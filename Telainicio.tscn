@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://thicp7wg040r"]
 
-[ext_resource type="Script" path="res://Telainicio.gd" id="1_hf2ad"]
-[ext_resource type="Texture2D" uid="uid://bhmqht1kkmjay" path="res://PNG/Background/bg_layer1.png" id="2_4ow4k"]
-[ext_resource type="Texture2D" uid="uid://bj7wxhiw7jrlf" path="res://PNG/Background/bg_layer2.png" id="3_dy7mr"]
-[ext_resource type="Texture2D" uid="uid://cpw87sxdtbke2" path="res://icon.svg" id="3_s86da"]
-[ext_resource type="Theme" uid="uid://bkn0dftw8jsu3" path="res://button_theme.tres" id="4_sdw38"]
-[ext_resource type="Texture2D" uid="uid://dbg61v2nggdu1" path="res://PNG/Background/bg_layer3.png" id="4_wpaca"]
-[ext_resource type="Texture2D" uid="uid://b68miou3rsjwp" path="res://PNG/Background/bg_layer4.png" id="5_ff1t0"]
+[ext_resource type="Script" path="res://scripts/Telainicio.gd" id="1_tj7fl"]
+[ext_resource type="Texture2D" uid="uid://bhmqht1kkmjay" path="res://PNG/Background/bg_layer1.png" id="2_on0dc"]
+[ext_resource type="Texture2D" uid="uid://bj7wxhiw7jrlf" path="res://PNG/Background/bg_layer2.png" id="3_p2up6"]
+[ext_resource type="Texture2D" uid="uid://dbg61v2nggdu1" path="res://PNG/Background/bg_layer3.png" id="4_fbuv1"]
+[ext_resource type="Texture2D" uid="uid://b68miou3rsjwp" path="res://PNG/Background/bg_layer4.png" id="5_jbi3y"]
+[ext_resource type="Texture2D" uid="uid://cpw87sxdtbke2" path="res://icon.svg" id="6_mn10t"]
+[ext_resource type="Theme" uid="uid://bkn0dftw8jsu3" path="res://button_theme.tres" id="7_3h0r3"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6h0bj"]
 
@@ -17,7 +17,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_hf2ad")
+script = ExtResource("1_tj7fl")
 
 [node name="Bg" type="TextureRect" parent="."]
 layout_mode = 2
@@ -25,7 +25,7 @@ offset_top = 324.0
 offset_right = 1152.0
 offset_bottom = 324.0
 size_flags_vertical = 4
-texture = ExtResource("2_4ow4k")
+texture = ExtResource("2_on0dc")
 expand_mode = 2
 stretch_mode = 3
 
@@ -35,7 +35,7 @@ offset_top = 324.0
 offset_right = 1152.0
 offset_bottom = 324.0
 size_flags_vertical = 4
-texture = ExtResource("3_dy7mr")
+texture = ExtResource("3_p2up6")
 expand_mode = 2
 stretch_mode = 3
 
@@ -45,7 +45,7 @@ offset_top = 324.0
 offset_right = 1152.0
 offset_bottom = 324.0
 size_flags_vertical = 4
-texture = ExtResource("4_wpaca")
+texture = ExtResource("4_fbuv1")
 expand_mode = 2
 stretch_mode = 3
 
@@ -55,7 +55,7 @@ offset_top = 324.0
 offset_right = 1152.0
 offset_bottom = 324.0
 size_flags_vertical = 4
-texture = ExtResource("5_ff1t0")
+texture = ExtResource("5_jbi3y")
 expand_mode = 2
 stretch_mode = 3
 
@@ -80,7 +80,7 @@ size_flags_horizontal = 0
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-texture = ExtResource("3_s86da")
+texture = ExtResource("6_mn10t")
 
 [node name="HSeparator2" type="HSeparator" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -93,7 +93,7 @@ theme_override_styles/separator = SubResource("StyleBoxEmpty_6h0bj")
 [node name="Button_start" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 0
-theme = ExtResource("4_sdw38")
+theme = ExtResource("7_3h0r3")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
@@ -110,7 +110,7 @@ theme_override_styles/separator = SubResource("StyleBoxEmpty_6h0bj")
 
 [node name="Button_quit" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("4_sdw38")
+theme = ExtResource("7_3h0r3")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
