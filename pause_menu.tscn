@@ -15,7 +15,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
-color = Color(0.221902, 0.221902, 0.221902, 1)
+color = Color(0.223529, 0.223529, 0.223529, 0.694118)
 
 [node name="Menu" type="VBoxContainer" parent="."]
 anchors_preset = 14
