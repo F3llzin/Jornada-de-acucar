@@ -1,34 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://4ptnbr3mddar"]
+[gd_scene load_steps=7 format=3 uid="uid://4ptnbr3mddar"]
 
 [ext_resource type="Script" path="res://scripts/Mundo.gd" id="1_c04g2"]
 [ext_resource type="PackedScene" uid="uid://b3545jl6vdnu8" path="res://pause_menu.tscn" id="1_yb224"]
-[ext_resource type="Script" path="res://scripts/jogador.gd" id="3_ycybc"]
-[ext_resource type="Texture2D" uid="uid://dmvllfhk0vxvd" path="res://import/sheets/DinoSprites - doux.png" id="5_fmg0s"]
+[ext_resource type="PackedScene" uid="uid://b4vpepr3kcjvt" path="res://jogador.tscn" id="3_lpart"]
 [ext_resource type="Texture2D" uid="uid://dyhopeqx27tro" path="res://Addons/Free/Terrain/Terrain (16x16).png" id="5_hvbqe"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_k8noo"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3t50u"]
-atlas = ExtResource("5_fmg0s")
-region = Rect2(0, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ux5b4"]
-atlas = ExtResource("5_fmg0s")
-region = Rect2(24, 0, 24, 24)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_h7ry2"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3t50u")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ux5b4")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 5.0
-}]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_77krc"]
 texture = ExtResource("5_hvbqe")
@@ -493,17 +468,8 @@ script = ExtResource("1_c04g2")
 
 [node name="pause_menu" parent="." instance=ExtResource("1_yb224")]
 
-[node name="jogador" type="CharacterBody2D" parent="."]
-position = Vector2(218, 605)
-script = ExtResource("3_ycybc")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="jogador"]
-shape = SubResource("RectangleShape2D_k8noo")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="jogador/CollisionShape2D"]
-sprite_frames = SubResource("SpriteFrames_h7ry2")
-animation = &"idle"
-autoplay = "idle"
+[node name="jogador" parent="." instance=ExtResource("3_lpart")]
+position = Vector2(251, 609)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_oss8j")

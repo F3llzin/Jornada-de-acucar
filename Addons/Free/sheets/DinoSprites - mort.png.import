@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://coan8jw8hi6uq"
-path="res://.godot/imported/DinoSprites - mort.png-8960b525e48ed84652e558381eef7e84.ctex"
+path="res://.godot/imported/DinoSprites - mort.png-9bd8abbe57f08f235c333d856ff8a646.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://import/sheets/DinoSprites - mort.png"
-dest_files=["res://.godot/imported/DinoSprites - mort.png-8960b525e48ed84652e558381eef7e84.ctex"]
+source_file="res://Addons/Free/sheets/DinoSprites - mort.png"
+dest_files=["res://.godot/imported/DinoSprites - mort.png-9bd8abbe57f08f235c333d856ff8a646.ctex"]
 
 [params]
 
