@@ -1,9 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://4ptnbr3mddar"]
+[gd_scene load_steps=12 format=3 uid="uid://bv1f1gexdaur1"]
 
 [ext_resource type="Script" path="res://scripts/Mundo.gd" id="1_c04g2"]
-[ext_resource type="PackedScene" uid="uid://b3545jl6vdnu8" path="res://pause_menu.tscn" id="1_yb224"]
-[ext_resource type="PackedScene" uid="uid://chsbryvmekqwh" path="res://coletavel.tscn" id="2_jkfg7"]
-[ext_resource type="PackedScene" uid="uid://b4vpepr3kcjvt" path="res://jogador.tscn" id="3_lpart"]
+[ext_resource type="PackedScene" path="res://pause_menu.tscn" id="1_yb224"]
+[ext_resource type="PackedScene" uid="uid://dwad24qiyqrnp" path="res://coletavel.tscn" id="2_jkfg7"]
+[ext_resource type="PackedScene" uid="uid://bh7sntndx4xcr" path="res://jogador.tscn" id="3_lpart"]
 [ext_resource type="Texture2D" uid="uid://8jxwk7wvc37l" path="res://Addons/Free/Background/parallax_forest_pack web/v1/layers/parallax-forest-back-trees.png" id="5_g58vb"]
 [ext_resource type="Texture2D" uid="uid://dyhopeqx27tro" path="res://Addons/Free/Terrain/Terrain (16x16).png" id="5_hvbqe"]
 [ext_resource type="Texture2D" uid="uid://ce25f4qgxp0pr" path="res://Addons/Free/Background/parallax_forest_pack web/v1/layers/parallax-forest-front-trees.png" id="6_8yqob"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://chsbryvmekqwh"]
+[gd_scene load_steps=29 format=3 uid="uid://dwad24qiyqrnp"]
 
 [ext_resource type="Texture2D" uid="uid://qfcfgs1bgcgb" path="res://Addons/Free/Items/Fruits/Cherries.png" id="1_d0ehm"]
 [ext_resource type="Script" path="res://scripts/coletavel.gd" id="1_pswpg"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://thicp7wg040r"]
+[gd_scene load_steps=9 format=3 uid="uid://cxb7rpxgq61i"]
 
 [ext_resource type="Script" path="res://scripts/Telainicio.gd" id="1_tj7fl"]
 [ext_resource type="Texture2D" uid="uid://bhmqht1kkmjay" path="res://Import/Background/bg_layer1.png" id="2_t6ivc"]
