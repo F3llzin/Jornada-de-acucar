@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dna3j5g51ym4y"
-path="res://.godot/imported/button_round_border.svg-ccfd04249dc2108677bfee91f203f66d.ctex"
+path="res://.godot/imported/button_round_border.svg-3b4e500cc4007012562d083ecba29ff3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://import/Vector/Yellow/button_round_border.svg"
-dest_files=["res://.godot/imported/button_round_border.svg-ccfd04249dc2108677bfee91f203f66d.ctex"]
+source_file="res://Import/Vector/Yellow/button_round_border.svg"
+dest_files=["res://.godot/imported/button_round_border.svg-3b4e500cc4007012562d083ecba29ff3.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bahgahx21t40u"
-path="res://.godot/imported/button_square_border.svg-612855c255725a28c6b828be7fd61001.ctex"
+path="res://.godot/imported/button_square_border.svg-85c17e0dd9c52d6d274a23b503f83a36.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://import/Vector/Blue/button_square_border.svg"
-dest_files=["res://.godot/imported/button_square_border.svg-612855c255725a28c6b828be7fd61001.ctex"]
+source_file="res://Import/Vector/Blue/button_square_border.svg"
+dest_files=["res://.godot/imported/button_square_border.svg-85c17e0dd9c52d6d274a23b503f83a36.ctex"]
 
 [params]
 
