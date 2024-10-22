@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d3pshji12vhua"
-path="res://.godot/imported/slide_vertical_color.svg-92906ca74b628917a019ed13b1e6bb3a.ctex"
+path="res://.godot/imported/slide_vertical_color.svg-3e45b2ef130b67539d21060a5a6344b2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Import/Vector/Grey/slide_vertical_color.svg"
-dest_files=["res://.godot/imported/slide_vertical_color.svg-92906ca74b628917a019ed13b1e6bb3a.ctex"]
+source_file="res://import/Vector/Grey/slide_vertical_color.svg"
+dest_files=["res://.godot/imported/slide_vertical_color.svg-3e45b2ef130b67539d21060a5a6344b2.ctex"]
 
 [params]
 

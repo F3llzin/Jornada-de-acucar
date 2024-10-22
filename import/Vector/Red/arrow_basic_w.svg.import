@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bexvang0tnaj7"
-path="res://.godot/imported/arrow_basic_w.svg-150b56133bea29bda768f64f7ece9326.ctex"
+path="res://.godot/imported/arrow_basic_w.svg-9bb74239540b370d471f595b00a72329.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Import/Vector/Red/arrow_basic_w.svg"
-dest_files=["res://.godot/imported/arrow_basic_w.svg-150b56133bea29bda768f64f7ece9326.ctex"]
+source_file="res://import/Vector/Red/arrow_basic_w.svg"
+dest_files=["res://.godot/imported/arrow_basic_w.svg-9bb74239540b370d471f595b00a72329.ctex"]
 
 [params]
 

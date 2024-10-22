@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bclsnvhbdu2sm"
-path="res://.godot/imported/icon_repeat_light.png-0dbd81381dd224bfeec5a24c9d3fe93f.ctex"
+path="res://.godot/imported/icon_repeat_light.png-a1c7ddf4427946e7974c3300195a6046.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Import/HUD/Extra/Default/icon_repeat_light.png"
-dest_files=["res://.godot/imported/icon_repeat_light.png-0dbd81381dd224bfeec5a24c9d3fe93f.ctex"]
+source_file="res://import/HUD/Extra/Default/icon_repeat_light.png"
+dest_files=["res://.godot/imported/icon_repeat_light.png-a1c7ddf4427946e7974c3300195a6046.ctex"]
 
 [params]
 

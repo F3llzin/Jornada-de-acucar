@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cyojk7nhmsyyx"
-path="res://.godot/imported/icon_circle.svg-efcdecb2adff3b7cf4e4a769c3ba3cd2.ctex"
+path="res://.godot/imported/icon_circle.svg-9713bdabcb9ede0b575682aec6c6d556.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Import/Vector/Blue/icon_circle.svg"
-dest_files=["res://.godot/imported/icon_circle.svg-efcdecb2adff3b7cf4e4a769c3ba3cd2.ctex"]
+source_file="res://import/Vector/Blue/icon_circle.svg"
+dest_files=["res://.godot/imported/icon_circle.svg-9713bdabcb9ede0b575682aec6c6d556.ctex"]
 
 [params]
 

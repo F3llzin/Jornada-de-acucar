@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ddioucr4al25v"
-path="res://.godot/imported/button_rectangle_border.svg-5ec00af35742d3375a100984f4561110.ctex"
+path="res://.godot/imported/button_rectangle_border.svg-adbb4a4c06b6b2016ae0dfc78eab3651.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Import/Vector/Blue/button_rectangle_border.svg"
-dest_files=["res://.godot/imported/button_rectangle_border.svg-5ec00af35742d3375a100984f4561110.ctex"]
+source_file="res://import/Vector/Blue/button_rectangle_border.svg"
+dest_files=["res://.godot/imported/button_rectangle_border.svg-adbb4a4c06b6b2016ae0dfc78eab3651.ctex"]
 
 [params]
 

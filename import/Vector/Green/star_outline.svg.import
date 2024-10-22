@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://8ulswafwja5g"
-path="res://.godot/imported/star_outline.svg-2fd85c2263e4e0d33b978fcbeea405e8.ctex"
+path="res://.godot/imported/star_outline.svg-2ef1e4a0afcc55c78634064a6d694d1e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Import/Vector/Green/star_outline.svg"
-dest_files=["res://.godot/imported/star_outline.svg-2fd85c2263e4e0d33b978fcbeea405e8.ctex"]
+source_file="res://import/Vector/Green/star_outline.svg"
+dest_files=["res://.godot/imported/star_outline.svg-2ef1e4a0afcc55c78634064a6d694d1e.ctex"]
 
 [params]
 

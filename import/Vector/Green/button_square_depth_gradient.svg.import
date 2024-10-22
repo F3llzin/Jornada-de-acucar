@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dggnme4bxid2h"
-path="res://.godot/imported/button_square_depth_gradient.svg-8130598d2b253b7df06cbf861c623f40.ctex"
+path="res://.godot/imported/button_square_depth_gradient.svg-60a130fcdbdcd5425e38ae7a891b0d75.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Import/Vector/Green/button_square_depth_gradient.svg"
-dest_files=["res://.godot/imported/button_square_depth_gradient.svg-8130598d2b253b7df06cbf861c623f40.ctex"]
+source_file="res://import/Vector/Green/button_square_depth_gradient.svg"
+dest_files=["res://.godot/imported/button_square_depth_gradient.svg-60a130fcdbdcd5425e38ae7a891b0d75.ctex"]
 
 [params]
 

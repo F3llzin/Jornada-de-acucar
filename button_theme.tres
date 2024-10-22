@@ -1,8 +1,8 @@
 [gd_resource type="Theme" load_steps=8 format=3 uid="uid://bkn0dftw8jsu3"]
 
-[ext_resource type="FontFile" uid="uid://bphwtilkabuay" path="res://Import/Font/Kenney Future.ttf" id="1_ks27v"]
-[ext_resource type="Texture2D" uid="uid://dnx6x2ulwjsm8" path="res://Import/HUD/Grey/Default/button_rectangle_depth_flat.png" id="2_7cjp4"]
-[ext_resource type="Texture2D" uid="uid://d27nug73jw6p3" path="res://Import/HUD/Grey/Default/button_rectangle_border.png" id="3_ch6w8"]
+[ext_resource type="FontFile" uid="uid://bphwtilkabuay" path="res://import/Font/Kenney Future.ttf" id="1_ks27v"]
+[ext_resource type="Texture2D" uid="uid://dnx6x2ulwjsm8" path="res://import/HUD/Grey/Default/button_rectangle_depth_flat.png" id="2_7cjp4"]
+[ext_resource type="Texture2D" uid="uid://d27nug73jw6p3" path="res://import/HUD/Grey/Default/button_rectangle_border.png" id="3_ch6w8"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pamb3"]
 texture = ExtResource("2_7cjp4")
