@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cwf5ki7thm1u1"
-path="res://.godot/imported/divider.png-dcf6657ac564cf7239ead9e2616f13ca.ctex"
+path="res://.godot/imported/divider.png-6221d7937c0e85a6dae802527b839c66.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Import/HUD/Extra/Default/divider.png"
-dest_files=["res://.godot/imported/divider.png-dcf6657ac564cf7239ead9e2616f13ca.ctex"]
+source_file="res://import/HUD/Extra/Default/divider.png"
+dest_files=["res://.godot/imported/divider.png-6221d7937c0e85a6dae802527b839c66.ctex"]
 
 [params]
 
