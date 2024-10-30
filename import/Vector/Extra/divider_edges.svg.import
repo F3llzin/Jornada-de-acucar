@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cdtx5qpmersre"
-path="res://.godot/imported/divider_edges.svg-e0d2c782101b59070adaeae80f6e72ce.ctex"
+path="res://.godot/imported/divider_edges.svg-1c8c1c72fb917dde892e8fb962f93086.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://import/Vector/Extra/divider_edges.svg"
-dest_files=["res://.godot/imported/divider_edges.svg-e0d2c782101b59070adaeae80f6e72ce.ctex"]
+source_file="res://Import/Vector/Extra/divider_edges.svg"
+dest_files=["res://.godot/imported/divider_edges.svg-1c8c1c72fb917dde892e8fb962f93086.ctex"]
 
 [params]
 

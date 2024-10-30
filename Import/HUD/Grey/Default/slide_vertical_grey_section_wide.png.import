@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dgyc05bdn45gq"
-path="res://.godot/imported/slide_vertical_grey_section_wide.png-c6141bc3b8fd50cadd8762313d450079.ctex"
+path="res://.godot/imported/slide_vertical_grey_section_wide.png-3212ec17340688dac5074e484cd051cb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://import/HUD/Grey/Default/slide_vertical_grey_section_wide.png"
-dest_files=["res://.godot/imported/slide_vertical_grey_section_wide.png-c6141bc3b8fd50cadd8762313d450079.ctex"]
+source_file="res://Import/HUD/Grey/Default/slide_vertical_grey_section_wide.png"
+dest_files=["res://.godot/imported/slide_vertical_grey_section_wide.png-3212ec17340688dac5074e484cd051cb.ctex"]
 
 [params]
 

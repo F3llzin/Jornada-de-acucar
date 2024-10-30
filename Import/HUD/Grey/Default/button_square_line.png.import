@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d1sleljhpgmh"
-path="res://.godot/imported/button_square_line.png-3f9163e2eca3a835c4d4c017d0b9b59f.ctex"
+path="res://.godot/imported/button_square_line.png-09447d69d10354189c9c3a02b2dca53e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://import/HUD/Grey/Default/button_square_line.png"
-dest_files=["res://.godot/imported/button_square_line.png-3f9163e2eca3a835c4d4c017d0b9b59f.ctex"]
+source_file="res://Import/HUD/Grey/Default/button_square_line.png"
+dest_files=["res://.godot/imported/button_square_line.png-09447d69d10354189c9c3a02b2dca53e.ctex"]
 
 [params]
 

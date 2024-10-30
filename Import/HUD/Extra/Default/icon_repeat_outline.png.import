@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dtr1afhlagogi"
-path="res://.godot/imported/icon_repeat_outline.png-0368ab1ae2c282444499f6db2f1a2f6c.ctex"
+path="res://.godot/imported/icon_repeat_outline.png-7ea840e2f2cb4f740bddd937083aac5d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://import/HUD/Extra/Default/icon_repeat_outline.png"
-dest_files=["res://.godot/imported/icon_repeat_outline.png-0368ab1ae2c282444499f6db2f1a2f6c.ctex"]
+source_file="res://Import/HUD/Extra/Default/icon_repeat_outline.png"
+dest_files=["res://.godot/imported/icon_repeat_outline.png-7ea840e2f2cb4f740bddd937083aac5d.ctex"]
 
 [params]
 

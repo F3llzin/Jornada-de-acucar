@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b2en1tocd4oyb"
-path="res://.godot/imported/input_outline_rectangle.svg-34793c5f7ede725c807a49e79ae1ce7e.ctex"
+path="res://.godot/imported/input_outline_rectangle.svg-270acda7409ea16a26a752d2e4643f5d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://import/Vector/Extra/input_outline_rectangle.svg"
-dest_files=["res://.godot/imported/input_outline_rectangle.svg-34793c5f7ede725c807a49e79ae1ce7e.ctex"]
+source_file="res://Import/Vector/Extra/input_outline_rectangle.svg"
+dest_files=["res://.godot/imported/input_outline_rectangle.svg-270acda7409ea16a26a752d2e4643f5d.ctex"]
 
 [params]
 

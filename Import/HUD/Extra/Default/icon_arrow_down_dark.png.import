@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dh4dsiw08neso"
-path="res://.godot/imported/icon_arrow_down_dark.png-efec4edf647b798b5a041597235856e0.ctex"
+path="res://.godot/imported/icon_arrow_down_dark.png-03adf0944b7686a44b1ce12cb05d2441.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://import/HUD/Extra/Default/icon_arrow_down_dark.png"
-dest_files=["res://.godot/imported/icon_arrow_down_dark.png-efec4edf647b798b5a041597235856e0.ctex"]
+source_file="res://Import/HUD/Extra/Default/icon_arrow_down_dark.png"
+dest_files=["res://.godot/imported/icon_arrow_down_dark.png-03adf0944b7686a44b1ce12cb05d2441.ctex"]
 
 [params]
 

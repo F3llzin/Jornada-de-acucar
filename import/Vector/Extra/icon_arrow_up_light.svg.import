@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b8rstakjotuh7"
-path="res://.godot/imported/icon_arrow_up_light.svg-781d90a94076b85377cad74b784780d6.ctex"
+path="res://.godot/imported/icon_arrow_up_light.svg-a79fff978cb6a15917e0e6131c06518b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://import/Vector/Extra/icon_arrow_up_light.svg"
-dest_files=["res://.godot/imported/icon_arrow_up_light.svg-781d90a94076b85377cad74b784780d6.ctex"]
+source_file="res://Import/Vector/Extra/icon_arrow_up_light.svg"
+dest_files=["res://.godot/imported/icon_arrow_up_light.svg-a79fff978cb6a15917e0e6131c06518b.ctex"]
 
 [params]
 

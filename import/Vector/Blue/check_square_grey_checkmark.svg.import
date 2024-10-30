@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cqf7hq6ftqrjf"
-path="res://.godot/imported/check_square_grey_checkmark.svg-f0d439d8fd53e3d0c00ed7ff63061d11.ctex"
+path="res://.godot/imported/check_square_grey_checkmark.svg-36d2499de1102ab4b46ed29836c98309.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://import/Vector/Blue/check_square_grey_checkmark.svg"
-dest_files=["res://.godot/imported/check_square_grey_checkmark.svg-f0d439d8fd53e3d0c00ed7ff63061d11.ctex"]
+source_file="res://Import/Vector/Blue/check_square_grey_checkmark.svg"
+dest_files=["res://.godot/imported/check_square_grey_checkmark.svg-36d2499de1102ab4b46ed29836c98309.ctex"]
 
 [params]
 
