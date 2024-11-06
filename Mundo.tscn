@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bv1f1gexdaur1"]
+[gd_scene load_steps=13 format=3 uid="uid://bv1f1gexdaur1"]
 
 [ext_resource type="Script" path="res://scripts/Mundo.gd" id="1_c04g2"]
 [ext_resource type="PackedScene" uid="uid://b3545jl6vdnu8" path="res://pause_menu.tscn" id="1_yb224"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://ce25f4qgxp0pr" path="res://Addons/Free/Background/parallax_forest_pack web/v1/layers/parallax-forest-front-trees.png" id="6_8yqob"]
 [ext_resource type="Texture2D" uid="uid://bsk7yiud7wf34" path="res://Addons/Free/Background/parallax_forest_pack web/v1/layers/parallax-forest-lights.png" id="7_e575k"]
 [ext_resource type="Texture2D" uid="uid://dw2gasp7ig28" path="res://Addons/Free/Background/parallax_forest_pack web/v1/layers/parallax-forest-middle-trees.png" id="8_jpbhk"]
+[ext_resource type="PackedScene" uid="uid://4klyw118whlq" path="res://enemy.tscn" id="10_g0y0f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_77krc"]
 texture = ExtResource("5_hvbqe")
@@ -637,3 +638,6 @@ motion_mirroring = Vector2(544, 0)
 scale = Vector2(2, 2)
 texture = ExtResource("8_jpbhk")
 centered = false
+
+[node name="Enemy" parent="." instance=ExtResource("10_g0y0f")]
+position = Vector2(176, 616)
