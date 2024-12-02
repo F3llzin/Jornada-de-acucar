@@ -27,3 +27,8 @@ func _physics_process(delta):
 	velocity.x = direction * SPEED * delta
 	
 	move_and_slide()
+
+
+func _on_animação_animation_finished(anim_name: StringName):
+	if anim_name == "Dano":
+		queue_free()

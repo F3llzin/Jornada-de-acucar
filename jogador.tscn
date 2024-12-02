@@ -1,9 +1,10 @@
-[gd_scene load_steps=16 format=3 uid="uid://bh7sntndx4xcr"]
+[gd_scene load_steps=17 format=3 uid="uid://bh7sntndx4xcr"]
 
 [ext_resource type="Script" path="res://scripts/jogador.gd" id="1_54iid"]
 [ext_resource type="Texture2D" uid="uid://dmvllfhk0vxvd" path="res://Addons/Free/sheets/DinoSprites - doux.png" id="2_nwq8u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k8noo"]
+size = Vector2(18, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3t50u"]
 atlas = ExtResource("2_nwq8u")
@@ -100,6 +101,9 @@ animations = [{
 "speed": 8.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7iumc"]
+size = Vector2(18, 18)
+
 [node name="jogador" type="CharacterBody2D"]
 script = ExtResource("1_54iid")
 
@@ -122,3 +126,9 @@ autoplay = "idle"
 frame_progress = 0.587365
 
 [node name="animação" type="AnimationPlayer" parent="."]
+
+[node name="HurtBox" type="Area2D" parent="."]
+
+[node name="colision" type="CollisionShape2D" parent="HurtBox"]
+shape = SubResource("RectangleShape2D_7iumc")
+debug_color = Color(0.960784, 0, 0.52549, 0.419608)
