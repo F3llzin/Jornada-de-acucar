@@ -4,6 +4,9 @@ extends CharacterBody2D
 const SPEED = 200.0
 const JUMP_VELOCITY = -280.0
 @onready var animation = $anim as AnimatedSprite2D
+@onready var pular = $pular as AudioStreamPlayer
+@onready var remote_transform = $RemoteTransform2D
+
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -18,6 +21,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		pulando = true
+		pular.play()
 	elif is_on_floor():
 		pulando = false
 
@@ -36,3 +40,11 @@ func _physics_process(delta):
 		animation.play("idle")
 
 	move_and_slide()
+
+
+func _on_hurt_box_body_entered(body):
+	if body.is_in_group("inimigos"):
+		queue_free()
+func seguir_camera(camera_2d):
+	var caminho_camera = camera_2d.get_path()
+	remote_transform.remote_path = caminho_camera

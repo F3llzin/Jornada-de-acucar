@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://bh7sntndx4xcr"]
+[gd_scene load_steps=18 format=3 uid="uid://bh7sntndx4xcr"]
 
 [ext_resource type="Script" path="res://scripts/jogador.gd" id="1_54iid"]
 [ext_resource type="Texture2D" uid="uid://dmvllfhk0vxvd" path="res://Addons/Free/sheets/DinoSprites - doux.png" id="2_nwq8u"]
+[ext_resource type="AudioStream" uid="uid://c3bewh333uoc0" path="res://Import/Sounds/tap-a.ogg" id="3_vwikx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k8noo"]
 size = Vector2(18, 20)
@@ -102,22 +103,13 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7iumc"]
-size = Vector2(18, 18)
+size = Vector2(22, 14)
 
 [node name="jogador" type="CharacterBody2D"]
 script = ExtResource("1_54iid")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_k8noo")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2, 2)
-limit_smoothed = true
-position_smoothing_enabled = true
-drag_horizontal_enabled = true
-drag_left_margin = 0.3
-drag_right_margin = 0.5
-editor_draw_drag_margin = true
 
 [node name="anim" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_h7ry2")
@@ -130,5 +122,13 @@ frame_progress = 0.587365
 [node name="HurtBox" type="Area2D" parent="."]
 
 [node name="colision" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_7iumc")
 debug_color = Color(0.960784, 0, 0.52549, 0.419608)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
+
+[node name="pular" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_vwikx")
+
+[connection signal="body_entered" from="HurtBox" to="." method="_on_hurt_box_body_entered"]

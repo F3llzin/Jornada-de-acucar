@@ -573,7 +573,7 @@ layer_0/tile_data = PackedInt32Array(2555904, 458752, 10, 2555905, 458752, 10, 2
 
 [node name="01" type="ParallaxLayer" parent="BG"]
 position = Vector2(-36, 235)
-motion_mirroring = Vector2(544, 0)
+motion_mirroring = Vector2(960, 0)
 
 [node name="texture" type="Sprite2D" parent="BG/01"]
 scale = Vector2(0.5, 0.5)
@@ -582,7 +582,7 @@ centered = false
 
 [node name="02" type="ParallaxLayer" parent="BG"]
 position = Vector2(-36, 235)
-motion_mirroring = Vector2(544, 0)
+motion_mirroring = Vector2(960, 0)
 
 [node name="texture" type="Sprite2D" parent="BG/02"]
 scale = Vector2(0.5, 0.5)
@@ -592,7 +592,7 @@ centered = false
 [node name="03" type="ParallaxLayer" parent="BG"]
 position = Vector2(-36, 235)
 motion_scale = Vector2(0.5, 1)
-motion_mirroring = Vector2(544, 0)
+motion_mirroring = Vector2(960, 0)
 
 [node name="texture" type="Sprite2D" parent="BG/03"]
 scale = Vector2(0.5, 0.5)
@@ -602,7 +602,7 @@ centered = false
 [node name="04" type="ParallaxLayer" parent="BG"]
 position = Vector2(-36, 235)
 motion_scale = Vector2(0.7, 1)
-motion_mirroring = Vector2(544, 0)
+motion_mirroring = Vector2(960, 0)
 
 [node name="texture" type="Sprite2D" parent="BG/04"]
 scale = Vector2(0.5, 0.5)
@@ -612,7 +612,7 @@ centered = false
 [node name="05" type="ParallaxLayer" parent="BG"]
 position = Vector2(-36, 235)
 motion_scale = Vector2(0.7, 1)
-motion_mirroring = Vector2(544, 0)
+motion_mirroring = Vector2(960, 0)
 
 [node name="texture" type="Sprite2D" parent="BG/05"]
 scale = Vector2(0.5, 0.5)
@@ -622,7 +622,7 @@ centered = false
 [node name="06" type="ParallaxLayer" parent="BG"]
 position = Vector2(-36, 235)
 motion_scale = Vector2(0.7, 1)
-motion_mirroring = Vector2(544, 0)
+motion_mirroring = Vector2(960, 0)
 
 [node name="texture" type="Sprite2D" parent="BG/06"]
 scale = Vector2(0.5, 0.5)
@@ -631,3 +631,15 @@ centered = false
 
 [node name="Enemy" parent="." instance=ExtResource("10_g0y0f")]
 position = Vector2(459, 616)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2.5, 2.5)
+limit_left = 0
+limit_bottom = 771
+limit_smoothed = true
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_left_margin = 0.3
+drag_right_margin = 0.5
+editor_draw_limits = true
+editor_draw_drag_margin = true

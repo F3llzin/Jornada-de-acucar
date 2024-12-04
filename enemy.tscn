@@ -179,7 +179,7 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6de8k"]
 size = Vector2(16, 2)
 
-[node name="Enemy" type="CharacterBody2D"]
+[node name="Enemy" type="CharacterBody2D" groups=["inimigos"]]
 script = ExtResource("1_awh8f")
 
 [node name="anim" type="Sprite2D" parent="."]
@@ -200,9 +200,8 @@ autoplay = "Andar"
 speed_scale = 1.5
 
 [node name="Detector_parede" type="RayCast2D" parent="."]
-position = Vector2(0, -25)
-rotation = -0.785398
-target_position = Vector2(-28.9914, -4.94975)
+position = Vector2(0, -20)
+target_position = Vector2(-10, 0)
 
 [node name="HitBox" parent="." instance=ExtResource("4_yvute")]
 

@@ -6,6 +6,8 @@ const JUMP_VELOCITY = -400.0
 var direction = -1
 @onready var Detector_parede = $Detector_parede as RayCast2D
 @onready var anim = $anim as Sprite2D
+@onready var anima__o = $"animação"
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
