@@ -131,4 +131,12 @@ debug_color = Color(0.960784, 0, 0.52549, 0.419608)
 [node name="pular" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_vwikx")
 
+[node name="Ray_direita" type="RayCast2D" parent="."]
+position = Vector2(8, 0)
+target_position = Vector2(4, 0)
+
+[node name="Ray_esquerda" type="RayCast2D" parent="."]
+position = Vector2(-8, 0)
+target_position = Vector2(-4, 0)
+
 [connection signal="body_entered" from="HurtBox" to="." method="_on_hurt_box_body_entered"]
