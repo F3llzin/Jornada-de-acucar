@@ -3,18 +3,19 @@ extends CharacterBody2D
 
 const SPEED = 200.0
 const JUMP_VELOCITY = -280.0
-var vida = 10
+var vida = 1
 var knockback = Vector2.ZERO
 @onready var animation = $anim as AnimatedSprite2D
 @onready var pular = $pular as AudioStreamPlayer
 @onready var remote_transform = $RemoteTransform2D
 @onready var ray_direita = $Ray_direita
 @onready var ray_esquerda = $Ray_esquerda
-
+var direction
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var pulando = false
+var is_hurted = false
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -31,25 +32,21 @@ func _physics_process(delta):
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction = Input.get_axis("ui_left", "ui_right")
+	direction = Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x = direction * SPEED
 		animation.scale.x = direction
-		if !pulando:
-			animation.play("run")
-	elif pulando:
-		animation.play("jump")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-		animation.play("idle")
 		
 	if knockback != Vector2.ZERO:
 		velocity = knockback
 
+	_set_state()
 	move_and_slide()
 
 
-func _on_hurt_box_body_entered(body):
+func _on_hurt_box_body_entered(_body):
 	#if body.is_in_group("inimigos"):
 		#queue_free()
 		if vida < 0:
@@ -70,4 +67,24 @@ func tomar_dano(knockback_force = Vector2.ZERO, duration = 0.25):
 		knockback = knockback_force 
 		
 		var knockback_tween = get_tree().create_tween()
-		knockback_tween.tween_property(self, "knockback", Vector2.ZERO, duration)
+		knockback_tween.parallel().tween_property(self, "knockback", Vector2.ZERO, duration)
+		animation.modulate = Color(1,0,0,1)
+		knockback_tween.parallel().tween_property(animation, "modulate", Color(1,1,1,1), duration)
+		
+	is_hurted = true
+	await get_tree().create_timer(.3).timeout
+	is_hurted = false
+		
+func _set_state():
+	var state = "idle"
+	
+	if !is_on_floor():
+		state = "jump"
+	elif direction != 0:
+		state = "run"
+	if is_hurted:
+		state = "hurt"
+	
+	if animation.name != state:
+		animation.play(state)
+		

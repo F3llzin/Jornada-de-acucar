@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://b3545jl6vdnu8"]
+[gd_scene load_steps=5 format=3 uid="uid://b3545jl6vdnu8"]
 
 [ext_resource type="Theme" uid="uid://cacpanawqld15" path="res://PAUSE.tres" id="1_h7kgw"]
 [ext_resource type="Script" path="res://scripts/pause_menu.gd" id="1_robbk"]
+
+[sub_resource type="InputEventAction" id="InputEventAction_xjt2t"]
+action = &"ui_cancel"
+
+[sub_resource type="Shortcut" id="Shortcut_yyvki"]
+events = [SubResource("InputEventAction_xjt2t")]
 
 [node name="pause_menu" type="CanvasLayer"]
 process_mode = 3
@@ -31,6 +37,7 @@ size_flags_vertical = 4
 [node name="Button_voltar" type="Button" parent="Menu"]
 layout_mode = 2
 theme = ExtResource("1_h7kgw")
+shortcut = SubResource("Shortcut_yyvki")
 text = "VOLTAR"
 
 [node name="Button_inicio" type="Button" parent="Menu"]

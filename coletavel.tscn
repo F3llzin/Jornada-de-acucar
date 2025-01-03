@@ -92,6 +92,7 @@ animations = [{
 radius = 7.07107
 
 [node name="cherry" type="Area2D"]
+collision_layer = 8
 script = ExtResource("1_pswpg")
 
 [node name="anim" type="AnimatedSprite2D" parent="."]

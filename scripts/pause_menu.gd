@@ -1,4 +1,5 @@
 extends CanvasLayer
+@onready var button_voltar = $Menu/Button_voltar
 
 
 # Called when the node enters the scene tree for the first time.
@@ -14,6 +15,7 @@ func _unhandled_input(event):
 	if event.is_action_pressed("ui_cancel"):
 		visible = true
 		get_tree().paused = true
+		button_voltar.grab_focus()
 
 func _on_button_voltar_pressed():
 	get_tree().paused = false
