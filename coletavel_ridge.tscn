@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c715hclrpqm3"]
+
+[ext_resource type="PackedScene" uid="uid://dwad24qiyqrnp" path="res://coletavel.tscn" id="1_e3swf"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mubf3"]
+radius = 7.0
+height = 14.0
+
+[node name="coletavel_ridge" type="RigidBody2D"]
+collision_layer = 0
+collision_mask = 2
+lock_rotation = true
+
+[node name="cherry" parent="." instance=ExtResource("1_e3swf")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_mubf3")

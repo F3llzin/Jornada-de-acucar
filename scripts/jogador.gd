@@ -45,6 +45,11 @@ func _physics_process(delta):
 	_set_state()
 	move_and_slide()
 
+	for platforms in get_slide_collision_count():
+		var colisao = get_slide_collision(platforms)
+		if colisao.get_collider().has_method("colidiu_com"):
+			colisao.get_collider().colidiu_com(colisao, self)
+
 
 func _on_hurt_box_body_entered(_body):
 	#if body.is_in_group("inimigos"):
@@ -88,3 +93,13 @@ func _set_state():
 	if animation.name != state:
 		animation.play(state)
 		
+
+
+func _on_cabeca_colisor_body_entered(body):
+	if body.has_method("quebrar_sprite"):
+		body.hit -= 1
+		if body.hit < 0:
+			body.quebrar_sprite()
+		else:
+			body.anim.play("hit")
+			body.criar_coletavel()

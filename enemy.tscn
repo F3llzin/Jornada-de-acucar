@@ -212,4 +212,7 @@ collision_mask = 6
 position = Vector2(0, -25)
 shape = SubResource("RectangleShape2D_6de8k")
 
+[node name="spawn_coletavel" type="Marker2D" parent="."]
+position = Vector2(0, -28)
+
 [connection signal="animation_finished" from="animação" to="." method="_on_animação_animation_finished"]

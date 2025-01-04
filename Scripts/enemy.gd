@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+const coletavel_instance = preload("res://coletavel_ridge.tscn")
 
 const SPEED = 700.0
 const JUMP_VELOCITY = -400.0
@@ -7,6 +7,8 @@ var direction = -1
 @onready var Detector_parede = $Detector_parede as RayCast2D
 @onready var anim = $anim as Sprite2D
 @onready var anima__o = $"animação"
+@onready var spawn_coletavel = $spawn_coletavel
+
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -34,3 +36,10 @@ func _physics_process(delta):
 func _on_animação_animation_finished(anim_name: StringName):
 	if anim_name == "Dano":
 		queue_free()
+		criar_coletavel()
+
+func criar_coletavel():
+	var coletavel = coletavel_instance.instantiate()
+	get_parent().call_deferred("add_child", coletavel)
+	coletavel.global_position = spawn_coletavel.global_position
+	coletavel.apply_impulse(Vector2(randi_range(-50,50), -150))

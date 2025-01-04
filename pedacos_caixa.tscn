@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://w30og7kua1px"]
+
+[ext_resource type="Script" path="res://Scripts/pedacos_caixa.gd" id="1_haek1"]
+
+[node name="pedacos_caixa" type="RigidBody2D"]
+script = ExtResource("1_haek1")
+
+[node name="texture" type="Sprite2D" parent="."]
+
+[node name="notifier" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="notifier" to="." method="_on_notifier_screen_exited"]
