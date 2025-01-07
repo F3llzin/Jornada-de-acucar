@@ -19,7 +19,7 @@ func display_text(text_to_display: String):
 	
 	await resized
 	
-	custom_minimum_size.x + min(size.x, largura_max)
+	custom_minimum_size.x = min(size.x, largura_max)
 	
 	if size.x > largura_max:
 		text.autowrap_mode = TextServer.AUTOWRAP_WORD
@@ -33,20 +33,22 @@ func display_text(text_to_display: String):
 	display_letter()
 	
 func display_letter():
-	text.text += texto[letter_index]
-	letter_index += 1
-	
-	if letter_index >= texto.length():
-		text_display_finished.emit()
-		return
+	if letter_index < texto.length():
+		text.text += texto[letter_index]
+		match texto[letter_index - 1]:
+			"!", "?", ",", ".":
+				timer.start(tempo_pontuacao)
+			" ":
+				timer.start(tempo_espaco)
+			_:
+				timer.start(tempo_letra)
+		letter_index += 1
+	#else:
+		#text_display_finished.emit()
+	#if letter_index >= texto.length():
+		#text_display_finished.emit()
+		#return
 		
-	match texto[letter_index]:
-		"!", "?", ",", ".":
-			tempo_letra.start(tempo_pontuacao)
-		" ":
-			tempo_letra.start(tempo_espaco)
-		_:
-			tempo_letra.start(tempo_letra)
 			
 func _on_timer_timeout():
 	display_letter()

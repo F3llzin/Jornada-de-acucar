@@ -19,3 +19,6 @@ collision_layer = 2
 
 [node name="collision" type="CollisionShape2D" parent="sinal"]
 shape = SubResource("RectangleShape2D_dtr32")
+
+[connection signal="body_entered" from="sinal" to="." method="_on_sinal_body_entered"]
+[connection signal="body_exited" from="sinal" to="." method="_on_sinal_body_exited"]

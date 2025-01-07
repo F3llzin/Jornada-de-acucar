@@ -28,7 +28,7 @@ func _on_all_text_displayed():
 	pode_antecipar_msg = true
 	
 func _unhandled_input(event):
-	if(event.is_action_pressed("mnsg_antecipada") && msg_ativada && pode_antecipar_msg):
+	if event.is_action_pressed("mnsg_antecipada") && msg_ativada && pode_antecipar_msg:
 		caixa_dialogo.queue_free()
 		current_line += 1
 		if current_line >= linhas_msg.size():
