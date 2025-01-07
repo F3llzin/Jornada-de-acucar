@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6n2xcr47nuef"
-path="res://.godot/imported/Dust Particle.png-37a55edec81a72b7c8f4c80184e0289e.ctex"
+uid="uid://b1ofbhjbexmin"
+path="res://.godot/imported/Transition.png-c7e243f3ab9d712bc108b8ed799cd51b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Addons/Free/Other/Dust Particle.png"
-dest_files=["res://.godot/imported/Dust Particle.png-37a55edec81a72b7c8f4c80184e0289e.ctex"]
+source_file="res://Addons/Free/Menu/Buttons/Other/Transition.png"
+dest_files=["res://.godot/imported/Transition.png-c7e243f3ab9d712bc108b8ed799cd51b.ctex"]
 
 [params]
 

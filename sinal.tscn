@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://3hdar7m18io7"]
+
+[ext_resource type="Script" path="res://Scripts/sinal.gd" id="1_fi7qx"]
+[ext_resource type="Texture2D" uid="uid://ux2g773ew7x0" path="res://Addons/Free/Menu/Buttons/Play.png" id="2_e3mjd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dtr32"]
+
+[node name="sinal" type="Node2D"]
+script = ExtResource("1_fi7qx")
+
+[node name="texture" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, -23)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_e3mjd")
+
+[node name="sinal" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="collision" type="CollisionShape2D" parent="sinal"]
+shape = SubResource("RectangleShape2D_dtr32")

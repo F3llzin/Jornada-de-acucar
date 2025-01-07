@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwxwyfqud20x7"]
+
+[ext_resource type="Script" path="res://Scripts/espinhos_area.gd" id="1_qkwsy"]
+[ext_resource type="Texture2D" uid="uid://b0dbkgian5v5x" path="res://Addons/Free/Traps/Spikes/Idle.png" id="2_38hrt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k862n"]
+
+[node name="espinhos_area" type="Area2D"]
+collision_layer = 2
+script = ExtResource("1_qkwsy")
+
+[node name="collision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_k862n")
+
+[node name="espinhos" type="Sprite2D" parent="."]
+texture_repeat = 2
+texture = ExtResource("2_38hrt")
+region_enabled = true
+region_rect = Rect2(0, 8, 8, 8)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

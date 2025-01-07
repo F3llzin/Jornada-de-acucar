@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://15qy0ci8p0ev"
-path="res://.godot/imported/Confetti (16x16).png-ea731104a1d62c220df91376b86821d7.ctex"
+uid="uid://beh5eq2tvnmil"
+path="res://.godot/imported/Shadow.png-2eddca65716fce3165285720948f93ef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Addons/Free/Other/Confetti (16x16).png"
-dest_files=["res://.godot/imported/Confetti (16x16).png-ea731104a1d62c220df91376b86821d7.ctex"]
+source_file="res://Addons/Free/Menu/Buttons/Other/Shadow.png"
+dest_files=["res://.godot/imported/Shadow.png-2eddca65716fce3165285720948f93ef.ctex"]
 
 [params]
 

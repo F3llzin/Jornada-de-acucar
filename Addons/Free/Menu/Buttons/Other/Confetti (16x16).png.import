@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0u2b8601mefx"
-path="res://.godot/imported/brick-piece-02.png-1d7170745af05c7c838c49b3a0180374.ctex"
+uid="uid://15qy0ci8p0ev"
+path="res://.godot/imported/Confetti (16x16).png-bbe3c2673dd34961ea8362cfd7b20737.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Addons/Free/Other/brick-piece-02.png"
-dest_files=["res://.godot/imported/brick-piece-02.png-1d7170745af05c7c838c49b3a0180374.ctex"]
+source_file="res://Addons/Free/Menu/Buttons/Other/Confetti (16x16).png"
+dest_files=["res://.godot/imported/Confetti (16x16).png-bbe3c2673dd34961ea8362cfd7b20737.ctex"]
 
 [params]
 

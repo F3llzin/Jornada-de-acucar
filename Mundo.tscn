@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bv1f1gexdaur1"]
+[gd_scene load_steps=19 format=3 uid="uid://bv1f1gexdaur1"]
 
 [ext_resource type="Script" path="res://scripts/Mundo.gd" id="1_c04g2"]
 [ext_resource type="PackedScene" uid="uid://b3545jl6vdnu8" path="res://pause_menu.tscn" id="1_yb224"]
@@ -14,6 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://dny4ocvciu0qb" path="res://Addons/Free/Background/platformer_background_1/Layers/layer01_ground.png" id="11_f5rwu"]
 [ext_resource type="PackedScene" uid="uid://dmpc3c3gam3dy" path="res://caixa_quebravel.tscn" id="13_cah2a"]
 [ext_resource type="PackedScene" uid="uid://d0p8x1lammvn0" path="res://falling_plataform.tscn" id="14_ix5dl"]
+[ext_resource type="PackedScene" uid="uid://dwxwyfqud20x7" path="res://espinhos_area.tscn" id="15_cigg7"]
+[ext_resource type="PackedScene" uid="uid://3hdar7m18io7" path="res://sinal.tscn" id="16_64ag5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_77krc"]
 texture = ExtResource("5_hvbqe")
@@ -652,3 +654,12 @@ position = Vector2(154, 719)
 
 [node name="falling_plataform" parent="." instance=ExtResource("14_ix5dl")]
 position = Vector2(504, 664)
+
+[node name="espinhos_area2" parent="." instance=ExtResource("15_cigg7")]
+position = Vector2(712, 608)
+
+[node name="espinhos_area" parent="." instance=ExtResource("15_cigg7")]
+position = Vector2(656, 608)
+
+[node name="sinal" parent="." instance=ExtResource("16_64ag5")]
+position = Vector2(512, 744)

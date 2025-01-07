@@ -52,22 +52,20 @@ func _physics_process(delta):
 
 
 func _on_hurt_box_body_entered(_body):
-	#if body.is_in_group("inimigos"):
-		#queue_free()
-		if vida < 0:
-			queue_free()
-		else:
-			if ray_direita.is_colliding():
-				tomar_dano(Vector2(-200, -200))
-			elif ray_esquerda.is_colliding():
-				tomar_dano(Vector2(200, -200))
+		if ray_direita.is_colliding():
+			tomar_dano(Vector2(-200, -200))
+		elif ray_esquerda.is_colliding():
+			tomar_dano(Vector2(200, -200))
 		
 func seguir_camera(camera_2d):
 	var caminho_camera = camera_2d.get_path()
 	remote_transform.remote_path = caminho_camera
 	
 func tomar_dano(knockback_force = Vector2.ZERO, duration = 0.25):
-	vida -= 1
+	if vida > 0:
+		vida -= 1
+	else:
+		queue_free()
 	if knockback_force != Vector2.ZERO:
 		knockback = knockback_force 
 		

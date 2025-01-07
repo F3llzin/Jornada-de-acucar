@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cloe6td2u1l66"
-path="res://.godot/imported/brick-piece-01.png-967ffedb901a53e753713d8f66002e59.ctex"
+uid="uid://d1klnonjs8fk2"
+path="res://.godot/imported/brick-piece-03.png-b091bbd4624a8ce3337d730e2a5ea9ee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Addons/Free/Other/brick-piece-01.png"
-dest_files=["res://.godot/imported/brick-piece-01.png-967ffedb901a53e753713d8f66002e59.ctex"]
+source_file="res://Addons/Free/Menu/Buttons/Other/brick-piece-03.png"
+dest_files=["res://.godot/imported/brick-piece-03.png-b091bbd4624a8ce3337d730e2a5ea9ee.ctex"]
 
 [params]
 
