@@ -43,12 +43,6 @@ func display_letter():
 			_:
 				timer.start(tempo_letra)
 		letter_index += 1
-	#else:
-		#text_display_finished.emit()
-	#if letter_index >= texto.length():
-		#text_display_finished.emit()
-		#return
-		
 			
 func _on_timer_timeout():
 	display_letter()

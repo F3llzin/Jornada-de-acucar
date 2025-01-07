@@ -650,7 +650,11 @@ editor_draw_limits = true
 editor_draw_drag_margin = true
 
 [node name="Caixa_quebravel" parent="." instance=ExtResource("13_cah2a")]
-position = Vector2(154, 719)
+position = Vector2(144, 720)
+
+[node name="Caixa_quebravel2" parent="." instance=ExtResource("13_cah2a")]
+position = Vector2(168, 720)
+hit = 6
 
 [node name="falling_plataform" parent="." instance=ExtResource("14_ix5dl")]
 position = Vector2(504, 664)
