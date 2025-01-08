@@ -9,7 +9,6 @@ var direction = -1
 @onready var anima__o = $"animação"
 @onready var spawn_coletavel = $spawn_coletavel
 
-
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -35,6 +34,7 @@ func _physics_process(delta):
 
 func _on_animação_animation_finished(anim_name: StringName):
 	if anim_name == "Dano":
+		Global.abates += 1
 		queue_free()
 		criar_coletavel()
 

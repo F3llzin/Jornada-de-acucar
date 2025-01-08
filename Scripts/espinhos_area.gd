@@ -2,7 +2,6 @@ extends Area2D
 @onready var collision = $collision
 @onready var espinhos = $espinhos
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	collision.shape.size = espinhos.get_rect().size

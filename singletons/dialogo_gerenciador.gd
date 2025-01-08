@@ -17,6 +17,8 @@ func comecar_msg(position: Vector2, lines: Array[String]):
 	msg_ativada = true
 	
 func mostrar_texto():
+	if caixa_dialogo && is_instance_valid(caixa_dialogo):
+		caixa_dialogo.queue_free()
 	caixa_dialogo = cena_dialogo.instantiate()
 	caixa_dialogo.text_display_finished.connect(_on_all_text_displayed)
 	get_tree().root.add_child(caixa_dialogo)

@@ -14,6 +14,7 @@ func _unhandled_input(event):
 		if event.is_action_pressed("interacao") && !DialogoGerenciador.msg_ativada:
 			texture.hide()
 			DialogoGerenciador.comecar_msg(global_position, lines)
+			return
 		else:
 			if DialogoGerenciador.caixa_dialogo != null:
 				DialogoGerenciador.msg_ativada = false

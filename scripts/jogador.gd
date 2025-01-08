@@ -3,7 +3,6 @@ extends CharacterBody2D
 
 const SPEED = 200.0
 const JUMP_VELOCITY = -280.0
-var vida = 1
 var knockback = Vector2.ZERO
 @onready var animation = $anim as AnimatedSprite2D
 @onready var pular = $pular as AudioStreamPlayer
@@ -16,6 +15,8 @@ var direction
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var pulando = false
 var is_hurted = false
+
+signal jogador_morreu
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -62,10 +63,11 @@ func seguir_camera(camera_2d):
 	remote_transform.remote_path = caminho_camera
 	
 func tomar_dano(knockback_force = Vector2.ZERO, duration = 0.25):
-	if vida > 0:
-		vida -= 1
+	if Global.vida_jogador > 0:
+		Global.vida_jogador -= 1
 	else:
 		queue_free()
+		emit_signal("jogador_morreu")
 	if knockback_force != Vector2.ZERO:
 		knockback = knockback_force 
 		
