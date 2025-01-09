@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://b3545jl6vdnu8"]
+[gd_scene load_steps=6 format=3 uid="uid://b3545jl6vdnu8"]
 
 [ext_resource type="Theme" uid="uid://cacpanawqld15" path="res://PAUSE.tres" id="1_h7kgw"]
 [ext_resource type="Script" path="res://scripts/pause_menu.gd" id="1_robbk"]
+[ext_resource type="Theme" uid="uid://c2cr74a1jy35o" path="res://sair_btn.tres" id="3_pwrtc"]
 
 [sub_resource type="InputEventAction" id="InputEventAction_xjt2t"]
 action = &"ui_cancel"
@@ -47,8 +48,9 @@ text = "INÍCIO"
 
 [node name="Button_sair" type="Button" parent="Menu"]
 layout_mode = 2
-theme = ExtResource("1_h7kgw")
-text = "SAIR DO JOGO"
+size_flags_horizontal = 4
+theme = ExtResource("3_pwrtc")
+text = "                         "
 
 [connection signal="pressed" from="Menu/Button_voltar" to="." method="_on_button_voltar_pressed"]
 [connection signal="pressed" from="Menu/Button_inicio" to="." method="_on_button_inicio_pressed"]

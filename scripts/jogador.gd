@@ -10,6 +10,7 @@ var knockback = Vector2.ZERO
 @onready var ray_direita = $Ray_direita
 @onready var ray_esquerda = $Ray_esquerda
 var direction
+var direcao
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -34,9 +35,16 @@ func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	direction = Input.get_axis("ui_left", "ui_right")
+	direcao = Input.get_axis("mov._direita", "mov._esquerda")
+	
 	if direction:
 		velocity.x = direction * SPEED
 		animation.scale.x = direction
+	
+	elif direcao:
+		velocity.x = direcao * SPEED
+		animation.scale.x = direcao
+	
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		
@@ -86,6 +94,8 @@ func _set_state():
 	if !is_on_floor():
 		state = "jump"
 	elif direction != 0:
+		state = "run"
+	elif direcao != 0:
 		state = "run"
 	if is_hurted:
 		state = "hurt"
