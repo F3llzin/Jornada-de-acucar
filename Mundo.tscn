@@ -689,6 +689,7 @@ position = Vector2(656, 608)
 
 [node name="sinal" parent="." instance=ExtResource("16_64ag5")]
 position = Vector2(512, 744)
+lines = Array[String](["E agora, nem pintada de ouro eu te quero", "Eu não vou sentir pena de te ver sofrendo", "Cê vai sentir a dor que eu tô sentido", "E vai se arrepender de vacilar comigo"])
 
 [node name="hud" type="CanvasLayer" parent="."]
 

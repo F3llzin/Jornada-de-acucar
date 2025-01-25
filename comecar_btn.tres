@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://brrdr3wshy6lm" path="res://Addons/Free/Menu/Buttons/comecar_normal.png" id="3_qkv6m"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pamb3"]
+content_margin_top = 15.0
 texture = ExtResource("2_4um4a")
 expand_margin_left = 5.0
 expand_margin_top = 5.0
@@ -12,6 +13,7 @@ expand_margin_right = 5.0
 expand_margin_bottom = 5.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2ehr6"]
+content_margin_top = 15.0
 texture = ExtResource("2_4um4a")
 expand_margin_left = 5.0
 expand_margin_top = 5.0
@@ -19,6 +21,7 @@ expand_margin_right = 5.0
 expand_margin_bottom = 5.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lb3j5"]
+content_margin_top = 15.0
 texture = ExtResource("3_qkv6m")
 expand_margin_left = 5.0
 expand_margin_top = 5.0
@@ -26,6 +29,7 @@ expand_margin_right = 5.0
 expand_margin_bottom = 5.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fmwhu"]
+content_margin_top = 15.0
 texture = ExtResource("2_4um4a")
 expand_margin_left = 5.0
 expand_margin_top = 5.0
