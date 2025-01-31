@@ -1,0 +1,42 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://b63d1fnrx6v43"]
+
+[ext_resource type="Texture2D" uid="uid://dxy5kd3jq7kti" path="res://Addons/Free/Menu/Buttons/voltar_focos.png" id="1_wrlcp"]
+[ext_resource type="Texture2D" uid="uid://cw1pa1harl6l8" path="res://Addons/Free/Menu/Buttons/voltar_normal.png" id="2_81uij"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0ampm"]
+content_margin_top = 15.0
+texture = ExtResource("1_wrlcp")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_etdfi"]
+content_margin_top = 15.0
+texture = ExtResource("1_wrlcp")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l40el"]
+content_margin_top = 15.0
+texture = ExtResource("2_81uij")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xqtxc"]
+content_margin_top = 15.0
+texture = ExtResource("1_wrlcp")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[resource]
+Button/styles/focus = SubResource("StyleBoxTexture_0ampm")
+Button/styles/hover = SubResource("StyleBoxTexture_etdfi")
+Button/styles/normal = SubResource("StyleBoxTexture_l40el")
+Button/styles/pressed = SubResource("StyleBoxTexture_xqtxc")

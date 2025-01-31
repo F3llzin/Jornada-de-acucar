@@ -21,3 +21,8 @@ func recomecar():
 	Global.vida_jogador = 3
 	Global.respawn_player()
 	#get_tree().reload_current_scene()
+
+func game_over():
+	get_tree().change_scene_to_file("res://game_over.tscn")
+
+

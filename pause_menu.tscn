@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://b3545jl6vdnu8"]
+[gd_scene load_steps=7 format=3 uid="uid://b3545jl6vdnu8"]
 
-[ext_resource type="Theme" uid="uid://cacpanawqld15" path="res://PAUSE.tres" id="1_h7kgw"]
 [ext_resource type="Script" path="res://scripts/pause_menu.gd" id="1_robbk"]
+[ext_resource type="Theme" uid="uid://b63d1fnrx6v43" path="res://voltar_btn.tres" id="2_guuue"]
+[ext_resource type="Theme" uid="uid://c107bj6m3piu5" path="res://inicio.tres" id="3_21uyy"]
 [ext_resource type="Theme" uid="uid://c2cr74a1jy35o" path="res://sair_btn.tres" id="3_pwrtc"]
 
 [sub_resource type="InputEventAction" id="InputEventAction_xjt2t"]
@@ -37,14 +38,16 @@ size_flags_vertical = 4
 
 [node name="Button_voltar" type="Button" parent="Menu"]
 layout_mode = 2
-theme = ExtResource("1_h7kgw")
+size_flags_horizontal = 4
+theme = ExtResource("2_guuue")
 shortcut = SubResource("Shortcut_yyvki")
-text = "VOLTAR"
+text = "                         "
 
 [node name="Button_inicio" type="Button" parent="Menu"]
 layout_mode = 2
-theme = ExtResource("1_h7kgw")
-text = "INÍCIO"
+size_flags_horizontal = 4
+theme = ExtResource("3_21uyy")
+text = "                         "
 
 [node name="Button_sair" type="Button" parent="Menu"]
 layout_mode = 2

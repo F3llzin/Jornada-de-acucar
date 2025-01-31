@@ -1,0 +1,42 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://c107bj6m3piu5"]
+
+[ext_resource type="Texture2D" uid="uid://61o5um4vedqn" path="res://Addons/Free/Menu/Buttons/inicio_focos.png" id="1_e1kec"]
+[ext_resource type="Texture2D" uid="uid://dnt6xl73ev83g" path="res://Addons/Free/Menu/Buttons/inicio_normal.png" id="2_7ye7o"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sbvcd"]
+content_margin_top = 15.0
+texture = ExtResource("1_e1kec")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k4t6a"]
+content_margin_top = 15.0
+texture = ExtResource("1_e1kec")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_biqbm"]
+content_margin_top = 15.0
+texture = ExtResource("2_7ye7o")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mcove"]
+content_margin_top = 15.0
+texture = ExtResource("1_e1kec")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[resource]
+Button/styles/focus = SubResource("StyleBoxTexture_sbvcd")
+Button/styles/hover = SubResource("StyleBoxTexture_k4t6a")
+Button/styles/normal = SubResource("StyleBoxTexture_biqbm")
+Button/styles/pressed = SubResource("StyleBoxTexture_mcove")
