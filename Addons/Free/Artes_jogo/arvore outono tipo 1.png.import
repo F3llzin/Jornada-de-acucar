@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mpgcjccgtvot"
-path="res://.godot/imported/enemy_walk.jpeg-7e50ceba4d59bdf1265bdc46a18ba0ff.ctex"
+uid="uid://d0nni5whk815s"
+path="res://.godot/imported/arvore outono tipo 1.png-6df84c863b1b7187eb80c52ecc79171f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Addons/Free/Main Characters/Inimigo Caranguejo/enemy_walk.jpeg"
-dest_files=["res://.godot/imported/enemy_walk.jpeg-7e50ceba4d59bdf1265bdc46a18ba0ff.ctex"]
+source_file="res://Addons/Free/Artes_jogo/arvore outono tipo 1.png"
+dest_files=["res://.godot/imported/arvore outono tipo 1.png-6df84c863b1b7187eb80c52ecc79171f.ctex"]
 
 [params]
 
