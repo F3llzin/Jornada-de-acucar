@@ -129,10 +129,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7iumc"]
-size = Vector2(22, 14)
+size = Vector2(23, 15)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eu4es"]
-size = Vector2(20, 5)
+size = Vector2(18, 5)
 
 [node name="jogador" type="CharacterBody2D"]
 collision_mask = 86
@@ -153,7 +153,7 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="colision" type="CollisionShape2D" parent="HurtBox"]
-position = Vector2(0, -2)
+position = Vector2(-0.5, -1.5)
 shape = SubResource("RectangleShape2D_7iumc")
 debug_color = Color(0.960784, 0, 0.52549, 0.419608)
 
@@ -163,14 +163,14 @@ debug_color = Color(0.960784, 0, 0.52549, 0.419608)
 stream = ExtResource("3_vwikx")
 
 [node name="Ray_direita" type="RayCast2D" parent="."]
-position = Vector2(8, 0)
-target_position = Vector2(4, 0)
+position = Vector2(10, 0)
+target_position = Vector2(10, 0)
 collision_mask = 4
 hit_from_inside = true
 
 [node name="Ray_esquerda" type="RayCast2D" parent="."]
-position = Vector2(-8, 0)
-target_position = Vector2(-4, 0)
+position = Vector2(-10, 0)
+target_position = Vector2(-10, 0)
 collision_mask = 4
 
 [node name="cabeca_colisor" type="Area2D" parent="."]

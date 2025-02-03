@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bt5bn0p70du3r"]
+
+[ext_resource type="Script" path="res://Scripts/zona_queda.gd" id="1_hutj3"]
+
+[node name="zona_queda" type="Area2D"]
+collision_layer = 2
+script = ExtResource("1_hutj3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -2,8 +2,9 @@ extends CharacterBody2D
 
 
 const SPEED = 200.0
-const JUMP_VELOCITY = -280.0
+const FRICCAO_AR = 0.5
 var knockback = Vector2.ZERO
+var knockback_power = 20 
 @onready var animation = $anim as AnimatedSprite2D
 @onready var pular = $pular as AudioStreamPlayer
 @onready var remote_transform = $RemoteTransform2D
@@ -13,24 +14,41 @@ var direction
 var direcao
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+@export var jump_height = 64
+@export var max_time_to_peak = 0.5
+
+var jump_velocity
+var gravity 
+var fall_gravity
+
 var pulando = false
 var is_hurted = false
 
 signal jogador_morreu
 
+func _ready():
+	jump_velocity = (jump_height * 2) / max_time_to_peak
+	gravity = (jump_height * 2) / (max_time_to_peak * max_time_to_peak)
+	fall_gravity = gravity * 2
+
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
-		velocity.y += gravity * delta
+		velocity.x = 0
+		#velocity.y += gravity * delta
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+		velocity.y = -jump_velocity
 		pulando = true
 		pular.play()
 	elif is_on_floor():
 		pulando = false
+		
+	if velocity.y > 0 or not Input.is_action_pressed("ui_accept"):
+		velocity.y += fall_gravity * delta
+	else:
+		velocity.y += gravity * delta
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -38,11 +56,11 @@ func _physics_process(delta):
 	direcao = Input.get_axis("mov._direita", "mov._esquerda")
 	
 	if direction:
-		velocity.x = direction * SPEED
+		velocity.x = lerp(velocity.x, direction * SPEED, FRICCAO_AR)
 		animation.scale.x = direction
 	
 	elif direcao:
-		velocity.x = direcao * SPEED
+		velocity.x = lerp(velocity.x, direcao * SPEED, FRICCAO_AR)
 		animation.scale.x = direcao
 	
 	else:
@@ -61,10 +79,8 @@ func _physics_process(delta):
 
 
 func _on_hurt_box_body_entered(_body):
-		if ray_direita.is_colliding():
-			tomar_dano(Vector2(-200, -200))
-		elif ray_esquerda.is_colliding():
-			tomar_dano(Vector2(200, -200))
+	var knock = Vector2((global_position.x - _body.global_position.x) * knockback_power, -200)
+	tomar_dano(knock)
 		
 func seguir_camera(camera_2d):
 	var caminho_camera = camera_2d.get_path()
@@ -113,3 +129,20 @@ func _on_cabeca_colisor_body_entered(body):
 		else:
 			body.anim.play("hit")
 			body.criar_coletavel()
+			
+func death_fall_zone():
+	if Global.vida_jogador > 0:
+		visible = false
+		set_physics_process(false)
+		await get_tree().create_timer(1.0).timeout
+		Global.respawn_player()
+		visible = true
+		set_physics_process(true)
+	else:
+		visible = false
+		await get_tree().create_timer(0.5).timeout
+		jogador_morreu.emit()
+
+func chegada():
+	visible = false
+	set_physics_process(false)

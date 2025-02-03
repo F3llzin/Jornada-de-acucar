@@ -9,7 +9,7 @@ func _ready():
 	Global.jogador.seguir_camera(camera_2d )
 	Global.jogador.jogador_morreu.connect(recomecar)
 	
-	
+
 func recomecar():
 	await get_tree().create_timer(1.0).timeout
 	var player = cena_jogador.instantiate()
