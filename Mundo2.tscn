@@ -1,9 +1,10 @@
-[gd_scene load_steps=28 format=3 uid="uid://cee8j6yhyovjc"]
+[gd_scene load_steps=34 format=3 uid="uid://cee8j6yhyovjc"]
 
 [ext_resource type="Script" path="res://scripts/Mundo.gd" id="1_i3p3u"]
 [ext_resource type="PackedScene" uid="uid://dwad24qiyqrnp" path="res://coletavel.tscn" id="2_a10ir"]
 [ext_resource type="PackedScene" uid="uid://bh7sntndx4xcr" path="res://jogador.tscn" id="3_rydyj"]
 [ext_resource type="Texture2D" uid="uid://dyhopeqx27tro" path="res://Addons/Free/Terrain/Terrain (16x16).png" id="4_ie2km"]
+[ext_resource type="PackedScene" uid="uid://dcie1hk7syhqi" path="res://final_jogo.tscn" id="4_otk7v"]
 [ext_resource type="Texture2D" uid="uid://dc10xbx0x17bx" path="res://Addons/Free/Background/platformer_background_1/Layers/layer06_sky.png" id="5_33qvm"]
 [ext_resource type="Texture2D" uid="uid://bgea2s4sn3hm7" path="res://Addons/Free/Background/platformer_background_1/Layers/layer05_rocks.png" id="6_2g7yd"]
 [ext_resource type="Texture2D" uid="uid://kp25nl6sh78v" path="res://Addons/Free/Background/platformer_background_1/Layers/layer04_clouds.png" id="7_5pid3"]
@@ -16,14 +17,14 @@
 [ext_resource type="PackedScene" uid="uid://3hdar7m18io7" path="res://sinal.tscn" id="15_pu0il"]
 [ext_resource type="Script" path="res://Scripts/gerenciador_hud.gd" id="16_divxu"]
 [ext_resource type="Texture2D" uid="uid://dajid1i8bb7n5" path="res://Addons/Free/Main Characters/Ninja Frog/Fall (32x32).png" id="17_0hjem"]
+[ext_resource type="Texture2D" uid="uid://rls2f11klx47" path="res://Addons/Free/Items/Fruits/coco.png" id="18_3x0lr"]
 [ext_resource type="FontFile" uid="uid://bphwtilkabuay" path="res://Import/Font/Kenney Future.ttf" id="18_picbg"]
-[ext_resource type="Texture2D" uid="uid://c6fa6n77w2bny" path="res://Addons/Free/Items/Fruits/pixil-frame-0.png" id="19_ddc62"]
-[ext_resource type="Texture2D" uid="uid://djo64pwao0v5r" path="res://Addons/Free/Items/Fruits/pixil-frame-0 (1).png" id="20_sa0vc"]
-[ext_resource type="Texture2D" uid="uid://bk0tq8ahjpji6" path="res://Addons/Free/Items/Fruits/pixil-frame-0 (2).png" id="21_pjv7r"]
-[ext_resource type="Texture2D" uid="uid://bbnh4g0klam78" path="res://Addons/Free/Items/Fruits/pixil-frame-0 (3).png" id="22_abekv"]
+[ext_resource type="Script" path="res://Scripts/transicao_credits.gd" id="23_mstgq"]
 [ext_resource type="Texture2D" uid="uid://b4f1v5d32io3f" path="res://Addons/Free/Menu/Buttons/Other/vida.png" id="23_njxoc"]
 [ext_resource type="PackedScene" uid="uid://b3545jl6vdnu8" path="res://pause_menu.tscn" id="24_mku6t"]
+[ext_resource type="Shader" path="res://shaders/transicao.gdshader" id="24_whxtc"]
 [ext_resource type="PackedScene" uid="uid://cyxhlk1rr7hqm" path="res://checkpoint.tscn" id="25_l5tn6"]
+[ext_resource type="Script" path="res://Scripts/cor.gd" id="25_qnvcf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_77krc"]
 texture = ExtResource("4_ie2km")
@@ -493,16 +494,48 @@ physics_layer_0/collision_layer = 2
 physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_77krc")
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_tmmrj"]
-frames = 4
-speed_scale = 6.0
-frame_0/texture = ExtResource("19_ddc62")
-frame_1/texture = ExtResource("20_sa0vc")
-frame_1/duration = 1.0
-frame_2/texture = ExtResource("21_pjv7r")
-frame_2/duration = 1.0
-frame_3/texture = ExtResource("22_abekv")
-frame_3/duration = 1.0
+[sub_resource type="AtlasTexture" id="AtlasTexture_iygvi"]
+atlas = ExtResource("18_3x0lr")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f3gga"]
+atlas = ExtResource("18_3x0lr")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vcwgv"]
+atlas = ExtResource("18_3x0lr")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kkwal"]
+atlas = ExtResource("18_3x0lr")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m8cu5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iygvi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f3gga")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vcwgv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kkwal")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gcu0d"]
+shader = ExtResource("24_whxtc")
+shader_parameter/lines = 10.0
+shader_parameter/threshold = 0.0
+shader_parameter/line_color_a = Color(1, 1, 1, 1)
+shader_parameter/line_color_b = Color(0, 0, 0, 1)
 
 [node name="Mundo_2" type="Node2D"]
 script = ExtResource("1_i3p3u")
@@ -581,6 +614,12 @@ position = Vector2(2584, 432)
 
 [node name="cherry26" parent="coletaveis" instance=ExtResource("2_a10ir")]
 position = Vector2(2648, 432)
+
+[node name="checkpoint" parent="." instance=ExtResource("25_l5tn6")]
+position = Vector2(333, 723)
+
+[node name="final_jogo" parent="." instance=ExtResource("4_otk7v")]
+position = Vector2(167, 752)
 
 [node name="jogador" parent="." instance=ExtResource("3_rydyj")]
 position = Vector2(251, 609)
@@ -730,11 +769,11 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
-[node name="icone" type="TextureRect" parent="hud/control/container/moeda"]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-texture = SubResource("AnimatedTexture_tmmrj")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="hud/control/container/moeda"]
+position = Vector2(47, 7)
+sprite_frames = SubResource("SpriteFrames_m8cu5")
+autoplay = "default"
+frame_progress = 0.509123
 
 [node name="contador" type="Label" parent="hud/control/container/moeda"]
 layout_mode = 2
@@ -755,8 +794,17 @@ texture = ExtResource("23_njxoc")
 
 [node name="pause_menu" parent="." instance=ExtResource("24_mku6t")]
 
-[node name="checkpoint" parent="." instance=ExtResource("25_l5tn6")]
-position = Vector2(333, 723)
-
 [node name="posicao_inicial" type="Marker2D" parent="."]
 position = Vector2(244, 736)
+
+[node name="transicao_credits" type="CanvasLayer" parent="."]
+script = ExtResource("23_mstgq")
+
+[node name="cor" type="ColorRect" parent="transicao_credits"]
+material = SubResource("ShaderMaterial_gcu0d")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("25_qnvcf")

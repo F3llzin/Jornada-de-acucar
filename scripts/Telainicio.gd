@@ -10,7 +10,7 @@ func _process(_delta):
 
 
 func _on_button_start_pressed():
-	get_tree().change_scene_to_file("res://Mundo.tscn")
+	get_tree().change_scene_to_file("res://instruct.tscn")
 	
 
 func _on_button_quit_pressed():

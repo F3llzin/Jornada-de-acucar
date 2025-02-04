@@ -146,3 +146,7 @@ func death_fall_zone():
 func chegada():
 	visible = false
 	set_physics_process(false)
+	
+func final_jogo():
+	visible = false
+	set_physics_process(false)

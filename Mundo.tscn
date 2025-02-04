@@ -599,8 +599,11 @@ position = Vector2(2584, 432)
 position = Vector2(2648, 432)
 
 [node name="chegada" parent="." instance=ExtResource("3_diagp")]
-position = Vector2(1616, 288)
+position = Vector2(1509, 547)
 prox_Nivel = "res://Mundo2.tscn"
+
+[node name="checkpoint" parent="." instance=ExtResource("25_bcai5")]
+position = Vector2(920, 408)
 
 [node name="jogador" parent="." instance=ExtResource("3_lpart")]
 position = Vector2(1024, 371)
@@ -760,17 +763,17 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
-[node name="icone" type="TextureRect" parent="hud/control/container/moeda"]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-texture = SubResource("AnimatedTexture_tmmrj")
-
 [node name="contador" type="Label" parent="hud/control/container/moeda"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("21_bviqm")
 text = "0000"
 vertical_alignment = 1
+
+[node name="icone" type="TextureRect" parent="hud/control/container/moeda"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = SubResource("AnimatedTexture_tmmrj")
 
 [node name="vida" type="HBoxContainer" parent="hud/control/container"]
 layout_mode = 2
@@ -796,6 +799,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("28_2w73j")
+metadata/_edit_use_anchors_ = true
 
 [node name="zona_queda" parent="transicao" instance=ExtResource("29_cngpo")]
 position = Vector2(1195, 726)
@@ -803,9 +807,6 @@ position = Vector2(1195, 726)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="transicao/zona_queda"]
 position = Vector2(-2.5, 0)
 shape = SubResource("RectangleShape2D_h8yfa")
-
-[node name="checkpoint" parent="." instance=ExtResource("25_bcai5")]
-position = Vector2(333, 723)
 
 [node name="posicao_inicial" type="Marker2D" parent="."]
 position = Vector2(244, 736)
