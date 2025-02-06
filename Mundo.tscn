@@ -11,10 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://bron38q311aje" path="res://Addons/Free/Artes_jogo/ceu_bg.png" id="7_y1fhk"]
 [ext_resource type="Texture2D" uid="uid://c41ehvfhnmjdb" path="res://Addons/Free/Artes_jogo/mar_bg.png" id="8_1qbo6"]
 [ext_resource type="Texture2D" uid="uid://iabagsomp7eh" path="res://Addons/Free/Artes_jogo/Decoracao/jarro_flor_dec.png" id="8_sxtkl"]
-[ext_resource type="Texture2D" uid="uid://do48a57karg21" path="res://Addons/Free/Artes_jogo/bg_bg.png" id="9_broji"]
 [ext_resource type="Texture2D" uid="uid://dyspbjki4oc3m" path="res://Addons/Free/Artes_jogo/Decoracao/tartaruga_dec.png" id="9_y7adl"]
 [ext_resource type="PackedScene" uid="uid://4klyw118whlq" path="res://enemy.tscn" id="10_g0y0f"]
 [ext_resource type="Texture2D" uid="uid://bjgnbogh62hx3" path="res://Addons/Free/Artes_jogo/Decoracao/lavanda_dec.png" id="10_llwch"]
+[ext_resource type="Texture2D" uid="uid://cxumxfjtnqjai" path="res://Addons/Free/Artes_jogo/bg.png" id="14_dr6g3"]
 [ext_resource type="PackedScene" uid="uid://d0p8x1lammvn0" path="res://falling_plataform.tscn" id="14_ix5dl"]
 [ext_resource type="PackedScene" uid="uid://dwxwyfqud20x7" path="res://espinhos_area.tscn" id="15_cigg7"]
 [ext_resource type="PackedScene" uid="uid://3hdar7m18io7" path="res://sinal.tscn" id="16_64ag5"]
@@ -249,6 +249,10 @@ prox_Nivel = "res://Mundo2.tscn"
 [node name="checkpoint" parent="." instance=ExtResource("25_bcai5")]
 position = Vector2(642, 35)
 
+[node name="sinal" parent="." instance=ExtResource("16_64ag5")]
+position = Vector2(510, 63)
+lines = Array[String](["Bem-vindo(a) a", "Jornada de Açúcar"])
+
 [node name="jogador" parent="." instance=ExtResource("3_lpart")]
 position = Vector2(45, 33)
 
@@ -256,7 +260,6 @@ position = Vector2(45, 33)
 scale = Vector2(0.4, 0.4)
 
 [node name="tile_dec" type="TileMap" parent="decoracoes"]
-scale = Vector2(1, 1)
 tile_set = SubResource("TileSet_1dmjy")
 format = 2
 
@@ -300,7 +303,7 @@ motion_mirroring = Vector2(408, 0)
 
 [node name="texture" type="Sprite2D" parent="BG/03"]
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("9_broji")
+texture = ExtResource("14_dr6g3")
 centered = false
 
 [node name="Enemy" parent="." instance=ExtResource("10_g0y0f")]
@@ -333,10 +336,6 @@ position = Vector2(893, 73)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="zona_queda"]
 position = Vector2(-2.5, -2.5)
 shape = SubResource("RectangleShape2D_h8yfa")
-
-[node name="sinal" parent="." instance=ExtResource("16_64ag5")]
-position = Vector2(512, 49)
-lines = Array[String](["Bem-vindo(a) a", "Jornada de Açúcar"])
 
 [node name="hud" type="CanvasLayer" parent="."]
 

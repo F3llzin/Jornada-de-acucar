@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://do48a57karg21"
-path="res://.godot/imported/bg_bg.png-dedc645717244c26501b8a6a15c06b10.ctex"
+uid="uid://oqipxbuxxltv"
+path="res://.godot/imported/G.O.png-79edec83333ffb200b7ceb1dcf20f2de.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Addons/Free/Artes_jogo/bg_bg.png"
-dest_files=["res://.godot/imported/bg_bg.png-dedc645717244c26501b8a6a15c06b10.ctex"]
+source_file="res://Addons/Free/Artes_jogo/G.O.png"
+dest_files=["res://.godot/imported/G.O.png-79edec83333ffb200b7ceb1dcf20f2de.ctex"]
 
 [params]
 

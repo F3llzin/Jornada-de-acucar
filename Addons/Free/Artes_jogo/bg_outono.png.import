@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://eb2eb2htluon"
-path="res://.godot/imported/check_point.png-2759e79415c2e0a6e11e0360ad4974f3.ctex"
+uid="uid://da2sbrosyl6ob"
+path="res://.godot/imported/bg_outono.png-3d4a2d7be66957a6f337749677c63036.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Addons/Free/Artes_jogo/check_point.png"
-dest_files=["res://.godot/imported/check_point.png-2759e79415c2e0a6e11e0360ad4974f3.ctex"]
+source_file="res://Addons/Free/Artes_jogo/bg_outono.png"
+dest_files=["res://.godot/imported/bg_outono.png-3d4a2d7be66957a6f337749677c63036.ctex"]
 
 [params]
 
