@@ -1,10 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://cxb7rpxgq61i"]
+[gd_scene load_steps=12 format=3 uid="uid://cxb7rpxgq61i"]
 
 [ext_resource type="Script" path="res://scripts/Telainicio.gd" id="1_tj7fl"]
 [ext_resource type="Texture2D" uid="uid://cgnsgmhrtopdn" path="res://Addons/Free/Artes_jogo/splash_tela.png" id="2_lre1o"]
 [ext_resource type="Texture2D" uid="uid://q6x2edvix66v" path="res://Addons/Free/Artes_jogo/J.A.png" id="3_urcsd"]
 [ext_resource type="Theme" uid="uid://c2cr74a1jy35o" path="res://sair_btn.tres" id="5_r78tm"]
+[ext_resource type="AudioStream" uid="uid://cst5v3njtrdjs" path="res://Addons/Free/Sons/Musica_splash.mp3" id="6_uxvmk"]
 [ext_resource type="Theme" uid="uid://bkn0dftw8jsu3" path="res://comecar_btn.tres" id="7_3h0r3"]
+[ext_resource type="AudioStream" uid="uid://coj1gr4fggeap" path="res://Addons/Free/Sons/Trocadebotão.mp3" id="7_qbqnn"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6h0bj"]
 
@@ -209,5 +211,19 @@ libraries = {
 }
 autoplay = "anim_tela"
 
+[node name="som_fundo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_uxvmk")
+volume_db = -10.0
+pitch_scale = 0.9
+autoplay = true
+
+[node name="troca_btn" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_qbqnn")
+volume_db = -15.0
+
+[connection signal="focus_exited" from="MarginContainer/HBoxContainer/VBoxContainer/Button_start" to="." method="_on_button_start_focus_exited"]
+[connection signal="mouse_exited" from="MarginContainer/HBoxContainer/VBoxContainer/Button_start" to="." method="_on_button_start_mouse_exited"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Button_start" to="." method="_on_button_start_pressed"]
+[connection signal="focus_exited" from="MarginContainer/HBoxContainer/VBoxContainer/Button_quit" to="." method="_on_button_quit_focus_exited"]
+[connection signal="mouse_exited" from="MarginContainer/HBoxContainer/VBoxContainer/Button_quit" to="." method="_on_button_quit_mouse_exited"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Button_quit" to="." method="_on_button_quit_pressed"]

@@ -1,5 +1,6 @@
 extends Control
 @onready var button_inicio = $HBoxContainer/Button_inicio
+@onready var troca_btn = $troca_btn
 
 
 # Called when the node enters the scene tree for the first time.
@@ -22,3 +23,19 @@ func _on_button_inicio_pressed():
 
 func _on_button_sair_pressed():
 	get_tree().quit()
+
+
+func _on_button_inicio_focus_exited():
+	troca_btn.play()
+
+
+func _on_button_inicio_mouse_exited():
+	troca_btn.play()
+
+
+func _on_button_sair_focus_exited():
+	troca_btn.play()
+
+
+func _on_button_sair_mouse_exited():
+	troca_btn.play()

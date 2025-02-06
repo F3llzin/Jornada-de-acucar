@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://b3545jl6vdnu8"]
+[gd_scene load_steps=8 format=3 uid="uid://b3545jl6vdnu8"]
 
 [ext_resource type="Script" path="res://scripts/pause_menu.gd" id="1_robbk"]
 [ext_resource type="Theme" uid="uid://b63d1fnrx6v43" path="res://voltar_btn.tres" id="2_guuue"]
 [ext_resource type="Theme" uid="uid://c107bj6m3piu5" path="res://inicio.tres" id="3_21uyy"]
 [ext_resource type="Theme" uid="uid://c2cr74a1jy35o" path="res://sair_btn.tres" id="3_pwrtc"]
+[ext_resource type="AudioStream" uid="uid://coj1gr4fggeap" path="res://Addons/Free/Sons/Trocadebotão.mp3" id="5_irw1t"]
 
 [sub_resource type="InputEventAction" id="InputEventAction_xjt2t"]
 action = &"ui_cancel"
@@ -55,6 +56,16 @@ size_flags_horizontal = 4
 theme = ExtResource("3_pwrtc")
 text = "                         "
 
+[node name="troca_btn" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_irw1t")
+volume_db = -15.0
+
+[connection signal="focus_exited" from="Menu/Button_voltar" to="." method="_on_button_voltar_focus_exited"]
+[connection signal="mouse_exited" from="Menu/Button_voltar" to="." method="_on_button_voltar_mouse_exited"]
 [connection signal="pressed" from="Menu/Button_voltar" to="." method="_on_button_voltar_pressed"]
+[connection signal="focus_exited" from="Menu/Button_inicio" to="." method="_on_button_inicio_focus_exited"]
+[connection signal="mouse_exited" from="Menu/Button_inicio" to="." method="_on_button_inicio_mouse_exited"]
 [connection signal="pressed" from="Menu/Button_inicio" to="." method="_on_button_inicio_pressed"]
+[connection signal="focus_exited" from="Menu/Button_sair" to="." method="_on_button_sair_focus_exited"]
+[connection signal="mouse_exited" from="Menu/Button_sair" to="." method="_on_button_sair_mouse_exited"]
 [connection signal="pressed" from="Menu/Button_sair" to="." method="_on_button_sair_pressed"]

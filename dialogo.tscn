@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bdoawgpm8kcyp"]
+[gd_scene load_steps=3 format=3 uid="uid://bdoawgpm8kcyp"]
 
 [ext_resource type="Script" path="res://Scripts/dialogo.gd" id="1_8ygdu"]
-[ext_resource type="Texture2D" uid="uid://d1sleljhpgmh" path="res://Import/HUD/Grey/Default/button_square_line.png" id="1_88kv5"]
-[ext_resource type="FontFile" uid="uid://b7k3pfg01gdo6" path="res://Import/Font/Kenney Future Narrow.ttf" id="2_deqcr"]
+[ext_resource type="Texture2D" uid="uid://d33bk7eu5l82t" path="res://Addons/Free/Artes_jogo/balaodialogo.png" id="2_246ny"]
 
 [node name="dialogo" type="MarginContainer"]
 offset_right = 40.0
@@ -11,12 +10,12 @@ script = ExtResource("1_8ygdu")
 
 [node name="bg" type="NinePatchRect" parent="."]
 layout_mode = 2
-texture = ExtResource("1_88kv5")
-region_rect = Rect2(0, 0, 64, 64)
-patch_margin_left = 16
-patch_margin_top = 16
-patch_margin_right = 16
-patch_margin_bottom = 16
+texture = ExtResource("2_246ny")
+region_rect = Rect2(0, 1, 39.8197, 31)
+patch_margin_left = 5
+patch_margin_top = 18
+patch_margin_right = 5
+patch_margin_bottom = 26
 
 [node name="label_margin" type="MarginContainer" parent="."]
 layout_mode = 2
@@ -28,8 +27,8 @@ theme_override_constants/margin_bottom = 16
 [node name="text" type="Label" parent="label_margin"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_deqcr")
-theme_override_font_sizes/font_size = 28
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Timer" type="Timer" parent="."]

@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://dcie1hk7syhqi"]
 
 [ext_resource type="Script" path="res://Scripts/final_jogo.gd" id="1_6n10x"]
-[ext_resource type="Texture2D" uid="uid://cpou6d0vmd33o" path="res://Addons/Free/Items/Checkpoints/Start/Start (Idle).png" id="1_c2uxp"]
+[ext_resource type="Texture2D" uid="uid://5ox0fj251kxs" path="res://Addons/Free/Artes_jogo/final_jogo.png" id="2_j6tes"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c41ky"]
-size = Vector2(57, 34)
+size = Vector2(50, 34)
 
 [node name="final_jogo" type="Area2D"]
 collision_layer = 2
@@ -12,11 +12,11 @@ script = ExtResource("1_6n10x")
 creditos = "res://creditos.tscn"
 
 [node name="sprite" type="Sprite2D" parent="."]
-position = Vector2(2, -33)
-texture = ExtResource("1_c2uxp")
+position = Vector2(2, -18)
+texture = ExtResource("2_j6tes")
 
 [node name="collision" type="CollisionShape2D" parent="."]
-position = Vector2(1.5, -17)
+position = Vector2(1, -17)
 shape = SubResource("RectangleShape2D_c41ky")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

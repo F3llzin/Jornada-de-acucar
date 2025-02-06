@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://3hdar7m18io7"]
 
 [ext_resource type="Script" path="res://Scripts/sinal.gd" id="1_fi7qx"]
-[ext_resource type="Texture2D" uid="uid://ux2g773ew7x0" path="res://Addons/Free/Menu/Buttons/Play.png" id="2_e3mjd"]
+[ext_resource type="Texture2D" uid="uid://bqit3hope1wn2" path="res://Addons/Free/Artes_jogo/balao_fala.png" id="2_460yg"]
 [ext_resource type="Texture2D" uid="uid://dny5p8qfso2go" path="res://Addons/Free/Artes_jogo/placa.png" id="3_v2r4m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dtr32"]
@@ -12,8 +12,8 @@ script = ExtResource("1_fi7qx")
 [node name="texture" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(0, -29)
-scale = Vector2(0.6, 0.6)
-texture = ExtResource("2_e3mjd")
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_460yg")
 
 [node name="sinal" type="Area2D" parent="."]
 collision_layer = 2
