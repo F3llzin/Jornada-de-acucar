@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cxb7rpxgq61i"]
 
 [ext_resource type="Script" path="res://scripts/Telainicio.gd" id="1_tj7fl"]
-[ext_resource type="Texture2D" uid="uid://cd81snoslvum2" path="res://Addons/Free/Background/parallax_forest_pack web/v2/preview.png" id="2_1togd"]
+[ext_resource type="Texture2D" uid="uid://cgnsgmhrtopdn" path="res://Addons/Free/Artes_jogo/splash_tela.png" id="2_lre1o"]
 [ext_resource type="Theme" uid="uid://c2cr74a1jy35o" path="res://sair_btn.tres" id="5_r78tm"]
 [ext_resource type="Texture2D" uid="uid://cpw87sxdtbke2" path="res://icon.svg" id="6_mn10t"]
 [ext_resource type="Theme" uid="uid://bkn0dftw8jsu3" path="res://comecar_btn.tres" id="7_3h0r3"]
@@ -22,7 +22,7 @@ layout_mode = 2
 offset_top = -14.8235
 offset_right = 1152.0
 offset_bottom = 662.824
-texture = ExtResource("2_1togd")
+texture = ExtResource("2_lre1o")
 expand_mode = 5
 
 [node name="MarginContainer" type="MarginContainer" parent="."]

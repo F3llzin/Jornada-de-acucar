@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://clrkundq7q3p5"]
+[gd_scene load_steps=11 format=3 uid="uid://clrkundq7q3p5"]
 
 [ext_resource type="Script" path="res://Scripts/game_over.gd" id="1_gqxx6"]
 [ext_resource type="Texture2D" uid="uid://bomu8ukanuveq" path="res://Addons/Free/Menu/Buttons/Close.png" id="1_q8a5v"]
 [ext_resource type="Theme" uid="uid://c2cr74a1jy35o" path="res://sair_btn.tres" id="2_s1pb5"]
+[ext_resource type="Texture2D" uid="uid://drlh2w2htaxe0" path="res://Addons/Free/Artes_jogo/gameover_tela.png" id="2_vjybt"]
 [ext_resource type="Theme" uid="uid://c107bj6m3piu5" path="res://inicio.tres" id="3_qpyfi"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sh341"]
@@ -78,7 +79,15 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gqxx6")
 
+[node name="Bg" type="TextureRect" parent="."]
+offset_top = -91.0
+offset_right = 1152.0
+offset_bottom = 655.496
+texture = ExtResource("2_vjybt")
+expand_mode = 5
+
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
