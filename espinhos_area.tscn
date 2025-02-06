@@ -4,12 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://b0dbkgian5v5x" path="res://Addons/Free/Traps/Spikes/Idle.png" id="2_38hrt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k862n"]
+size = Vector2(16, 13)
 
 [node name="espinhos_area" type="Area2D"]
 collision_layer = 2
 script = ExtResource("1_qkwsy")
 
 [node name="collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2.5)
 shape = SubResource("RectangleShape2D_k862n")
 
 [node name="espinhos" type="Sprite2D" parent="."]

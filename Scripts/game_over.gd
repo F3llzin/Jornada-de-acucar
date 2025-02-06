@@ -1,5 +1,5 @@
 extends Control
-@onready var button_inicio = $VBoxContainer/Button_inicio
+@onready var button_inicio = $HBoxContainer/Button_inicio
 
 
 # Called when the node enters the scene tree for the first time.

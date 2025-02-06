@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://clrkundq7q3p5"]
+[gd_scene load_steps=10 format=3 uid="uid://clrkundq7q3p5"]
 
 [ext_resource type="Script" path="res://Scripts/game_over.gd" id="1_gqxx6"]
 [ext_resource type="Theme" uid="uid://c2cr74a1jy35o" path="res://sair_btn.tres" id="2_s1pb5"]
@@ -6,9 +6,7 @@
 [ext_resource type="Theme" uid="uid://c107bj6m3piu5" path="res://inicio.tres" id="3_qpyfi"]
 [ext_resource type="Texture2D" uid="uid://oqipxbuxxltv" path="res://Addons/Free/Artes_jogo/G.O.png" id="3_sfjxe"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sh341"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_erm0d"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ayfnd"]
 
 [sub_resource type="Animation" id="Animation_l15fi"]
 length = 0.001
@@ -27,31 +25,31 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("VBoxContainer:modulate")
+tracks/1/path = NodePath("Bg:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 1)]
+"values": [Vector2(0, -91)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Bg:position")
+tracks/2/path = NodePath("g-o:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, -91)]
+"values": [Color(1, 1, 1, 1)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("g-o:modulate")
+tracks/3/path = NodePath("HBoxContainer:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -71,7 +69,7 @@ tracks/0/path = NodePath("ColorRect:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 1.4),
 "transitions": PackedFloat32Array(0.450625, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -79,35 +77,35 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("VBoxContainer:modulate")
+tracks/1/path = NodePath("Bg:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(2, 2.6),
-"transitions": PackedFloat32Array(0.420448, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Bg:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0.3, 1),
+"times": PackedFloat32Array(0.6, 1.7),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(0, -81), Vector2(0, -91)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("g-o:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.8, 2.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("g-o:modulate")
+tracks/3/path = NodePath("HBoxContainer:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(1.8, 2.4),
+"times": PackedFloat32Array(2, 2.6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -139,9 +137,9 @@ expand_mode = 5
 [node name="g-o" type="TextureRect" parent="."]
 layout_mode = 2
 offset_left = 313.0
-offset_top = 2.00002
+offset_top = 46.0
 offset_right = 513.0
-offset_bottom = 102.0
+offset_bottom = 146.0
 scale = Vector2(3, 3)
 texture = ExtResource("3_sfjxe")
 
@@ -154,35 +152,31 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -25.0
-offset_top = -43.0
-offset_right = 25.0
-offset_bottom = 43.0
+offset_left = -118.0
+offset_top = 35.0
+offset_right = 118.0
+offset_bottom = 75.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HSeparator2" type="HSeparator" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_styles/separator = SubResource("StyleBoxEmpty_sh341")
-
-[node name="Button_inicio" type="Button" parent="VBoxContainer"]
+[node name="Button_inicio" type="Button" parent="HBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_qpyfi")
-text = "                         
-"
+text = "                         "
 
-[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
 layout_mode = 2
-theme_override_styles/separator = SubResource("StyleBoxEmpty_erm0d")
+theme_override_constants/separation = 20
+theme_override_styles/separator = SubResource("StyleBoxEmpty_ayfnd")
 
-[node name="Button_sair" type="Button" parent="VBoxContainer"]
+[node name="Button_sair" type="Button" parent="HBoxContainer"]
 layout_mode = 2
 theme = ExtResource("2_s1pb5")
 text = "                         "
@@ -193,5 +187,5 @@ libraries = {
 }
 autoplay = "fade_in"
 
-[connection signal="pressed" from="VBoxContainer/Button_inicio" to="." method="_on_button_inicio_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button_sair" to="." method="_on_button_sair_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button_inicio" to="." method="_on_button_inicio_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button_sair" to="." method="_on_button_sair_pressed"]
