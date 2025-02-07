@@ -1,8 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://cxb7rpxgq61i"]
+[gd_scene load_steps=14 format=3 uid="uid://cxb7rpxgq61i"]
 
 [ext_resource type="Script" path="res://scripts/Telainicio.gd" id="1_tj7fl"]
 [ext_resource type="Texture2D" uid="uid://cgnsgmhrtopdn" path="res://Addons/Free/Artes_jogo/splash_tela.png" id="2_lre1o"]
 [ext_resource type="Texture2D" uid="uid://q6x2edvix66v" path="res://Addons/Free/Artes_jogo/J.A.png" id="3_urcsd"]
+[ext_resource type="Script" path="res://Scripts/particula.gd" id="4_va77b"]
+[ext_resource type="PackedScene" uid="uid://b13hionvld030" path="res://doce_prt.tscn" id="5_fr2g0"]
 [ext_resource type="Theme" uid="uid://c2cr74a1jy35o" path="res://sair_btn.tres" id="5_r78tm"]
 [ext_resource type="AudioStream" uid="uid://cst5v3njtrdjs" path="res://Addons/Free/Sons/Musica_splash.mp3" id="6_uxvmk"]
 [ext_resource type="Theme" uid="uid://bkn0dftw8jsu3" path="res://comecar_btn.tres" id="7_3h0r3"]
@@ -153,6 +155,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+
+[node name="particula" type="Node2D" parent="."]
+script = ExtResource("4_va77b")
+object_templates = Array[PackedScene]([ExtResource("5_fr2g0")])
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1

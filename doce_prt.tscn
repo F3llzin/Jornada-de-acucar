@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b13hionvld030"]
+
+[ext_resource type="Texture2D" uid="uid://cr3qwxwhpp4t7" path="res://Addons/Free/Artes_jogo/Decoracao/doce_dec.png" id="1_1tsem"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tmwor"]
+
+[node name="doce_prt" type="RigidBody2D"]
+
+[node name="collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, -9)
+shape = SubResource("CircleShape2D_tmwor")
+
+[node name="DoceDec" type="Sprite2D" parent="."]
+position = Vector2(0, -6)
+texture = ExtResource("1_1tsem")
