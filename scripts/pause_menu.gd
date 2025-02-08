@@ -1,6 +1,6 @@
 extends CanvasLayer
-@onready var button_voltar = $Menu/Button_voltar
 @onready var troca_btn = $troca_btn
+@onready var button_voltar = $menu/Button_voltar
 
 
 # Called when the node enters the scene tree for the first time.

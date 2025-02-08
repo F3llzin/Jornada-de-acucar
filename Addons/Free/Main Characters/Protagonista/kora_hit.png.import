@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://tfong2ny4dfq"
-path="res://.godot/imported/noz.png-88db4bfcdfab441d01f45c23320cc592.ctex"
+uid="uid://c31mn2mk2af1c"
+path="res://.godot/imported/kora_hit.png-c38b1a62cbbc252a5b3e8738b5dab28b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Addons/Free/Artes_jogo/noz.png"
-dest_files=["res://.godot/imported/noz.png-88db4bfcdfab441d01f45c23320cc592.ctex"]
+source_file="res://Addons/Free/Main Characters/Protagonista/kora_hit.png"
+dest_files=["res://.godot/imported/kora_hit.png-c38b1a62cbbc252a5b3e8738b5dab28b.ctex"]
 
 [params]
 

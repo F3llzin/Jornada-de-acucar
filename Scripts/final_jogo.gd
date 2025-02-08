@@ -1,6 +1,6 @@
 extends Area2D
 
-@onready var transicao = get_parent().get_node("transicao_credits")
+@onready var transicao = get_parent().get_node("transicao")
 @export var creditos : String = ""
 
 func _on_body_entered(body):

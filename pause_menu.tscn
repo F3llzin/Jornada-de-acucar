@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://b3545jl6vdnu8"]
+[gd_scene load_steps=9 format=3 uid="uid://b3545jl6vdnu8"]
 
 [ext_resource type="Script" path="res://scripts/pause_menu.gd" id="1_robbk"]
+[ext_resource type="Texture2D" uid="uid://bjtj14xengrbx" path="res://Addons/Free/Artes_jogo/pause_tela.png" id="2_4qp37"]
 [ext_resource type="Theme" uid="uid://b63d1fnrx6v43" path="res://voltar_btn.tres" id="2_guuue"]
 [ext_resource type="Theme" uid="uid://c107bj6m3piu5" path="res://inicio.tres" id="3_21uyy"]
 [ext_resource type="Theme" uid="uid://c2cr74a1jy35o" path="res://sair_btn.tres" id="3_pwrtc"]
@@ -26,31 +27,41 @@ grow_vertical = 2
 size_flags_horizontal = 4
 color = Color(0.223529, 0.223529, 0.223529, 0.694118)
 
-[node name="Menu" type="VBoxContainer" parent="."]
-anchors_preset = 14
-anchor_top = 0.5
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
 anchor_right = 1.0
-anchor_bottom = 0.5
-offset_top = -16.0
-offset_bottom = 16.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_vertical = 4
+texture = ExtResource("2_4qp37")
 
-[node name="Button_voltar" type="Button" parent="Menu"]
+[node name="menu" type="HBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = -20.0
+offset_right = 160.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button_voltar" type="Button" parent="menu"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("2_guuue")
 shortcut = SubResource("Shortcut_yyvki")
 text = "                         "
 
-[node name="Button_inicio" type="Button" parent="Menu"]
+[node name="Button_inicio" type="Button" parent="menu"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("3_21uyy")
 text = "                         "
 
-[node name="Button_sair" type="Button" parent="Menu"]
+[node name="Button_sair" type="Button" parent="menu"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("3_pwrtc")
@@ -60,12 +71,12 @@ text = "                         "
 stream = ExtResource("5_irw1t")
 volume_db = -15.0
 
-[connection signal="focus_exited" from="Menu/Button_voltar" to="." method="_on_button_voltar_focus_exited"]
-[connection signal="mouse_exited" from="Menu/Button_voltar" to="." method="_on_button_voltar_mouse_exited"]
-[connection signal="pressed" from="Menu/Button_voltar" to="." method="_on_button_voltar_pressed"]
-[connection signal="focus_exited" from="Menu/Button_inicio" to="." method="_on_button_inicio_focus_exited"]
-[connection signal="mouse_exited" from="Menu/Button_inicio" to="." method="_on_button_inicio_mouse_exited"]
-[connection signal="pressed" from="Menu/Button_inicio" to="." method="_on_button_inicio_pressed"]
-[connection signal="focus_exited" from="Menu/Button_sair" to="." method="_on_button_sair_focus_exited"]
-[connection signal="mouse_exited" from="Menu/Button_sair" to="." method="_on_button_sair_mouse_exited"]
-[connection signal="pressed" from="Menu/Button_sair" to="." method="_on_button_sair_pressed"]
+[connection signal="focus_exited" from="menu/Button_voltar" to="." method="_on_button_voltar_focus_exited"]
+[connection signal="mouse_exited" from="menu/Button_voltar" to="." method="_on_button_voltar_mouse_exited"]
+[connection signal="pressed" from="menu/Button_voltar" to="." method="_on_button_voltar_pressed"]
+[connection signal="focus_exited" from="menu/Button_inicio" to="." method="_on_button_inicio_focus_exited"]
+[connection signal="mouse_exited" from="menu/Button_inicio" to="." method="_on_button_inicio_mouse_exited"]
+[connection signal="pressed" from="menu/Button_inicio" to="." method="_on_button_inicio_pressed"]
+[connection signal="focus_exited" from="menu/Button_sair" to="." method="_on_button_sair_focus_exited"]
+[connection signal="mouse_exited" from="menu/Button_sair" to="." method="_on_button_sair_mouse_exited"]
+[connection signal="pressed" from="menu/Button_sair" to="." method="_on_button_sair_pressed"]
