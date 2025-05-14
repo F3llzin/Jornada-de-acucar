@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://6nmpv7lm4nij"]
 
 [ext_resource type="Script" path="res://Scripts/chegada.gd" id="1_w1cam"]
-[ext_resource type="Texture2D" uid="uid://byij3eiksnyvb" path="res://Addons/Free/Artes_jogo/chegada_trofeu.png" id="2_8l0ah"]
+[ext_resource type="Texture2D" uid="uid://cmox4uag8sa88" path="res://Addons/Free/Artes_jogo/Trofeu_doce.png" id="2_m7gtu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0d858"]
 size = Vector2(32, 33)
@@ -49,10 +49,8 @@ script = ExtResource("1_w1cam")
 
 [node name="sprite" type="Sprite2D" parent="."]
 position = Vector2(0, -32)
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_8l0ah")
-region_enabled = true
-region_rect = Rect2(782, 26, 569, 650)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_m7gtu")
 
 [node name="collision" type="CollisionShape2D" parent="."]
 position = Vector2(0, -17.5)

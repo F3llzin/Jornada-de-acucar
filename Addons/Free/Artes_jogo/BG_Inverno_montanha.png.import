@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bs0pkgxyatxx3"
-path="res://.godot/imported/Tile_Chao.png-5f7792437e3b6a60e58c38d8eb4b4076.ctex"
+uid="uid://cja1yh00hlpc1"
+path="res://.godot/imported/BG_Inverno_montanha.png-85ee70cd5414b8bf84aba1399192237b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Addons/Free/Artes_jogo/Tile_Chao.png"
-dest_files=["res://.godot/imported/Tile_Chao.png-5f7792437e3b6a60e58c38d8eb4b4076.ctex"]
+source_file="res://Addons/Free/Artes_jogo/BG_Inverno_montanha.png"
+dest_files=["res://.godot/imported/BG_Inverno_montanha.png-85ee70cd5414b8bf84aba1399192237b.ctex"]
 
 [params]
 

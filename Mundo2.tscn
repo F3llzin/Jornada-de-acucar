@@ -12,7 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://bjgnbogh62hx3" path="res://Addons/Free/Artes_jogo/Decoracao/lavanda_dec.png" id="8_eml8k"]
 [ext_resource type="Texture2D" uid="uid://cr3qwxwhpp4t7" path="res://Addons/Free/Artes_jogo/Decoracao/doce_dec.png" id="8_j0kpi"]
 [ext_resource type="Texture2D" uid="uid://3bio45ilwi4r" path="res://Addons/Free/Artes_jogo/placa_perigo.png" id="9_cj84h"]
-[ext_resource type="Texture2D" uid="uid://cjksgw5xynb1w" path="res://Addons/Free/Artes_jogo/placa_seguir.png" id="11_01dd5"]
 [ext_resource type="Texture2D" uid="uid://chn3gxfmr7gfe" path="res://Addons/Free/Artes_jogo/tile.png" id="12_edkci"]
 [ext_resource type="Texture2D" uid="uid://iabagsomp7eh" path="res://Addons/Free/Artes_jogo/Decoracao/jarro_flor_dec.png" id="12_eglxm"]
 [ext_resource type="Texture2D" uid="uid://bciljhdbud243" path="res://Addons/Free/Artes_jogo/ceu_outono.png" id="14_efi3v"]
@@ -21,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://ch1rxp7vg7n7" path="res://Addons/Free/Artes_jogo/chao_outono.png" id="16_8sfim"]
 [ext_resource type="Script" path="res://Scripts/gerenciador_hud.gd" id="16_divxu"]
 [ext_resource type="PackedScene" uid="uid://bt5bn0p70du3r" path="res://zona_queda.tscn" id="17_7rj8e"]
+[ext_resource type="Texture2D" uid="uid://dpy657om4jxvn" path="res://Addons/Free/Artes_jogo/placa_out.png" id="17_a258m"]
 [ext_resource type="Texture2D" uid="uid://csdf3oeqfnxtf" path="res://Addons/Free/Main Characters/Inimigo Abobora/abobora_pulando.png" id="19_pa1y2"]
 [ext_resource type="Texture2D" uid="uid://tfong2ny4dfq" path="res://Addons/Free/Items/Fruits/noz.png" id="21_hh5uc"]
 [ext_resource type="Script" path="res://Scripts/transicao.gd" id="23_1kmm5"]
@@ -347,14 +347,14 @@ position = Vector2(150, 62)
 [node name="placa_seguir" type="Node2D" parent="."]
 
 [node name="PlacaSeguir" type="Sprite2D" parent="placa_seguir"]
-position = Vector2(169, 69)
+position = Vector2(169, 68)
 scale = Vector2(0.6, 0.6)
-texture = ExtResource("11_01dd5")
+texture = ExtResource("17_a258m")
 
 [node name="PlacaSeguir2" type="Sprite2D" parent="placa_seguir"]
 position = Vector2(716, 70)
 scale = Vector2(0.6, 0.6)
-texture = ExtResource("11_01dd5")
+texture = ExtResource("17_a258m")
 
 [node name="tile" type="TileMap" parent="."]
 position = Vector2(0, 31)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://bv1f1gexdaur1"]
+[gd_scene load_steps=44 format=3 uid="uid://bv1f1gexdaur1"]
 
 [ext_resource type="Script" path="res://scripts/Mundo.gd" id="1_c04g2"]
 [ext_resource type="PackedScene" uid="uid://b3545jl6vdnu8" path="res://pause_menu.tscn" id="1_yb224"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://6nmpv7lm4nij" path="res://chegada.tscn" id="3_diagp"]
 [ext_resource type="PackedScene" uid="uid://bh7sntndx4xcr" path="res://jogador.tscn" id="3_lpart"]
 [ext_resource type="Texture2D" uid="uid://chn3gxfmr7gfe" path="res://Addons/Free/Artes_jogo/tile.png" id="5_vgsp5"]
-[ext_resource type="Texture2D" uid="uid://cjksgw5xynb1w" path="res://Addons/Free/Artes_jogo/placa_seguir.png" id="6_1s7m3"]
 [ext_resource type="Texture2D" uid="uid://3i2ovggwjsyw" path="res://Addons/Free/Artes_jogo/Decoracao/bola_dec.png" id="6_u3kh2"]
 [ext_resource type="Texture2D" uid="uid://cr3qwxwhpp4t7" path="res://Addons/Free/Artes_jogo/Decoracao/doce_dec.png" id="7_mkmrk"]
 [ext_resource type="Texture2D" uid="uid://bron38q311aje" path="res://Addons/Free/Artes_jogo/ceu_bg.png" id="7_y1fhk"]
@@ -14,6 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://dyspbjki4oc3m" path="res://Addons/Free/Artes_jogo/Decoracao/tartaruga_dec.png" id="9_y7adl"]
 [ext_resource type="PackedScene" uid="uid://4klyw118whlq" path="res://enemy.tscn" id="10_g0y0f"]
 [ext_resource type="Texture2D" uid="uid://3bio45ilwi4r" path="res://Addons/Free/Artes_jogo/placa_perigo.png" id="11_wge2c"]
+[ext_resource type="Texture2D" uid="uid://c1b1en2vvvv88" path="res://Addons/Free/Artes_jogo/poste.png" id="12_8hnfw"]
+[ext_resource type="Texture2D" uid="uid://bj76iby6id2et" path="res://Addons/Free/Artes_jogo/placa_verao.png" id="12_173hn"]
 [ext_resource type="Texture2D" uid="uid://cxumxfjtnqjai" path="res://Addons/Free/Artes_jogo/bg.png" id="14_dr6g3"]
 [ext_resource type="PackedScene" uid="uid://dwxwyfqud20x7" path="res://espinhos_area.tscn" id="15_cigg7"]
 [ext_resource type="PackedScene" uid="uid://3hdar7m18io7" path="res://sinal.tscn" id="16_64ag5"]
@@ -263,19 +264,19 @@ scale = Vector2(1.5, 1.5)
 texture = ExtResource("9_y7adl")
 
 [node name="jogador" parent="." instance=ExtResource("3_lpart")]
-position = Vector2(148, 66)
+position = Vector2(139, 64)
 
 [node name="placa_seguir" type="Node2D" parent="."]
 
-[node name="PlacaSeguir" type="Sprite2D" parent="placa_seguir"]
-position = Vector2(169, 69)
-scale = Vector2(0.6, 0.6)
-texture = ExtResource("6_1s7m3")
+[node name="poste" type="Sprite2D" parent="placa_seguir"]
+position = Vector2(1199, 36)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("12_8hnfw")
 
-[node name="PlacaSeguir2" type="Sprite2D" parent="placa_seguir"]
-position = Vector2(1199, 52)
+[node name="PlacaSeguir" type="Sprite2D" parent="placa_seguir"]
+position = Vector2(169, 68)
 scale = Vector2(0.6, 0.6)
-texture = ExtResource("6_1s7m3")
+texture = ExtResource("12_173hn")
 
 [node name="tile" type="TileMap" parent="."]
 position = Vector2(0, 31)
