@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://d0p8x1lammvn0"]
 
-[ext_resource type="Texture2D" uid="uid://dyhopeqx27tro" path="res://Addons/Free/Terrain/Terrain (16x16).png" id="1_as3xp"]
 [ext_resource type="Script" path="res://Scripts/falling_plataform.gd" id="1_neeoj"]
+[ext_resource type="Texture2D" uid="uid://cpxim07n3xsdm" path="res://Addons/Free/Traps/Falling Platforms/plataforma_trap.png" id="2_8dbr1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4yu60"]
 size = Vector2(46, 6)
@@ -49,8 +49,8 @@ collision_mask = 0
 script = ExtResource("1_neeoj")
 
 [node name="texture" type="Sprite2D" parent="."]
-texture = ExtResource("1_as3xp")
-region_enabled = true
+position = Vector2(0, -3)
+texture = ExtResource("2_8dbr1")
 region_rect = Rect2(272, 32, 48, 8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

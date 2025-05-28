@@ -1,10 +1,9 @@
-[gd_scene load_steps=48 format=3 uid="uid://bsh5thx504yep"]
+[gd_scene load_steps=49 format=3 uid="uid://bsh5thx504yep"]
 
 [ext_resource type="Script" path="res://scripts/Mundo.gd" id="1_i3p3u"]
 [ext_resource type="PackedScene" uid="uid://d0et5ubiolsqn" path="res://coletavel_outono.tscn" id="2_h3tlj"]
 [ext_resource type="PackedScene" uid="uid://dwxwyfqud20x7" path="res://espinhos_area.tscn" id="2_q6egm"]
 [ext_resource type="PackedScene" uid="uid://bh7sntndx4xcr" path="res://jogador.tscn" id="3_rydyj"]
-[ext_resource type="PackedScene" uid="uid://dcie1hk7syhqi" path="res://final_jogo.tscn" id="4_otk7v"]
 [ext_resource type="PackedScene" uid="uid://cc64vt0n8xfpo" path="res://enemy2.tscn" id="4_vmahg"]
 [ext_resource type="Texture2D" uid="uid://d0nni5whk815s" path="res://Addons/Free/Artes_jogo/arvore outono tipo 1.png" id="5_gpb5x"]
 [ext_resource type="Texture2D" uid="uid://c5kyhqudgf6yv" path="res://Addons/Free/Artes_jogo/banco.png" id="6_ocj23"]
@@ -29,6 +28,8 @@
 [ext_resource type="Shader" path="res://shaders/transicao.gdshader" id="24_whxtc"]
 [ext_resource type="PackedScene" uid="uid://cyxhlk1rr7hqm" path="res://checkpoint.tscn" id="25_l5tn6"]
 [ext_resource type="Script" path="res://Scripts/color.gd" id="25_rb68b"]
+[ext_resource type="PackedScene" uid="uid://d0p8x1lammvn0" path="res://falling_plataform.tscn" id="31_8gkyi"]
+[ext_resource type="PackedScene" uid="uid://6nmpv7lm4nij" path="res://chegada.tscn" id="31_cfk2l"]
 [ext_resource type="AudioStream" uid="uid://co7qk0q6cvpdt" path="res://Addons/Free/Sons/musica_outono.mp3" id="31_u3hjo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rr2iv"]
@@ -273,9 +274,6 @@ position = Vector2(1436, 97)
 [node name="Enemy4" parent="inimigos" instance=ExtResource("4_vmahg")]
 position = Vector2(1567, 97)
 
-[node name="final_jogo" parent="." instance=ExtResource("4_otk7v")]
-position = Vector2(2081, 61)
-
 [node name="sinal" parent="." instance=ExtResource("15_pu0il")]
 position = Vector2(837, 79)
 lines = Array[String](["Cuidado!", "O desafio é grande!"])
@@ -287,7 +285,8 @@ lines = Array[String](["Devagar!", "Você está próximo...", "De finalizar esta
 [node name="decoracoes2" type="Node2D" parent="."]
 
 [node name="ArvoreOutonoTipo1" type="Sprite2D" parent="decoracoes2"]
-position = Vector2(558, 52)
+position = Vector2(562, 34)
+scale = Vector2(1.8, 1.8)
 texture = ExtResource("5_gpb5x")
 
 [node name="Banco" type="Sprite2D" parent="decoracoes2"]
@@ -296,7 +295,8 @@ scale = Vector2(0.7, 0.7)
 texture = ExtResource("6_ocj23")
 
 [node name="ArvoreOutonoTipo2" type="Sprite2D" parent="decoracoes2"]
-position = Vector2(673, 53)
+position = Vector2(677, 35)
+scale = Vector2(1.8, 1.8)
 texture = ExtResource("7_jwm24")
 
 [node name="LavandaDec" type="Sprite2D" parent="decoracoes2"]
@@ -551,3 +551,12 @@ stream = ExtResource("31_u3hjo")
 volume_db = -5.0
 pitch_scale = 0.9
 autoplay = true
+
+[node name="chegada" parent="." instance=ExtResource("31_cfk2l")]
+position = Vector2(2085, 60)
+prox_Nivel = "res://Mundo3.tscn"
+
+[node name="Falling_plataform" type="Node2D" parent="."]
+position = Vector2(773, 73)
+
+[node name="falling_plataform" parent="Falling_plataform" instance=ExtResource("31_8gkyi")]

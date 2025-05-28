@@ -19,8 +19,8 @@
 [ext_resource type="PackedScene" uid="uid://cyxhlk1rr7hqm" path="res://checkpoint.tscn" id="17_1vj62"]
 [ext_resource type="Texture2D" uid="uid://wro4hg2luu38" path="res://Addons/Free/Artes_jogo/tile_chao_ofc.png" id="17_o26va"]
 [ext_resource type="Texture2D" uid="uid://bciljhdbud243" path="res://Addons/Free/Artes_jogo/ceu_outono.png" id="18_4r5y3"]
-[ext_resource type="Texture2D" uid="uid://da2sbrosyl6ob" path="res://Addons/Free/Artes_jogo/bg_outono.png" id="19_1m65g"]
-[ext_resource type="Texture2D" uid="uid://ch1rxp7vg7n7" path="res://Addons/Free/Artes_jogo/chao_outono.png" id="20_c8bw1"]
+[ext_resource type="Texture2D" uid="uid://cja1yh00hlpc1" path="res://Addons/Free/Artes_jogo/BG_Inverno_montanha.png" id="20_lwvo6"]
+[ext_resource type="Texture2D" uid="uid://cu7lb20n20pkf" path="res://Addons/Free/Artes_jogo/Bg_inverno.png" id="21_nrsxn"]
 [ext_resource type="PackedScene" uid="uid://bt5bn0p70du3r" path="res://zona_queda.tscn" id="21_phe0a"]
 [ext_resource type="Script" path="res://Scripts/gerenciador_hud.gd" id="22_ldwum"]
 [ext_resource type="Texture2D" uid="uid://csdf3oeqfnxtf" path="res://Addons/Free/Main Characters/Inimigo Abobora/abobora_pulando.png" id="23_kmssi"]
@@ -510,7 +510,7 @@ motion_mirroring = Vector2(408, 0)
 
 [node name="texture" type="Sprite2D" parent="BG/02"]
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("19_1m65g")
+texture = ExtResource("20_lwvo6")
 centered = false
 
 [node name="03" type="ParallaxLayer" parent="BG"]
@@ -520,7 +520,7 @@ motion_mirroring = Vector2(408, 0)
 
 [node name="texture" type="Sprite2D" parent="BG/03"]
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("20_c8bw1")
+texture = ExtResource("21_nrsxn")
 centered = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
