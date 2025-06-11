@@ -1,53 +1,49 @@
-[gd_scene load_steps=18 format=3 uid="uid://d0et5ubiolsqn"]
+[gd_scene load_steps=17 format=3 uid="uid://jpsjrpxyirsq"]
 
-[ext_resource type="Script" path="res://scripts/coletavel.gd" id="1_8pn0x"]
-[ext_resource type="Texture2D" uid="uid://c7tvoaktaorit" path="res://Addons/Free/Items/Fruits/Collected.png" id="2_q0a3v"]
-[ext_resource type="Texture2D" uid="uid://tfong2ny4dfq" path="res://Addons/Free/Items/Fruits/noz.png" id="3_qniia"]
-[ext_resource type="AudioStream" uid="uid://crlgfcyci66ba" path="res://Addons/Free/Sons/Coins.mp3" id="4_2dtnr"]
+[ext_resource type="Script" path="res://scripts/coletavel.gd" id="1_iv36r"]
+[ext_resource type="Texture2D" uid="uid://c7tvoaktaorit" path="res://Addons/Free/Items/Fruits/Collected.png" id="2_nge8j"]
+[ext_resource type="Texture2D" uid="uid://rls2f11klx47" path="res://Addons/Free/Items/Fruits/coco.png" id="3_xgau1"]
+[ext_resource type="AudioStream" uid="uid://crlgfcyci66ba" path="res://Addons/Free/Sons/Coins.mp3" id="4_1w0gh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ydk7i"]
-atlas = ExtResource("2_q0a3v")
+atlas = ExtResource("2_nge8j")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k12bk"]
-atlas = ExtResource("2_q0a3v")
+atlas = ExtResource("2_nge8j")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_awho2"]
-atlas = ExtResource("2_q0a3v")
+atlas = ExtResource("2_nge8j")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_62nyr"]
-atlas = ExtResource("2_q0a3v")
+atlas = ExtResource("2_nge8j")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ylcg5"]
-atlas = ExtResource("2_q0a3v")
+atlas = ExtResource("2_nge8j")
 region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dn7pb"]
-atlas = ExtResource("2_q0a3v")
+atlas = ExtResource("2_nge8j")
 region = Rect2(160, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dtv00"]
-atlas = ExtResource("3_qniia")
-region = Rect2(0, 0, 31, 25)
+[sub_resource type="AtlasTexture" id="AtlasTexture_sl5an"]
+atlas = ExtResource("3_xgau1")
+region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_c5vw4"]
-atlas = ExtResource("3_qniia")
-region = Rect2(31, 0, 31, 25)
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbihw"]
+atlas = ExtResource("3_xgau1")
+region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xhx4g"]
-atlas = ExtResource("3_qniia")
-region = Rect2(62, 0, 31, 25)
+[sub_resource type="AtlasTexture" id="AtlasTexture_3qns0"]
+atlas = ExtResource("3_xgau1")
+region = Rect2(64, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ivd0g"]
-atlas = ExtResource("3_qniia")
-region = Rect2(93, 0, 31, 25)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_38xeu"]
-atlas = ExtResource("3_qniia")
-region = Rect2(124, 0, 31, 25)
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ojer"]
+atlas = ExtResource("3_xgau1")
+region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_os4k1"]
 animations = [{
@@ -76,19 +72,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_dtv00")
+"texture": SubResource("AtlasTexture_sl5an")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_c5vw4")
+"texture": SubResource("AtlasTexture_lbihw")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xhx4g")
+"texture": SubResource("AtlasTexture_3qns0")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ivd0g")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_38xeu")
+"texture": SubResource("AtlasTexture_2ojer")
 }],
 "loop": true,
 "name": &"idle",
@@ -100,20 +93,19 @@ radius = 7.07107
 
 [node name="cherry" type="Area2D"]
 collision_layer = 8
-script = ExtResource("1_8pn0x")
+script = ExtResource("1_iv36r")
 
 [node name="anim" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.53, 0.53)
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_os4k1")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.55016
 
 [node name="collision" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_knju3")
 
 [node name="coleta" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_2dtnr")
+stream = ExtResource("4_1w0gh")
 volume_db = -10.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

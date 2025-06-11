@@ -1,8 +1,8 @@
 [gd_scene load_steps=50 format=3 uid="uid://cie6am2l84ktx"]
 
 [ext_resource type="Script" path="res://scripts/Mundo.gd" id="1_2lxy0"]
-[ext_resource type="PackedScene" uid="uid://d0et5ubiolsqn" path="res://coletavel_outono.tscn" id="2_vrqc4"]
 [ext_resource type="PackedScene" uid="uid://dwxwyfqud20x7" path="res://espinhos_area.tscn" id="3_ky5jt"]
+[ext_resource type="PackedScene" uid="uid://b8lhe2amprayo" path="res://enemy3.tscn" id="4_rpm4k"]
 [ext_resource type="PackedScene" uid="uid://cc64vt0n8xfpo" path="res://enemy2.tscn" id="4_t2m6h"]
 [ext_resource type="PackedScene" uid="uid://dcie1hk7syhqi" path="res://final_jogo.tscn" id="5_uwtic"]
 [ext_resource type="PackedScene" uid="uid://3hdar7m18io7" path="res://sinal.tscn" id="6_mj1t0"]
@@ -319,57 +319,6 @@ script = ExtResource("1_2lxy0")
 [node name="coletaveis" type="Node2D" parent="."]
 position = Vector2(8, 120)
 
-[node name="cherry" parent="coletaveis" instance=ExtResource("2_vrqc4")]
-position = Vector2(280, -48)
-
-[node name="cherry2" parent="coletaveis" instance=ExtResource("2_vrqc4")]
-position = Vector2(234, -82)
-
-[node name="cherry3" parent="coletaveis" instance=ExtResource("2_vrqc4")]
-position = Vector2(328, -81)
-
-[node name="cherry4" parent="coletaveis" instance=ExtResource("2_vrqc4")]
-position = Vector2(501, -76)
-
-[node name="cherry5" parent="coletaveis" instance=ExtResource("2_vrqc4")]
-position = Vector2(691, -49)
-
-[node name="cherry6" parent="coletaveis" instance=ExtResource("2_vrqc4")]
-position = Vector2(872, -49)
-
-[node name="cherry7" parent="coletaveis" instance=ExtResource("2_vrqc4")]
-position = Vector2(914, -49)
-
-[node name="cherry8" parent="coletaveis" instance=ExtResource("2_vrqc4")]
-position = Vector2(990, -49)
-
-[node name="cherry9" parent="coletaveis" instance=ExtResource("2_vrqc4")]
-position = Vector2(1093, -49)
-
-[node name="cherry10" parent="coletaveis" instance=ExtResource("2_vrqc4")]
-position = Vector2(1362, -49)
-
-[node name="cherry11" parent="coletaveis" instance=ExtResource("2_vrqc4")]
-position = Vector2(1482, -74)
-
-[node name="cherry13" parent="coletaveis" instance=ExtResource("2_vrqc4")]
-position = Vector2(1705, -74)
-
-[node name="cherry12" parent="coletaveis" instance=ExtResource("2_vrqc4")]
-position = Vector2(1482, -95)
-
-[node name="cherry14" parent="coletaveis" instance=ExtResource("2_vrqc4")]
-position = Vector2(1952, -66)
-
-[node name="cherry17" parent="coletaveis" instance=ExtResource("2_vrqc4")]
-position = Vector2(1952, -97)
-
-[node name="cherry15" parent="coletaveis" instance=ExtResource("2_vrqc4")]
-position = Vector2(2000, -66)
-
-[node name="cherry16" parent="coletaveis" instance=ExtResource("2_vrqc4")]
-position = Vector2(2000, -96)
-
 [node name="espinhos" type="Node2D" parent="."]
 position = Vector2(117, 4)
 
@@ -387,9 +336,6 @@ position = Vector2(1161, 66)
 
 [node name="inimigos" type="Node2D" parent="."]
 
-[node name="Enemy" parent="inimigos" instance=ExtResource("4_t2m6h")]
-position = Vector2(426, 97)
-
 [node name="Enemy2" parent="inimigos" instance=ExtResource("4_t2m6h")]
 position = Vector2(1313, 97)
 
@@ -398,6 +344,9 @@ position = Vector2(1436, 97)
 
 [node name="Enemy4" parent="inimigos" instance=ExtResource("4_t2m6h")]
 position = Vector2(1567, 97)
+
+[node name="Enemy5" parent="inimigos" instance=ExtResource("4_rpm4k")]
+position = Vector2(427, 84)
 
 [node name="final_jogo" parent="." instance=ExtResource("5_uwtic")]
 position = Vector2(2081, 61)
