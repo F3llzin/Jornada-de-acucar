@@ -3,7 +3,6 @@
 [ext_resource type="Script" path="res://scripts/Mundo.gd" id="1_2lxy0"]
 [ext_resource type="PackedScene" uid="uid://dwxwyfqud20x7" path="res://espinhos_area.tscn" id="3_ky5jt"]
 [ext_resource type="PackedScene" uid="uid://b8lhe2amprayo" path="res://enemy3.tscn" id="4_rpm4k"]
-[ext_resource type="PackedScene" uid="uid://cc64vt0n8xfpo" path="res://enemy2.tscn" id="4_t2m6h"]
 [ext_resource type="PackedScene" uid="uid://dcie1hk7syhqi" path="res://final_jogo.tscn" id="5_uwtic"]
 [ext_resource type="PackedScene" uid="uid://3hdar7m18io7" path="res://sinal.tscn" id="6_mj1t0"]
 [ext_resource type="Texture2D" uid="uid://d0nni5whk815s" path="res://Addons/Free/Artes_jogo/arvore outono tipo 1.png" id="7_cl6w6"]
@@ -31,6 +30,7 @@
 [ext_resource type="Script" path="res://Scripts/color.gd" id="28_67tub"]
 [ext_resource type="PackedScene" uid="uid://b3545jl6vdnu8" path="res://pause_menu.tscn" id="29_6b7v0"]
 [ext_resource type="AudioStream" uid="uid://co7qk0q6cvpdt" path="res://Addons/Free/Sons/musica_outono.mp3" id="30_phj6b"]
+[ext_resource type="PackedScene" uid="uid://jpsjrpxyirsq" path="res://coletavel_inverno.tscn" id="31_lxhqo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rr2iv"]
 texture = ExtResource("11_eyus8")
@@ -336,15 +336,6 @@ position = Vector2(1161, 66)
 
 [node name="inimigos" type="Node2D" parent="."]
 
-[node name="Enemy2" parent="inimigos" instance=ExtResource("4_t2m6h")]
-position = Vector2(1313, 97)
-
-[node name="Enemy3" parent="inimigos" instance=ExtResource("4_t2m6h")]
-position = Vector2(1436, 97)
-
-[node name="Enemy4" parent="inimigos" instance=ExtResource("4_t2m6h")]
-position = Vector2(1567, 97)
-
 [node name="Enemy5" parent="inimigos" instance=ExtResource("4_rpm4k")]
 position = Vector2(427, 84)
 
@@ -625,3 +616,6 @@ stream = ExtResource("30_phj6b")
 volume_db = -5.0
 pitch_scale = 0.9
 autoplay = true
+
+[node name="cherry" parent="." instance=ExtResource("31_lxhqo")]
+position = Vector2(290, 61)
