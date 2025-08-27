@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://bsh5thx504yep"]
+[gd_scene load_steps=48 format=3 uid="uid://bsh5thx504yep"]
 
 [ext_resource type="Script" path="res://scripts/Mundo.gd" id="1_i3p3u"]
 [ext_resource type="PackedScene" uid="uid://d0et5ubiolsqn" path="res://coletavel_outono.tscn" id="2_h3tlj"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://d0nni5whk815s" path="res://Addons/Free/Artes_jogo/arvore outono tipo 1.png" id="5_gpb5x"]
 [ext_resource type="Texture2D" uid="uid://c5kyhqudgf6yv" path="res://Addons/Free/Artes_jogo/banco.png" id="6_ocj23"]
 [ext_resource type="Texture2D" uid="uid://bkhtti87im4c4" path="res://Addons/Free/Artes_jogo/arvore outono tipo 2.png" id="7_jwm24"]
-[ext_resource type="Texture2D" uid="uid://bjgnbogh62hx3" path="res://Addons/Free/Artes_jogo/Decoracao/lavanda_dec.png" id="8_eml8k"]
 [ext_resource type="Texture2D" uid="uid://cr3qwxwhpp4t7" path="res://Addons/Free/Artes_jogo/Decoracao/doce_dec.png" id="8_j0kpi"]
 [ext_resource type="Texture2D" uid="uid://3bio45ilwi4r" path="res://Addons/Free/Artes_jogo/placa_perigo.png" id="9_cj84h"]
 [ext_resource type="Texture2D" uid="uid://chn3gxfmr7gfe" path="res://Addons/Free/Artes_jogo/tile.png" id="12_edkci"]
@@ -260,28 +259,6 @@ position = Vector2(780, 69)
 [node name="espinhos_area4" parent="espinhos" instance=ExtResource("2_q6egm")]
 position = Vector2(1622, 69)
 
-[node name="inimigos" type="Node2D" parent="."]
-
-[node name="Enemy" parent="inimigos" instance=ExtResource("4_vmahg")]
-position = Vector2(357, 82)
-
-[node name="Enemy2" parent="inimigos" instance=ExtResource("4_vmahg")]
-position = Vector2(503, 82)
-
-[node name="Enemy3" parent="inimigos" instance=ExtResource("4_vmahg")]
-position = Vector2(1513, 82)
-
-[node name="Enemy4" parent="inimigos" instance=ExtResource("4_vmahg")]
-position = Vector2(1586, 80)
-
-[node name="sinal" parent="." instance=ExtResource("15_pu0il")]
-position = Vector2(837, 79)
-lines = Array[String](["Cuidado!", "O desafio é grande!"])
-
-[node name="sinal2" parent="." instance=ExtResource("15_pu0il")]
-position = Vector2(1491, 80)
-lines = Array[String](["Devagar!", "Você está próximo...", "De finalizar esta fase!"])
-
 [node name="decoracoes2" type="Node2D" parent="."]
 position = Vector2(-1, -89)
 
@@ -300,17 +277,27 @@ position = Vector2(1552, 124)
 scale = Vector2(1.8, 1.8)
 texture = ExtResource("7_jwm24")
 
-[node name="LavandaDec" type="Sprite2D" parent="decoracoes2"]
-position = Vector2(1888, 61)
-texture = ExtResource("8_eml8k")
+[node name="inimigos" type="Node2D" parent="."]
 
-[node name="LavandaDec2" type="Sprite2D" parent="decoracoes2"]
-position = Vector2(1906, 61)
-texture = ExtResource("8_eml8k")
+[node name="Enemy" parent="inimigos" instance=ExtResource("4_vmahg")]
+position = Vector2(357, 82)
 
-[node name="LavandaDec3" type="Sprite2D" parent="decoracoes2"]
-position = Vector2(1925, 61)
-texture = ExtResource("8_eml8k")
+[node name="Enemy2" parent="inimigos" instance=ExtResource("4_vmahg")]
+position = Vector2(503, 82)
+
+[node name="Enemy3" parent="inimigos" instance=ExtResource("4_vmahg")]
+position = Vector2(2211, 96)
+
+[node name="Enemy4" parent="inimigos" instance=ExtResource("4_vmahg")]
+position = Vector2(2401, 99)
+
+[node name="sinal" parent="." instance=ExtResource("15_pu0il")]
+position = Vector2(837, 79)
+lines = Array[String](["Cuidado!", "O desafio é grande!"])
+
+[node name="sinal2" parent="." instance=ExtResource("15_pu0il")]
+position = Vector2(1491, 80)
+lines = Array[String](["Devagar!", "Você está próximo...", "De finalizar esta fase!"])
 
 [node name="decoracoes" type="Node2D" parent="."]
 scale = Vector2(0.4, 0.4)
@@ -326,6 +313,11 @@ texture = ExtResource("9_cj84h")
 
 [node name="PlacaPerigo2" type="Sprite2D" parent="decoracoes"]
 position = Vector2(4147.5, 165)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_cj84h")
+
+[node name="PlacaPerigo3" type="Sprite2D" parent="decoracoes"]
+position = Vector2(2605, 167.5)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("9_cj84h")
 
@@ -573,7 +565,7 @@ pitch_scale = 0.9
 autoplay = true
 
 [node name="chegada" parent="." instance=ExtResource("31_cfk2l")]
-position = Vector2(2085, 60)
+position = Vector2(2911, 60)
 prox_Nivel = "res://Mundo3.tscn"
 
 [node name="Falling_plataform" type="Node2D" parent="."]

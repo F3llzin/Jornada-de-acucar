@@ -23,9 +23,9 @@ func _physics_process(delta):
 		Detector_parede.scale.x *= -1
 	
 	if direction == 1:
-		anim.flip_h = false
-	else: 
 		anim.flip_h = true
+	else: 
+		anim.flip_h = false
 		
 	velocity.x = direction * SPEED * delta
 	
