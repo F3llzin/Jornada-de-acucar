@@ -275,6 +275,11 @@ position = Vector2(1525, 158)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("6_ocj23")
 
+[node name="Banco2" type="Sprite2D" parent="decoracoes2"]
+position = Vector2(226, 157)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("6_ocj23")
+
 [node name="ArvoreOutonoTipo2" type="Sprite2D" parent="decoracoes2"]
 position = Vector2(1552, 124)
 scale = Vector2(1.8, 1.8)
@@ -286,12 +291,12 @@ scale = Vector2(1.8, 1.8)
 texture = ExtResource("7_jwm24")
 
 [node name="sinal" parent="." instance=ExtResource("15_pu0il")]
-position = Vector2(837, 79)
-lines = Array[String](["Cuidado!", "O desafio é grande!"])
+position = Vector2(842, 79)
+lines = Array[String](["Cuidado!"])
 
 [node name="sinal2" parent="." instance=ExtResource("15_pu0il")]
 position = Vector2(1491, 80)
-lines = Array[String](["Devagar!", "Você está próximo...", "De finalizar esta fase!"])
+lines = Array[String](["Devagar!"])
 
 [node name="decoracoes" type="Node2D" parent="."]
 scale = Vector2(0.4, 0.4)
@@ -305,10 +310,6 @@ texture = ExtResource("9_cj84h")
 position = Vector2(2605, 167.5)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("9_cj84h")
-
-[node name="JarroFlorDec2" type="Sprite2D" parent="decoracoes"]
-position = Vector2(3642.5, 175)
-texture = ExtResource("12_eglxm")
 
 [node name="JarroFlorDec3" type="Sprite2D" parent="decoracoes"]
 position = Vector2(502.5, 175)

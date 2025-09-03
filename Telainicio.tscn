@@ -147,6 +147,14 @@ offset_bottom = 1135.0
 scale = Vector2(0.23, 0.23)
 texture = ExtResource("3_heoj1")
 
+[node name="Correcao" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 706.0
+offset_top = 147.0
+offset_right = 746.0
+offset_bottom = 187.0
+color = Color(0.972549, 0.878431, 0.796078, 1)
+
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = 15

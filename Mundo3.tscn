@@ -1,19 +1,18 @@
-[gd_scene load_steps=50 format=3 uid="uid://cie6am2l84ktx"]
+[gd_scene load_steps=47 format=3 uid="uid://cie6am2l84ktx"]
 
 [ext_resource type="Script" path="res://scripts/Mundo.gd" id="1_2lxy0"]
-[ext_resource type="PackedScene" uid="uid://dwxwyfqud20x7" path="res://espinhos_area.tscn" id="3_ky5jt"]
+[ext_resource type="PackedScene" uid="uid://cigce187yrbdx" path="res://espinhos_area_cristal.tscn" id="3_o0uvx"]
 [ext_resource type="PackedScene" uid="uid://b8lhe2amprayo" path="res://enemy3.tscn" id="4_rpm4k"]
 [ext_resource type="PackedScene" uid="uid://dcie1hk7syhqi" path="res://final_jogo.tscn" id="5_uwtic"]
 [ext_resource type="Texture2D" uid="uid://7cjriirb6rl1" path="res://Addons/Free/Artes_jogo/Arvore_inverno.png" id="6_ku8r5"]
 [ext_resource type="PackedScene" uid="uid://3hdar7m18io7" path="res://sinal.tscn" id="6_mj1t0"]
 [ext_resource type="Texture2D" uid="uid://c5kyhqudgf6yv" path="res://Addons/Free/Artes_jogo/banco.png" id="8_m88uq"]
-[ext_resource type="Texture2D" uid="uid://bjgnbogh62hx3" path="res://Addons/Free/Artes_jogo/Decoracao/lavanda_dec.png" id="10_xxa5s"]
-[ext_resource type="Texture2D" uid="uid://cr3qwxwhpp4t7" path="res://Addons/Free/Artes_jogo/Decoracao/doce_dec.png" id="11_eyus8"]
+[ext_resource type="Texture2D" uid="uid://bwm881idj4lxf" path="res://Addons/Free/Artes_jogo/tronco_inverno.png" id="9_acuml"]
+[ext_resource type="Texture2D" uid="uid://bup6k6xyqlvgg" path="res://Addons/Free/Artes_jogo/rochas_neve.png" id="10_6yvbc"]
+[ext_resource type="Texture2D" uid="uid://ctga4xem8c0ve" path="res://Addons/Free/Artes_jogo/placa_inv.png" id="11_jcieb"]
 [ext_resource type="Texture2D" uid="uid://3bio45ilwi4r" path="res://Addons/Free/Artes_jogo/placa_perigo.png" id="12_wtc13"]
 [ext_resource type="Texture2D" uid="uid://y1t3h0m1todk" path="res://Addons/Free/Artes_jogo/Arvore_seca_inverno.png" id="12_x07np"]
-[ext_resource type="Texture2D" uid="uid://iabagsomp7eh" path="res://Addons/Free/Artes_jogo/Decoracao/jarro_flor_dec.png" id="13_gtw8x"]
 [ext_resource type="PackedScene" uid="uid://bh7sntndx4xcr" path="res://jogador.tscn" id="14_y7k0d"]
-[ext_resource type="Texture2D" uid="uid://cjksgw5xynb1w" path="res://Addons/Free/Artes_jogo/placa_seguir.png" id="15_paa3l"]
 [ext_resource type="Texture2D" uid="uid://chn3gxfmr7gfe" path="res://Addons/Free/Artes_jogo/tile.png" id="16_xrwvi"]
 [ext_resource type="PackedScene" uid="uid://cyxhlk1rr7hqm" path="res://checkpoint.tscn" id="17_1vj62"]
 [ext_resource type="Texture2D" uid="uid://wro4hg2luu38" path="res://Addons/Free/Artes_jogo/tile_chao_ofc.png" id="17_o26va"]
@@ -31,14 +30,6 @@
 [ext_resource type="PackedScene" uid="uid://b3545jl6vdnu8" path="res://pause_menu.tscn" id="29_6b7v0"]
 [ext_resource type="AudioStream" uid="uid://co7qk0q6cvpdt" path="res://Addons/Free/Sons/musica_outono.mp3" id="30_phj6b"]
 [ext_resource type="PackedScene" uid="uid://jpsjrpxyirsq" path="res://coletavel_inverno.tscn" id="31_lxhqo"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rr2iv"]
-texture = ExtResource("11_eyus8")
-0:0/size_in_atlas = Vector2i(2, 2)
-0:0/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_1dmjy"]
-sources/1 = SubResource("TileSetAtlasSource_rr2iv")
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_eeb8d"]
 tile_data = PackedInt32Array(0, 1, 0)
@@ -322,17 +313,9 @@ position = Vector2(8, 120)
 [node name="espinhos" type="Node2D" parent="."]
 position = Vector2(117, 4)
 
-[node name="espinhos_area" parent="espinhos" instance=ExtResource("3_ky5jt")]
-position = Vector2(836, 66)
-
-[node name="espinhos_area3" parent="espinhos" instance=ExtResource("3_ky5jt")]
-position = Vector2(935, 66)
-
-[node name="espinhos_area2" parent="espinhos" instance=ExtResource("3_ky5jt")]
-position = Vector2(1048, 66)
-
-[node name="espinhos_area4" parent="espinhos" instance=ExtResource("3_ky5jt")]
-position = Vector2(1161, 66)
+[node name="espinhos_area" parent="espinhos" instance=ExtResource("3_o0uvx")]
+position = Vector2(761, 66)
+scale = Vector2(0.65, 0.65)
 
 [node name="inimigos" type="Node2D" parent="."]
 
@@ -364,28 +347,37 @@ scale = Vector2(0.7, 0.7)
 texture = ExtResource("8_m88uq")
 
 [node name="Arvore_inverno2" type="Sprite2D" parent="decoracoes2"]
-position = Vector2(677, 34)
+position = Vector2(677, 36)
 scale = Vector2(1.8, 1.8)
 texture = ExtResource("6_ku8r5")
 
-[node name="LavandaDec" type="Sprite2D" parent="decoracoes2"]
-position = Vector2(1888, 61)
-texture = ExtResource("10_xxa5s")
+[node name="Boneco_neve" type="Sprite2D" parent="decoracoes2"]
+position = Vector2(125, 65)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("12_x07np")
+flip_h = true
 
-[node name="LavandaDec2" type="Sprite2D" parent="decoracoes2"]
-position = Vector2(1906, 61)
-texture = ExtResource("10_xxa5s")
+[node name="TroncoInverno" type="Sprite2D" parent="decoracoes2"]
+position = Vector2(384, 76)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("9_acuml")
 
-[node name="LavandaDec3" type="Sprite2D" parent="decoracoes2"]
-position = Vector2(1925, 61)
-texture = ExtResource("10_xxa5s")
+[node name="RochasNeve" type="Sprite2D" parent="decoracoes2"]
+position = Vector2(464, 74)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("10_6yvbc")
+region_enabled = true
+region_rect = Rect2(0, 27.3698, 50.0168, 22.6302)
+
+[node name="RochasNeve2" type="Sprite2D" parent="decoracoes2"]
+position = Vector2(670, 72)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("10_6yvbc")
+region_enabled = true
+region_rect = Rect2(0.255211, 3.40667, 49.7696, 18.9598)
 
 [node name="decoracoes" type="Node2D" parent="."]
 scale = Vector2(0.4, 0.4)
-
-[node name="tile_dec" type="TileMap" parent="decoracoes"]
-tile_set = SubResource("TileSet_1dmjy")
-format = 2
 
 [node name="PlacaPerigo" type="Sprite2D" parent="decoracoes"]
 position = Vector2(500, 165)
@@ -397,34 +389,20 @@ position = Vector2(4147.5, 165)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("12_wtc13")
 
-[node name="JarroFlorDec" type="Sprite2D" parent="decoracoes"]
-position = Vector2(5092.5, 135)
-texture = ExtResource("13_gtw8x")
-
-[node name="JarroFlorDec2" type="Sprite2D" parent="decoracoes"]
-position = Vector2(3060, 175)
-texture = ExtResource("13_gtw8x")
-
-[node name="Boneco_neve" type="Sprite2D" parent="decoracoes"]
-position = Vector2(312.5, 162.5)
-scale = Vector2(2, 2)
-texture = ExtResource("12_x07np")
-flip_h = true
-
 [node name="jogador" parent="." instance=ExtResource("14_y7k0d")]
 position = Vector2(150, 62)
 
 [node name="placa_seguir" type="Node2D" parent="."]
 
 [node name="PlacaSeguir" type="Sprite2D" parent="placa_seguir"]
-position = Vector2(169, 69)
+position = Vector2(169, 63)
 scale = Vector2(0.6, 0.6)
-texture = ExtResource("15_paa3l")
+texture = ExtResource("11_jcieb")
 
-[node name="PlacaSeguir2" type="Sprite2D" parent="placa_seguir"]
-position = Vector2(716, 70)
+[node name="PlacaSeguir3" type="Sprite2D" parent="placa_seguir"]
+position = Vector2(719, 63)
 scale = Vector2(0.6, 0.6)
-texture = ExtResource("15_paa3l")
+texture = ExtResource("11_jcieb")
 
 [node name="tile" type="TileMap" parent="."]
 position = Vector2(0, 31)
@@ -462,7 +440,8 @@ motion_scale = Vector2(0.7, 1)
 motion_mirroring = Vector2(552.16, 0)
 
 [node name="texture" type="Sprite2D" parent="BG/03"]
-scale = Vector2(0.29, 0.29)
+position = Vector2(0, 10)
+scale = Vector2(0.27, 0.27)
 texture = ExtResource("21_nrsxn")
 centered = false
 
