@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://d0et5ubiolsqn" path="res://coletavel_outono.tscn" id="2_h3tlj"]
 [ext_resource type="PackedScene" uid="uid://dwxwyfqud20x7" path="res://espinhos_area.tscn" id="2_q6egm"]
 [ext_resource type="PackedScene" uid="uid://bh7sntndx4xcr" path="res://jogador.tscn" id="3_rydyj"]
+[ext_resource type="PackedScene" uid="uid://cn86d25o00chr" path="res://arvore_outono_part.tscn" id="4_kbesr"]
 [ext_resource type="PackedScene" uid="uid://cc64vt0n8xfpo" path="res://enemy2.tscn" id="4_vmahg"]
-[ext_resource type="Texture2D" uid="uid://d0nni5whk815s" path="res://Addons/Free/Artes_jogo/arvore outono tipo 1.png" id="5_gpb5x"]
 [ext_resource type="Texture2D" uid="uid://c5kyhqudgf6yv" path="res://Addons/Free/Artes_jogo/banco.png" id="6_ocj23"]
 [ext_resource type="Texture2D" uid="uid://bkhtti87im4c4" path="res://Addons/Free/Artes_jogo/arvore outono tipo 2.png" id="7_jwm24"]
 [ext_resource type="Texture2D" uid="uid://3bio45ilwi4r" path="res://Addons/Free/Artes_jogo/placa_perigo.png" id="9_cj84h"]
@@ -260,15 +260,15 @@ position = Vector2(1622, 69)
 [node name="decoracoes2" type="Node2D" parent="."]
 position = Vector2(-1, -89)
 
-[node name="ArvoreOutonoTipo1" type="Sprite2D" parent="decoracoes2"]
+[node name="Arvore" parent="decoracoes2" instance=ExtResource("4_kbesr")]
 position = Vector2(485, 120)
 scale = Vector2(1.8, 1.8)
-texture = ExtResource("5_gpb5x")
+emit_qnd_jogo_iniciar = true
 
-[node name="ArvoreOutonoTipo3" type="Sprite2D" parent="decoracoes2"]
-position = Vector2(1856, 120)
+[node name="Arvore2" parent="decoracoes2" instance=ExtResource("4_kbesr")]
+position = Vector2(1857, 120)
 scale = Vector2(1.8, 1.8)
-texture = ExtResource("5_gpb5x")
+emit_qnd_jogo_iniciar = true
 
 [node name="Banco" type="Sprite2D" parent="decoracoes2"]
 position = Vector2(1525, 158)
@@ -280,13 +280,13 @@ position = Vector2(226, 157)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("6_ocj23")
 
-[node name="ArvoreOutonoTipo2" type="Sprite2D" parent="decoracoes2"]
-position = Vector2(1552, 124)
+[node name="ArvoreOutonoTipo4" type="Sprite2D" parent="decoracoes2"]
+position = Vector2(2824, 106)
 scale = Vector2(1.8, 1.8)
 texture = ExtResource("7_jwm24")
 
-[node name="ArvoreOutonoTipo4" type="Sprite2D" parent="decoracoes2"]
-position = Vector2(2824, 106)
+[node name="ArvoreOutonoTipo5" type="Sprite2D" parent="decoracoes2"]
+position = Vector2(1552, 124)
 scale = Vector2(1.8, 1.8)
 texture = ExtResource("7_jwm24")
 
