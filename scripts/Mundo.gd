@@ -2,6 +2,7 @@ extends Node2D
 @onready var jogador = $jogador
 @onready var cena_jogador = preload("res://jogador.tscn")
 @onready var camera_2d = $Camera2D
+@onready var button_pause = $hud/control/container/pause/Button_pause
 
 func _ready():
 	Global.jogador_posicao_inicial = $posicao_inicial
@@ -24,3 +25,5 @@ func recomecar():
 
 func game_over():
 	get_tree().change_scene_to_file("res://game_over.tscn")
+
+

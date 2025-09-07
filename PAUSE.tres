@@ -1,21 +1,38 @@
-[gd_resource type="Theme" load_steps=6 format=3 uid="uid://cacpanawqld15"]
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://cacpanawqld15"]
 
-[ext_resource type="FontFile" uid="uid://bphwtilkabuay" path="res://import/Font/Kenney Future.ttf" id="1_7yidc"]
+[ext_resource type="Texture2D" uid="uid://c6c6pgudvxu8q" path="res://Addons/Free/Menu/Buttons/pausar_focos.png" id="1_y4mgi"]
+[ext_resource type="Texture2D" uid="uid://b0dlxkkhnxiwb" path="res://Addons/Free/Menu/Buttons/pausar_normal.png" id="2_n61gb"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hvr1r"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_guowr"]
+texture = ExtResource("1_y4mgi")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3filp"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tsvpr"]
+texture = ExtResource("1_y4mgi")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1t0mt"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wrp0a"]
+texture = ExtResource("2_n61gb")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eey6l"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tvx1g"]
+texture = ExtResource("1_y4mgi")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
 
 [resource]
-Button/colors/font_focus_color = Color(0.627451, 0.505882, 1, 1)
-Button/colors/font_hover_color = Color(0.627451, 0.505882, 1, 1)
-Button/colors/font_pressed_color = Color(0.627451, 0.505882, 1, 1)
-Button/fonts/font = ExtResource("1_7yidc")
-Button/styles/focus = SubResource("StyleBoxEmpty_hvr1r")
-Button/styles/hover = SubResource("StyleBoxEmpty_3filp")
-Button/styles/normal = SubResource("StyleBoxEmpty_1t0mt")
-Button/styles/pressed = SubResource("StyleBoxEmpty_eey6l")
+Button/styles/focus = SubResource("StyleBoxTexture_guowr")
+Button/styles/hover = SubResource("StyleBoxTexture_tsvpr")
+Button/styles/normal = SubResource("StyleBoxTexture_wrp0a")
+Button/styles/pressed = SubResource("StyleBoxTexture_tvx1g")

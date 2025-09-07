@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://bv1f1gexdaur1"]
+[gd_scene load_steps=42 format=3 uid="uid://bv1f1gexdaur1"]
 
 [ext_resource type="Script" path="res://scripts/Mundo.gd" id="1_c04g2"]
 [ext_resource type="PackedScene" uid="uid://b3545jl6vdnu8" path="res://pause_menu.tscn" id="1_yb224"]
@@ -30,6 +30,7 @@
 [ext_resource type="Script" path="res://Scripts/color.gd" id="28_2w73j"]
 [ext_resource type="PackedScene" uid="uid://bt5bn0p70du3r" path="res://zona_queda.tscn" id="29_cngpo"]
 [ext_resource type="AudioStream" uid="uid://cc80wxii5loi5" path="res://Addons/Free/Sons/musica_verao.mp3" id="31_rdyt4"]
+[ext_resource type="Texture2D" uid="uid://cyo2tvmvt8dhq" path="res://Addons/Free/Menu/Buttons/seta_normal.png" id="31_x177e"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_eeb8d"]
 tile_data = PackedInt32Array(0, 1, 0)
@@ -390,6 +391,34 @@ position = Vector2(1405, 106)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_queda/zona_queda3"]
 position = Vector2(-13, -2.25)
 shape = SubResource("RectangleShape2D_h8yfa")
+
+[node name="mobile" type="CanvasLayer" parent="."]
+
+[node name="ui_esq" type="TouchScreenButton" parent="mobile"]
+position = Vector2(305, 555)
+rotation = 1.5708
+scale = Vector2(3, 3)
+texture_normal = ExtResource("31_x177e")
+texture_pressed = ExtResource("31_x177e")
+action = "ui_right"
+visibility_mode = 1
+
+[node name="ui_dir" type="TouchScreenButton" parent="mobile"]
+position = Vector2(0, 650)
+rotation = -1.5708
+scale = Vector2(3, 3)
+texture_normal = ExtResource("31_x177e")
+texture_pressed = ExtResource("31_x177e")
+action = "ui_left"
+visibility_mode = 1
+
+[node name="ui_pulo" type="TouchScreenButton" parent="mobile"]
+position = Vector2(1055, 550)
+scale = Vector2(3, 3)
+texture_normal = ExtResource("31_x177e")
+texture_pressed = ExtResource("31_x177e")
+action = "ui_accept"
+visibility_mode = 1
 
 [node name="hud" type="CanvasLayer" parent="."]
 

@@ -33,3 +33,4 @@ func _on_button_start_mouse_exited():
 
 func _on_button_quit_mouse_exited():
 	troca_btn.play()
+

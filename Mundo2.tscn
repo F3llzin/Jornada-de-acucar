@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://bsh5thx504yep"]
+[gd_scene load_steps=50 format=3 uid="uid://bsh5thx504yep"]
 
 [ext_resource type="Script" path="res://scripts/Mundo.gd" id="1_i3p3u"]
 [ext_resource type="PackedScene" uid="uid://d0et5ubiolsqn" path="res://coletavel_outono.tscn" id="2_h3tlj"]
@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://tfong2ny4dfq" path="res://Addons/Free/Items/Fruits/noz.png" id="21_hh5uc"]
 [ext_resource type="Script" path="res://Scripts/transicao.gd" id="23_1kmm5"]
 [ext_resource type="Texture2D" uid="uid://b4f1v5d32io3f" path="res://Addons/Free/Menu/Buttons/Other/vida.png" id="23_njxoc"]
+[ext_resource type="Texture2D" uid="uid://cyo2tvmvt8dhq" path="res://Addons/Free/Menu/Buttons/seta_normal.png" id="23_vqcly"]
 [ext_resource type="PackedScene" uid="uid://b3545jl6vdnu8" path="res://pause_menu.tscn" id="24_mku6t"]
 [ext_resource type="Shader" path="res://shaders/transicao.gdshader" id="24_whxtc"]
 [ext_resource type="PackedScene" uid="uid://cyxhlk1rr7hqm" path="res://checkpoint.tscn" id="25_l5tn6"]
@@ -517,6 +518,34 @@ position = Vector2(1856, 108)
 position = Vector2(-13, -2.25)
 shape = SubResource("RectangleShape2D_h8yfa")
 
+[node name="mobile" type="CanvasLayer" parent="."]
+
+[node name="ui_esq" type="TouchScreenButton" parent="mobile"]
+position = Vector2(305, 555)
+rotation = 1.5708
+scale = Vector2(3, 3)
+texture_normal = ExtResource("23_vqcly")
+texture_pressed = ExtResource("23_vqcly")
+action = "ui_right"
+visibility_mode = 1
+
+[node name="ui_dir" type="TouchScreenButton" parent="mobile"]
+position = Vector2(0, 650)
+rotation = -1.5708
+scale = Vector2(3, 3)
+texture_normal = ExtResource("23_vqcly")
+texture_pressed = ExtResource("23_vqcly")
+action = "ui_left"
+visibility_mode = 1
+
+[node name="ui_pulo" type="TouchScreenButton" parent="mobile"]
+position = Vector2(1055, 550)
+scale = Vector2(3, 3)
+texture_normal = ExtResource("23_vqcly")
+texture_pressed = ExtResource("23_vqcly")
+action = "ui_accept"
+visibility_mode = 1
+
 [node name="hud" type="CanvasLayer" parent="."]
 
 [node name="control" type="Control" parent="hud"]
@@ -619,27 +648,30 @@ autoplay = true
 position = Vector2(2911, 60)
 prox_Nivel = "res://Mundo3.tscn"
 
-[node name="Falling_plataform" type="Node2D" parent="."]
-position = Vector2(1099, 87)
+[node name="plataforma_cai" type="Node2D" parent="."]
+position = Vector2(150, 62)
 
-[node name="falling_plataform" parent="Falling_plataform" instance=ExtResource("31_8gkyi")]
+[node name="Falling_plataform" type="Node2D" parent="plataforma_cai"]
+position = Vector2(949, 25)
 
-[node name="Falling_plataform2" type="Node2D" parent="."]
-position = Vector2(1177, 87)
+[node name="falling_plataform" parent="plataforma_cai/Falling_plataform" instance=ExtResource("31_8gkyi")]
 
-[node name="falling_plataform" parent="Falling_plataform2" instance=ExtResource("31_8gkyi")]
+[node name="Falling_plataform2" type="Node2D" parent="plataforma_cai"]
+position = Vector2(1027, 25)
 
-[node name="Falling_plataform3" type="Node2D" parent="."]
-position = Vector2(1252, 87)
+[node name="falling_plataform" parent="plataforma_cai/Falling_plataform2" instance=ExtResource("31_8gkyi")]
 
-[node name="falling_plataform" parent="Falling_plataform3" instance=ExtResource("31_8gkyi")]
+[node name="Falling_plataform3" type="Node2D" parent="plataforma_cai"]
+position = Vector2(1102, 25)
 
-[node name="Falling_plataform4" type="Node2D" parent="."]
-position = Vector2(1327, 87)
+[node name="falling_plataform" parent="plataforma_cai/Falling_plataform3" instance=ExtResource("31_8gkyi")]
 
-[node name="falling_plataform" parent="Falling_plataform4" instance=ExtResource("31_8gkyi")]
+[node name="Falling_plataform4" type="Node2D" parent="plataforma_cai"]
+position = Vector2(1177, 25)
 
-[node name="Falling_plataform5" type="Node2D" parent="."]
-position = Vector2(1400, 87)
+[node name="falling_plataform" parent="plataforma_cai/Falling_plataform4" instance=ExtResource("31_8gkyi")]
 
-[node name="falling_plataform" parent="Falling_plataform5" instance=ExtResource("31_8gkyi")]
+[node name="Falling_plataform5" type="Node2D" parent="plataforma_cai"]
+position = Vector2(1250, 25)
+
+[node name="falling_plataform" parent="plataforma_cai/Falling_plataform5" instance=ExtResource("31_8gkyi")]
