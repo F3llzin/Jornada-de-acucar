@@ -131,7 +131,7 @@ func _on_cabeca_colisor_body_entered(body):
 			body.criar_coletavel()
 			
 func death_fall_zone():
-	if Global.vida_jogador > 0:
+	if Global.vida_jogador >= 0:
 		visible = false
 		set_physics_process(false)
 		await get_tree().create_timer(1.0).timeout
