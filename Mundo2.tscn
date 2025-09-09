@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://bsh5thx504yep"]
+[gd_scene load_steps=51 format=3 uid="uid://bsh5thx504yep"]
 
 [ext_resource type="Script" path="res://scripts/Mundo.gd" id="1_i3p3u"]
 [ext_resource type="PackedScene" uid="uid://d0et5ubiolsqn" path="res://coletavel_outono.tscn" id="2_h3tlj"]
@@ -32,6 +32,7 @@
 [ext_resource type="Script" path="res://Scripts/color.gd" id="25_rb68b"]
 [ext_resource type="PackedScene" uid="uid://d0p8x1lammvn0" path="res://falling_plataform.tscn" id="31_8gkyi"]
 [ext_resource type="PackedScene" uid="uid://6nmpv7lm4nij" path="res://chegada.tscn" id="31_cfk2l"]
+[ext_resource type="Theme" uid="uid://cacpanawqld15" path="res://PAUSE.tres" id="31_ddpkv"]
 [ext_resource type="Texture2D" uid="uid://bmbtwpsdhi1dw" path="res://Addons/Free/Artes_jogo/tronco_caido_outono.png" id="31_l0mjo"]
 [ext_resource type="AudioStream" uid="uid://co7qk0q6cvpdt" path="res://Addons/Free/Sons/musica_outono.mp3" id="31_u3hjo"]
 
@@ -447,6 +448,7 @@ limit_bottom = 110
 limit_smoothed = true
 position_smoothing_enabled = true
 drag_horizontal_enabled = true
+drag_vertical_enabled = true
 drag_left_margin = 0.3
 drag_right_margin = 0.4
 editor_draw_limits = true
@@ -633,6 +635,17 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("25_rb68b")
 
+[node name="pause_bttn" type="CanvasLayer" parent="."]
+
+[node name="Pause_bttn" type="Button" parent="pause_bttn"]
+offset_left = 888.0
+offset_top = 24.0
+offset_right = 935.0
+offset_bottom = 55.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("31_ddpkv")
+
 [node name="pause_menu2" parent="." instance=ExtResource("24_mku6t")]
 
 [node name="posicao_inicial" type="Marker2D" parent="."]
@@ -675,3 +688,5 @@ position = Vector2(1177, 25)
 position = Vector2(1250, 25)
 
 [node name="falling_plataform" parent="plataforma_cai/Falling_plataform5" instance=ExtResource("31_8gkyi")]
+
+[connection signal="pressed" from="pause_bttn/Pause_bttn" to="." method="_on_pause_bttn_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://bv1f1gexdaur1"]
+[gd_scene load_steps=47 format=3 uid="uid://bv1f1gexdaur1"]
 
 [ext_resource type="Script" path="res://scripts/Mundo.gd" id="1_c04g2"]
 [ext_resource type="PackedScene" uid="uid://b3545jl6vdnu8" path="res://pause_menu.tscn" id="1_yb224"]
@@ -9,9 +9,13 @@
 [ext_resource type="Texture2D" uid="uid://3i2ovggwjsyw" path="res://Addons/Free/Artes_jogo/Decoracao/bola_dec.png" id="6_u3kh2"]
 [ext_resource type="Texture2D" uid="uid://bron38q311aje" path="res://Addons/Free/Artes_jogo/ceu_bg.png" id="7_y1fhk"]
 [ext_resource type="Texture2D" uid="uid://c41ehvfhnmjdb" path="res://Addons/Free/Artes_jogo/mar_bg.png" id="8_1qbo6"]
+[ext_resource type="Texture2D" uid="uid://c5kyhqudgf6yv" path="res://Addons/Free/Artes_jogo/banco.png" id="8_ysgag"]
+[ext_resource type="Texture2D" uid="uid://bk6rb5ny5q3vi" path="res://Addons/Free/Artes_jogo/guarda_sol.png" id="9_vbs30"]
 [ext_resource type="Texture2D" uid="uid://dyspbjki4oc3m" path="res://Addons/Free/Artes_jogo/Decoracao/tartaruga_dec.png" id="9_y7adl"]
 [ext_resource type="PackedScene" uid="uid://4klyw118whlq" path="res://enemy.tscn" id="10_g0y0f"]
+[ext_resource type="Texture2D" uid="uid://bwnubpbm43m1e" path="res://Addons/Free/Artes_jogo/lixeira.png" id="10_m206v"]
 [ext_resource type="Texture2D" uid="uid://3bio45ilwi4r" path="res://Addons/Free/Artes_jogo/placa_perigo.png" id="11_wge2c"]
+[ext_resource type="Texture2D" uid="uid://cw70q16gu4f1e" path="res://Addons/Free/Artes_jogo/placa_colorida.png" id="11_ybxsg"]
 [ext_resource type="Texture2D" uid="uid://c1b1en2vvvv88" path="res://Addons/Free/Artes_jogo/poste.png" id="12_8hnfw"]
 [ext_resource type="Texture2D" uid="uid://bj76iby6id2et" path="res://Addons/Free/Artes_jogo/placa_verao.png" id="12_173hn"]
 [ext_resource type="Texture2D" uid="uid://cxumxfjtnqjai" path="res://Addons/Free/Artes_jogo/bg.png" id="14_dr6g3"]
@@ -29,6 +33,7 @@
 [ext_resource type="Shader" path="res://shaders/transicao.gdshader" id="27_fdjhp"]
 [ext_resource type="Script" path="res://Scripts/color.gd" id="28_2w73j"]
 [ext_resource type="PackedScene" uid="uid://bt5bn0p70du3r" path="res://zona_queda.tscn" id="29_cngpo"]
+[ext_resource type="Theme" uid="uid://cacpanawqld15" path="res://PAUSE.tres" id="30_shspf"]
 [ext_resource type="AudioStream" uid="uid://cc80wxii5loi5" path="res://Addons/Free/Sons/musica_verao.mp3" id="31_rdyt4"]
 [ext_resource type="Texture2D" uid="uid://cyo2tvmvt8dhq" path="res://Addons/Free/Menu/Buttons/seta_normal.png" id="31_x177e"]
 
@@ -268,7 +273,7 @@ texture = ExtResource("9_y7adl")
 flip_h = true
 
 [node name="Poste" type="Sprite2D" parent="decoracoes"]
-position = Vector2(545, 142.5)
+position = Vector2(582.5, 142.5)
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("12_8hnfw")
 
@@ -286,6 +291,47 @@ texture = ExtResource("12_8hnfw")
 position = Vector2(3317.5, 90)
 scale = Vector2(3, 3)
 texture = ExtResource("12_8hnfw")
+
+[node name="Banco" type="Sprite2D" parent="decoracoes"]
+position = Vector2(517.5, 170)
+scale = Vector2(1.9, 1.9)
+texture = ExtResource("8_ysgag")
+
+[node name="GuardaSol" type="Sprite2D" parent="decoracoes"]
+position = Vector2(1095, 57.5)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("9_vbs30")
+
+[node name="GuardaSol2" type="Sprite2D" parent="decoracoes"]
+position = Vector2(1995, 57.5)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("9_vbs30")
+
+[node name="GuardaSol3" type="Sprite2D" parent="decoracoes"]
+position = Vector2(3597.5, 97.5)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("9_vbs30")
+flip_h = true
+
+[node name="Lixeira" type="Sprite2D" parent="decoracoes"]
+position = Vector2(627.5, 185)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("10_m206v")
+
+[node name="PlacaColorida" type="Sprite2D" parent="decoracoes"]
+position = Vector2(1557.5, 117.5)
+scale = Vector2(1.6, 1.6)
+texture = ExtResource("11_ybxsg")
+
+[node name="PlacaColorida3" type="Sprite2D" parent="decoracoes"]
+position = Vector2(1372.5, 117.5)
+scale = Vector2(1.6, 1.6)
+texture = ExtResource("11_ybxsg")
+
+[node name="PlacaColorida2" type="Sprite2D" parent="decoracoes"]
+position = Vector2(4005, 117.5)
+scale = Vector2(1.6, 1.6)
+texture = ExtResource("11_ybxsg")
 
 [node name="inimigos" type="Node2D" parent="."]
 
@@ -364,6 +410,7 @@ limit_bottom = 110
 limit_smoothed = true
 position_smoothing_enabled = true
 drag_horizontal_enabled = true
+drag_vertical_enabled = true
 drag_left_margin = 0.3
 drag_right_margin = 0.4
 editor_draw_limits = true
@@ -509,6 +556,17 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("28_2w73j")
 
+[node name="pause_bttn" type="CanvasLayer" parent="."]
+
+[node name="Pause_bttn" type="Button" parent="pause_bttn"]
+offset_left = 888.0
+offset_top = 24.0
+offset_right = 935.0
+offset_bottom = 55.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("30_shspf")
+
 [node name="pause_menu2" parent="." instance=ExtResource("1_yb224")]
 
 [node name="posicao_inicial" type="Marker2D" parent="."]
@@ -519,3 +577,5 @@ stream = ExtResource("31_rdyt4")
 volume_db = -10.0
 pitch_scale = 0.9
 autoplay = true
+
+[connection signal="pressed" from="pause_bttn/Pause_bttn" to="." method="_on_button_pressed"]

@@ -27,3 +27,31 @@ func game_over():
 	get_tree().change_scene_to_file("res://game_over.tscn")
 
 
+func _on_button_pressed():
+	#Simula pressionar "ui_cancel
+	var ev = InputEventAction.new()
+	ev.action = &"ui_cancel"
+	ev.pressed = true
+	Input.parse_input_event(ev)
+	#Simula toque rápido
+	await get_tree().process_frame
+	ev = InputEventAction.new()
+	ev.action = &"ui_cancel"
+	ev.pressed = false
+	Input.parse_input_event(ev)
+
+
+
+func _on_pause_bttn_pressed():
+	#Simula pressionar "ui_cancel
+	var ev = InputEventAction.new()
+	ev.action = &"ui_cancel"
+	ev.pressed = true
+	Input.parse_input_event(ev)
+	#Simula toque rápido
+	await get_tree().process_frame
+	ev = InputEventAction.new()
+	ev.action = &"ui_cancel"
+	ev.pressed = false
+	Input.parse_input_event(ev)
+

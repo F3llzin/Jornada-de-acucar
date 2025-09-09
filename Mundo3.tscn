@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://cie6am2l84ktx"]
+[gd_scene load_steps=49 format=3 uid="uid://cie6am2l84ktx"]
 
 [ext_resource type="Script" path="res://scripts/Mundo.gd" id="1_2lxy0"]
 [ext_resource type="PackedScene" uid="uid://cigce187yrbdx" path="res://espinhos_area_cristal.tscn" id="3_o0uvx"]
@@ -29,6 +29,7 @@
 [ext_resource type="Shader" path="res://shaders/transicao.gdshader" id="27_i3j2y"]
 [ext_resource type="Script" path="res://Scripts/color.gd" id="28_67tub"]
 [ext_resource type="PackedScene" uid="uid://b3545jl6vdnu8" path="res://pause_menu.tscn" id="29_6b7v0"]
+[ext_resource type="Theme" uid="uid://cacpanawqld15" path="res://PAUSE.tres" id="29_nixwd"]
 [ext_resource type="AudioStream" uid="uid://co7qk0q6cvpdt" path="res://Addons/Free/Sons/musica_outono.mp3" id="30_phj6b"]
 [ext_resource type="PackedScene" uid="uid://jpsjrpxyirsq" path="res://coletavel_inverno.tscn" id="31_lxhqo"]
 
@@ -453,6 +454,7 @@ limit_bottom = 110
 limit_smoothed = true
 position_smoothing_enabled = true
 drag_horizontal_enabled = true
+drag_vertical_enabled = true
 drag_left_margin = 0.3
 drag_right_margin = 0.4
 editor_draw_limits = true
@@ -618,6 +620,17 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("28_67tub")
 
+[node name="pause_bttn" type="CanvasLayer" parent="."]
+
+[node name="Pause_bttn" type="Button" parent="pause_bttn"]
+offset_left = 888.0
+offset_top = 24.0
+offset_right = 935.0
+offset_bottom = 55.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("29_nixwd")
+
 [node name="pause_menu2" parent="." instance=ExtResource("29_6b7v0")]
 
 [node name="posicao_inicial" type="Marker2D" parent="."]
@@ -631,3 +644,5 @@ autoplay = true
 
 [node name="cherry" parent="." instance=ExtResource("31_lxhqo")]
 position = Vector2(290, 61)
+
+[connection signal="pressed" from="pause_bttn/Pause_bttn" to="." method="_on_pause_bttn_pressed"]
