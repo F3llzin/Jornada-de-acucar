@@ -442,26 +442,26 @@ shape = SubResource("RectangleShape2D_h8yfa")
 [node name="mobile" type="CanvasLayer" parent="."]
 
 [node name="ui_esq" type="TouchScreenButton" parent="mobile"]
-position = Vector2(305, 555)
+position = Vector2(328, 520)
 rotation = 1.5708
-scale = Vector2(3, 3)
+scale = Vector2(4, 4)
 texture_normal = ExtResource("31_x177e")
 texture_pressed = ExtResource("31_x177e")
 action = "ui_right"
 visibility_mode = 1
 
 [node name="ui_dir" type="TouchScreenButton" parent="mobile"]
-position = Vector2(0, 650)
+position = Vector2(0, 648)
 rotation = -1.5708
-scale = Vector2(3, 3)
+scale = Vector2(4, 4)
 texture_normal = ExtResource("31_x177e")
 texture_pressed = ExtResource("31_x177e")
 action = "ui_left"
 visibility_mode = 1
 
 [node name="ui_pulo" type="TouchScreenButton" parent="mobile"]
-position = Vector2(1055, 550)
-scale = Vector2(3, 3)
+position = Vector2(1024, 520)
+scale = Vector2(4, 4)
 texture_normal = ExtResource("31_x177e")
 texture_pressed = ExtResource("31_x177e")
 action = "ui_accept"
@@ -544,6 +544,18 @@ size_flags_horizontal = 0
 size_flags_vertical = 0
 texture = ExtResource("24_7h85p")
 
+[node name="pause_bttn" type="CanvasLayer" parent="."]
+
+[node name="Pause_bttn" type="Button" parent="pause_bttn"]
+offset_left = 880.0
+offset_top = 24.0
+offset_right = 927.0
+offset_bottom = 55.0
+scale = Vector2(1.2, 1.2)
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("30_shspf")
+
 [node name="transicao" type="CanvasLayer" parent="."]
 script = ExtResource("26_8i45e")
 
@@ -554,18 +566,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("28_2w73j")
-
-[node name="pause_bttn" type="CanvasLayer" parent="."]
-
-[node name="Pause_bttn" type="Button" parent="pause_bttn"]
-offset_left = 888.0
-offset_top = 24.0
-offset_right = 935.0
-offset_bottom = 55.0
-size_flags_horizontal = 4
-size_flags_vertical = 8
-theme = ExtResource("30_shspf")
 
 [node name="pause_menu2" parent="." instance=ExtResource("1_yb224")]
 

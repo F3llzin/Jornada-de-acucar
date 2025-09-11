@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtr3o5d4ngw2f"
-path="res://.godot/imported/Off.png-ad52b8989f7c4aa21874c39635442bd8.ctex"
+uid="uid://bi3yfjgo0bndw"
+path="res://.godot/imported/pinheiro.png-61dc1e8d19fe726c58faf40c38aa0dbe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Addons/Free/Traps/Falling Platforms/Off.png"
-dest_files=["res://.godot/imported/Off.png-ad52b8989f7c4aa21874c39635442bd8.ctex"]
+source_file="res://Addons/Free/Artes_jogo/pinheiro.png"
+dest_files=["res://.godot/imported/pinheiro.png-61dc1e8d19fe726c58faf40c38aa0dbe.ctex"]
 
 [params]
 

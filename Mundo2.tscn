@@ -520,29 +520,43 @@ position = Vector2(1856, 108)
 position = Vector2(-13, -2.25)
 shape = SubResource("RectangleShape2D_h8yfa")
 
+[node name="zona_queda10" parent="area_queda" instance=ExtResource("17_7rj8e")]
+position = Vector2(2989, 105)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_queda/zona_queda10"]
+position = Vector2(-13, -2.25)
+shape = SubResource("RectangleShape2D_h8yfa")
+
+[node name="zona_queda11" parent="area_queda" instance=ExtResource("17_7rj8e")]
+position = Vector2(3117, 105)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_queda/zona_queda11"]
+position = Vector2(-13, -2.25)
+shape = SubResource("RectangleShape2D_h8yfa")
+
 [node name="mobile" type="CanvasLayer" parent="."]
 
 [node name="ui_esq" type="TouchScreenButton" parent="mobile"]
-position = Vector2(305, 555)
+position = Vector2(328, 520)
 rotation = 1.5708
-scale = Vector2(3, 3)
+scale = Vector2(4, 4)
 texture_normal = ExtResource("23_vqcly")
 texture_pressed = ExtResource("23_vqcly")
 action = "ui_right"
 visibility_mode = 1
 
 [node name="ui_dir" type="TouchScreenButton" parent="mobile"]
-position = Vector2(0, 650)
+position = Vector2(0, 648)
 rotation = -1.5708
-scale = Vector2(3, 3)
+scale = Vector2(4, 4)
 texture_normal = ExtResource("23_vqcly")
 texture_pressed = ExtResource("23_vqcly")
 action = "ui_left"
 visibility_mode = 1
 
 [node name="ui_pulo" type="TouchScreenButton" parent="mobile"]
-position = Vector2(1055, 550)
-scale = Vector2(3, 3)
+position = Vector2(1024, 520)
+scale = Vector2(4, 4)
 texture_normal = ExtResource("23_vqcly")
 texture_pressed = ExtResource("23_vqcly")
 action = "ui_accept"
@@ -623,6 +637,18 @@ size_flags_horizontal = 0
 size_flags_vertical = 0
 texture = ExtResource("23_njxoc")
 
+[node name="pause_bttn" type="CanvasLayer" parent="."]
+
+[node name="Pause_bttn" type="Button" parent="pause_bttn"]
+offset_left = 880.0
+offset_top = 24.0
+offset_right = 927.0
+offset_bottom = 55.0
+scale = Vector2(1.2, 1.2)
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("31_ddpkv")
+
 [node name="transicao" type="CanvasLayer" parent="."]
 script = ExtResource("23_1kmm5")
 
@@ -633,18 +659,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("25_rb68b")
-
-[node name="pause_bttn" type="CanvasLayer" parent="."]
-
-[node name="Pause_bttn" type="Button" parent="pause_bttn"]
-offset_left = 888.0
-offset_top = 24.0
-offset_right = 935.0
-offset_bottom = 55.0
-size_flags_horizontal = 4
-size_flags_vertical = 8
-theme = ExtResource("31_ddpkv")
 
 [node name="pause_menu2" parent="." instance=ExtResource("24_mku6t")]
 

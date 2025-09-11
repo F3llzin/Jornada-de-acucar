@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqgs73klry0oc"
-path="res://.godot/imported/On (32x10).png-0d6b8510363d504b2aee23eb822a64ab.ctex"
+uid="uid://dm4kqo7sg3l2j"
+path="res://.godot/imported/lavanda.png-2aee9ddccd6e1fb374f1a19dfa5ee250.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Addons/Free/Traps/Falling Platforms/On (32x10).png"
-dest_files=["res://.godot/imported/On (32x10).png-0d6b8510363d504b2aee23eb822a64ab.ctex"]
+source_file="res://Addons/Free/Artes_jogo/lavanda.png"
+dest_files=["res://.godot/imported/lavanda.png-2aee9ddccd6e1fb374f1a19dfa5ee250.ctex"]
 
 [params]
 
