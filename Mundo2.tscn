@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cn86d25o00chr" path="res://arvore_outono_part.tscn" id="4_kbesr"]
 [ext_resource type="PackedScene" uid="uid://cc64vt0n8xfpo" path="res://enemy2.tscn" id="4_vmahg"]
 [ext_resource type="Texture2D" uid="uid://c5kyhqudgf6yv" path="res://Addons/Free/Artes_jogo/banco.png" id="6_ocj23"]
+[ext_resource type="Texture2D" uid="uid://dny5p8qfso2go" path="res://Addons/Free/Artes_jogo/placa.png" id="7_8y4x7"]
 [ext_resource type="Texture2D" uid="uid://bkhtti87im4c4" path="res://Addons/Free/Artes_jogo/arvore outono tipo 2.png" id="7_jwm24"]
 [ext_resource type="Texture2D" uid="uid://3bio45ilwi4r" path="res://Addons/Free/Artes_jogo/placa_perigo.png" id="9_cj84h"]
 [ext_resource type="Texture2D" uid="uid://c1b1en2vvvv88" path="res://Addons/Free/Artes_jogo/poste.png" id="11_yfoou"]
@@ -15,7 +16,6 @@
 [ext_resource type="Texture2D" uid="uid://iabagsomp7eh" path="res://Addons/Free/Artes_jogo/Decoracao/jarro_flor_dec.png" id="12_eglxm"]
 [ext_resource type="Texture2D" uid="uid://cdyoakf14m6ci" path="res://Addons/Free/Artes_jogo/casa_arvore2.png" id="13_1jkin"]
 [ext_resource type="Texture2D" uid="uid://bciljhdbud243" path="res://Addons/Free/Artes_jogo/ceu_outono.png" id="14_efi3v"]
-[ext_resource type="PackedScene" uid="uid://3hdar7m18io7" path="res://sinal.tscn" id="15_pu0il"]
 [ext_resource type="Texture2D" uid="uid://da2sbrosyl6ob" path="res://Addons/Free/Artes_jogo/bg_outono.png" id="15_x0131"]
 [ext_resource type="Texture2D" uid="uid://ch1rxp7vg7n7" path="res://Addons/Free/Artes_jogo/chao_outono.png" id="16_8sfim"]
 [ext_resource type="Script" path="res://Scripts/gerenciador_hud.gd" id="16_divxu"]
@@ -292,13 +292,16 @@ position = Vector2(1552, 124)
 scale = Vector2(1.8, 1.8)
 texture = ExtResource("7_jwm24")
 
-[node name="sinal" parent="." instance=ExtResource("15_pu0il")]
-position = Vector2(842, 79)
-lines = Array[String](["Cuidado!"])
+[node name="Placa" type="Sprite2D" parent="decoracoes2"]
+position = Vector2(843, 157)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("7_8y4x7")
+flip_h = true
 
-[node name="sinal2" parent="." instance=ExtResource("15_pu0il")]
-position = Vector2(1491, 80)
-lines = Array[String](["Devagar!"])
+[node name="Placa2" type="Sprite2D" parent="decoracoes2"]
+position = Vector2(1492, 158)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("7_8y4x7")
 
 [node name="decoracoes" type="Node2D" parent="."]
 scale = Vector2(0.4, 0.4)

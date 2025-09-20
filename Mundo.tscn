@@ -18,9 +18,9 @@
 [ext_resource type="Texture2D" uid="uid://cw70q16gu4f1e" path="res://Addons/Free/Artes_jogo/placa_colorida.png" id="11_ybxsg"]
 [ext_resource type="Texture2D" uid="uid://c1b1en2vvvv88" path="res://Addons/Free/Artes_jogo/poste.png" id="12_8hnfw"]
 [ext_resource type="Texture2D" uid="uid://bj76iby6id2et" path="res://Addons/Free/Artes_jogo/placa_verao.png" id="12_173hn"]
+[ext_resource type="Texture2D" uid="uid://dny5p8qfso2go" path="res://Addons/Free/Artes_jogo/placa.png" id="12_ejxdf"]
 [ext_resource type="Texture2D" uid="uid://cxumxfjtnqjai" path="res://Addons/Free/Artes_jogo/bg.png" id="14_dr6g3"]
 [ext_resource type="PackedScene" uid="uid://dwxwyfqud20x7" path="res://espinhos_area.tscn" id="15_cigg7"]
-[ext_resource type="PackedScene" uid="uid://3hdar7m18io7" path="res://sinal.tscn" id="16_64ag5"]
 [ext_resource type="Texture2D" uid="uid://c6fa6n77w2bny" path="res://Addons/Free/Items/Fruits/pixil-frame-0.png" id="17_qan00"]
 [ext_resource type="Script" path="res://Scripts/gerenciador_hud.gd" id="17_y0uxs"]
 [ext_resource type="Texture2D" uid="uid://djo64pwao0v5r" path="res://Addons/Free/Items/Fruits/pixil-frame-0 (1).png" id="18_0miu0"]
@@ -333,6 +333,11 @@ position = Vector2(4005, 117.5)
 scale = Vector2(1.6, 1.6)
 texture = ExtResource("11_ybxsg")
 
+[node name="Placa" type="Sprite2D" parent="decoracoes"]
+position = Vector2(722.5, 170)
+scale = Vector2(1.75, 1.75)
+texture = ExtResource("12_ejxdf")
+
 [node name="inimigos" type="Node2D" parent="."]
 
 [node name="Enemy" parent="inimigos" instance=ExtResource("10_g0y0f")]
@@ -347,10 +352,6 @@ position = Vector2(493, 66)
 [node name="chegada" parent="." instance=ExtResource("3_diagp")]
 position = Vector2(1577, 67)
 prox_Nivel = "res://Mundo2.tscn"
-
-[node name="sinal" parent="." instance=ExtResource("16_64ag5")]
-position = Vector2(289, 79)
-lines = Array[String](["Bem-vindo(a) a"])
 
 [node name="jogador" parent="." instance=ExtResource("3_lpart")]
 position = Vector2(139, 64)
