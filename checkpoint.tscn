@@ -199,10 +199,8 @@ script = ExtResource("1_eh7mj")
 [node name="anim" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -21)
 sprite_frames = SubResource("SpriteFrames_fj7gp")
-animation = &"checkpoint"
+animation = &"sem_verif."
 autoplay = "sem_verif."
-frame = 12
-frame_progress = 1.0
 
 [node name="collision" type="CollisionShape2D" parent="."]
 position = Vector2(0, -13.75)

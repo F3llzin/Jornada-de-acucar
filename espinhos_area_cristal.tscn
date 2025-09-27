@@ -16,6 +16,7 @@ scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_h1yn7")
 
 [node name="espinhos" type="Sprite2D" parent="."]
+modulate = Color(0.841726, 0.781022, 1, 1)
 self_modulate = Color(0.763809, 0.763809, 0.763808, 1)
 texture_repeat = 2
 position = Vector2(0, -3)
