@@ -1,6 +1,20 @@
-[gd_scene load_steps=8 format=3 uid="uid://cte0xmrukv4gs"]
+[gd_scene load_steps=13 format=3 uid="uid://cte0xmrukv4gs"]
 
 [ext_resource type="Script" path="res://Scripts/instruct.gd" id="1_61lvd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kaih6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rqmnn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jcc32"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w7j0l"]
+
+[sub_resource type="Theme" id="Theme_4swdq"]
+Button/styles/focus = SubResource("StyleBoxEmpty_kaih6")
+Button/styles/hover = SubResource("StyleBoxEmpty_rqmnn")
+Button/styles/normal = SubResource("StyleBoxEmpty_jcc32")
+Button/styles/pressed = SubResource("StyleBoxEmpty_w7j0l")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_shp0n"]
 
@@ -342,6 +356,16 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_61lvd")
 
+[node name="Canva" type="CanvasLayer" parent="."]
+
+[node name="Prosseguir" type="Button" parent="Canva"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_4swdq")
+
 [node name="cor" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -485,3 +509,5 @@ libraries = {
 "": SubResource("AnimationLibrary_6scqu")
 }
 autoplay = "fade_in"
+
+[connection signal="pressed" from="Canva/Prosseguir" to="." method="_on_button_pressed"]

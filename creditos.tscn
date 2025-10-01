@@ -1,6 +1,20 @@
-[gd_scene load_steps=7 format=3 uid="uid://bgminpun0q0e8"]
+[gd_scene load_steps=12 format=3 uid="uid://bgminpun0q0e8"]
 
 [ext_resource type="Script" path="res://Scripts/creditos.gd" id="1_2ig7w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rnsdb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hn8kt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0k5c2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1lgyt"]
+
+[sub_resource type="Theme" id="Theme_1633m"]
+Button/styles/focus = SubResource("StyleBoxEmpty_rnsdb")
+Button/styles/hover = SubResource("StyleBoxEmpty_hn8kt")
+Button/styles/normal = SubResource("StyleBoxEmpty_0k5c2")
+Button/styles/pressed = SubResource("StyleBoxEmpty_1lgyt")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uu6tt"]
 
@@ -292,6 +306,16 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_2ig7w")
 
+[node name="Canva" type="CanvasLayer" parent="."]
+
+[node name="Prosseguir" type="Button" parent="Canva"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_1633m")
+
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -303,12 +327,13 @@ color = Color(0.123109, 0.010861, 0.153093, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
-anchors_preset = 10
+anchors_preset = 15
 anchor_right = 1.0
+anchor_bottom = 1.0
 offset_left = 3.5
 offset_right = 3.5
-offset_bottom = 640.0
 grow_horizontal = 2
+grow_vertical = 2
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
@@ -317,7 +342,8 @@ size_flags_vertical = 8
 [node name="enter" type="Label" parent="MarginContainer/VBoxContainer2"]
 layout_mode = 2
 size_flags_vertical = 8
-text = "Aperte \"Enter\" para continuar"
+text = "Aperte em qualquer lugar ou
+ \"Enter\" para continuar"
 horizontal_alignment = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
@@ -412,3 +438,5 @@ libraries = {
 "": SubResource("AnimationLibrary_chvob")
 }
 autoplay = "fade_in"
+
+[connection signal="pressed" from="Canva/Prosseguir" to="." method="_on_prosseguir_pressed"]
