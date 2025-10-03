@@ -355,6 +355,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_61lvd")
+metadata/_edit_use_anchors_ = true
 
 [node name="Canva" type="CanvasLayer" parent="."]
 
@@ -380,6 +381,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_bottom = 5.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -495,13 +497,14 @@ text = "Use \"i\" para interagir com placas e \"o\" para passar mensagem."
 
 [node name="HSeparator2" type="HSeparator" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_constants/separation = 45
+theme_override_constants/separation = 35
 theme_override_styles/separator = SubResource("StyleBoxEmpty_lscqo")
 
 [node name="enter" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 8
-text = "Aperte \"Enter\" para continuar"
+text = "Aperte em qualquer lugar ou
+ \"Enter\" para continuar"
 horizontal_alignment = 2
 
 [node name="anim" type="AnimationPlayer" parent="."]

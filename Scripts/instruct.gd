@@ -2,7 +2,7 @@ extends Control
 
 func _unhandled_input(event):
 	if event.is_action_pressed("ui_accept"):
-		get_tree().change_scene_to_file("res://Mundo.tscn")
+		get_tree().change_scene_to_file("res://seletor_fases.tscn")
 
 
 func _on_button_pressed():

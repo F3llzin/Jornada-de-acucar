@@ -1,0 +1,48 @@
+[gd_scene load_steps=2 format=3 uid="uid://dd0x0yhwj2esa"]
+
+[ext_resource type="PackedScene" uid="uid://dm6valn4sw22r" path="res://fase_btn.tscn" id="1_bcumk"]
+
+[node name="seletor_fases" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="fase_btn" parent="." instance=ExtResource("1_bcumk")]
+layout_mode = 0
+offset_left = 234.0
+offset_top = 168.0
+offset_right = 242.0
+offset_bottom = 176.0
+tranca = false
+nome_fase = "res://Mundo.tscn"
+nmr_fase = "1"
+
+[node name="fase_btn2" parent="." instance=ExtResource("1_bcumk")]
+layout_mode = 0
+offset_left = 746.0
+offset_top = 168.0
+offset_right = 754.0
+offset_bottom = 176.0
+nome_fase = "res://Mundo2.tscn"
+nmr_fase = "2"
+moeda_bloqueio = 1
+
+[node name="fase_btn3" parent="." instance=ExtResource("1_bcumk")]
+layout_mode = 0
+offset_left = 234.0
+offset_top = 432.0
+offset_right = 242.0
+offset_bottom = 440.0
+nome_fase = "res://Mundo3.tscn"
+nmr_fase = "3"
+
+[node name="fase_btn4" parent="." instance=ExtResource("1_bcumk")]
+layout_mode = 0
+offset_left = 734.0
+offset_top = 431.0
+offset_right = 742.0
+offset_bottom = 439.0
+nmr_fase = "4"

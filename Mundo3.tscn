@@ -34,7 +34,7 @@
 [ext_resource type="PackedScene" uid="uid://b3545jl6vdnu8" path="res://pause_menu.tscn" id="29_6b7v0"]
 [ext_resource type="Theme" uid="uid://cacpanawqld15" path="res://PAUSE.tres" id="29_nixwd"]
 [ext_resource type="PackedScene" uid="uid://jpsjrpxyirsq" path="res://coletavel_inverno.tscn" id="31_lxhqo"]
-[ext_resource type="AudioStream" uid="uid://btc7t8sfrbwt3" path="res://Addons/Free/Sons/Áudio de Endryk Ruan (1).mp3" id="35_6hvss"]
+[ext_resource type="AudioStream" uid="uid://gd8dre4ts8uk" path="res://Addons/Free/Sons/musica_inverno.mp3" id="35_fujop"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_eeb8d"]
 tile_data = PackedInt32Array(0, 1, 0)
@@ -317,6 +317,81 @@ position = Vector2(8, 120)
 
 [node name="cherry" parent="coletaveis" instance=ExtResource("31_lxhqo")]
 position = Vector2(280, -69)
+
+[node name="cherry4" parent="coletaveis" instance=ExtResource("31_lxhqo")]
+position = Vector2(480, -69)
+
+[node name="cherry2" parent="coletaveis" instance=ExtResource("31_lxhqo")]
+position = Vector2(280, -98)
+
+[node name="cherry3" parent="coletaveis" instance=ExtResource("31_lxhqo")]
+position = Vector2(481, -99)
+
+[node name="cherry5" parent="coletaveis" instance=ExtResource("31_lxhqo")]
+position = Vector2(516, -99)
+
+[node name="cherry8" parent="coletaveis" instance=ExtResource("31_lxhqo")]
+position = Vector2(553, -99)
+
+[node name="cherry9" parent="coletaveis" instance=ExtResource("31_lxhqo")]
+position = Vector2(753, -99)
+
+[node name="cherry10" parent="coletaveis" instance=ExtResource("31_lxhqo")]
+position = Vector2(801, -99)
+
+[node name="cherry6" parent="coletaveis" instance=ExtResource("31_lxhqo")]
+position = Vector2(516, -69)
+
+[node name="cherry7" parent="coletaveis" instance=ExtResource("31_lxhqo")]
+position = Vector2(551, -69)
+
+[node name="cherry11" parent="coletaveis" instance=ExtResource("31_lxhqo")]
+position = Vector2(753, -69)
+
+[node name="cherry12" parent="coletaveis" instance=ExtResource("31_lxhqo")]
+position = Vector2(800, -69)
+
+[node name="cherry13" parent="coletaveis" instance=ExtResource("31_lxhqo")]
+position = Vector2(927, -69)
+
+[node name="cherry14" parent="coletaveis" instance=ExtResource("31_lxhqo")]
+position = Vector2(1001, -69)
+
+[node name="cherry15" parent="coletaveis" instance=ExtResource("31_lxhqo")]
+position = Vector2(1078, -69)
+
+[node name="cherry16" parent="coletaveis" instance=ExtResource("31_lxhqo")]
+position = Vector2(1237, -92)
+
+[node name="cherry17" parent="coletaveis" instance=ExtResource("31_lxhqo")]
+position = Vector2(1457, -88)
+
+[node name="cherry19" parent="coletaveis" instance=ExtResource("31_lxhqo")]
+position = Vector2(1668, -69)
+
+[node name="cherry20" parent="coletaveis" instance=ExtResource("31_lxhqo")]
+position = Vector2(1707, -69)
+
+[node name="cherry21" parent="coletaveis" instance=ExtResource("31_lxhqo")]
+position = Vector2(1741, -69)
+
+[node name="cherry22" parent="coletaveis" instance=ExtResource("31_lxhqo")]
+position = Vector2(2456, -69)
+
+[node name="cherry23" parent="coletaveis" instance=ExtResource("31_lxhqo")]
+position = Vector2(2682, -95)
+
+[node name="cherry24" parent="coletaveis" instance=ExtResource("31_lxhqo")]
+position = Vector2(2828, -78)
+
+[node name="cherry25" parent="coletaveis" instance=ExtResource("31_lxhqo")]
+position = Vector2(2899, -78)
+
+[node name="cherry26" parent="coletaveis" instance=ExtResource("31_lxhqo")]
+position = Vector2(2968, -78)
+
+[node name="cherry18" parent="coletaveis" instance=ExtResource("31_lxhqo")]
+position = Vector2(1457, -66)
 
 [node name="espinhos" type="Node2D" parent="."]
 position = Vector2(117, 4)
@@ -856,7 +931,7 @@ script = ExtResource("28_67tub")
 position = Vector2(130, 61)
 
 [node name="som_fundo" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("35_6hvss")
+stream = ExtResource("35_fujop")
 volume_db = -5.0
 pitch_scale = 0.9
 autoplay = true

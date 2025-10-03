@@ -1,0 +1,33 @@
+extends Button
+@export var tranca = true
+@export var nome_fase: String 
+@export var nmr_fase: String 
+@export var moeda_bloqueio = 0
+@onready var fase = $fase
+@onready var bloqueio = $bloqueio
+var nmr_um = preload("res://Addons/Free/Menu/Levels/01.png")
+var nmr_dois = preload("res://Addons/Free/Menu/Levels/02.png")
+var nmr_tres = preload("res://Addons/Free/Menu/Levels/03.png")
+var nmr_quatro = preload("res://Addons/Free/Menu/Levels/04.png")
+
+func _ready():
+	if Global.moeda > moeda_bloqueio:
+		tranca = false
+	if tranca:
+		bloqueio.visible = true
+	else:
+		bloqueio.visible = false
+	match nmr_fase:
+		"1":
+			fase.texture = nmr_um
+		"2":
+			fase.texture = nmr_dois
+		"3":
+			fase.texture = nmr_tres
+		"4":
+			fase.texture = nmr_quatro
+
+
+func _on_pressed():
+	if !tranca:
+		get_tree().change_scene_to_file(nome_fase)

@@ -150,3 +150,12 @@ func chegada():
 func final_jogo():
 	visible = false
 	set_physics_process(false)
+
+func _input(event):
+	if event is InputEventScreenTouch:
+		if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+			velocity.y = -jump_velocity
+			pulando = true
+			pular.play()
+		elif is_on_floor():
+			pulando = false
