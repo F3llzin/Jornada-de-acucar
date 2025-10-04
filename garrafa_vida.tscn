@@ -1,0 +1,129 @@
+[gd_scene load_steps=22 format=3 uid="uid://d7e3ujavp710"]
+
+[ext_resource type="Texture2D" uid="uid://c7tvoaktaorit" path="res://Addons/Free/Items/Fruits/Collected.png" id="1_7vahf"]
+[ext_resource type="Script" path="res://Scripts/garrafa_vida.gd" id="1_gsm8l"]
+[ext_resource type="Texture2D" uid="uid://b4f1v5d32io3f" path="res://Addons/Free/Menu/Buttons/Other/vida.png" id="2_myljl"]
+[ext_resource type="Texture2D" uid="uid://dtwsi0cpdah7b" path="res://Addons/Free/Menu/Buttons/Other/vida 2.png" id="3_ib7f5"]
+[ext_resource type="Texture2D" uid="uid://bm2gw7s12c14u" path="res://Addons/Free/Menu/Buttons/Other/vida 3.png" id="4_xoere"]
+[ext_resource type="Texture2D" uid="uid://yygwxk6p5nce" path="res://Addons/Free/Menu/Buttons/Other/vida 4.png" id="5_ytsrf"]
+[ext_resource type="AudioStream" uid="uid://crlgfcyci66ba" path="res://Addons/Free/Sons/Coins.mp3" id="6_ngrev"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ydk7i"]
+atlas = ExtResource("1_7vahf")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k12bk"]
+atlas = ExtResource("1_7vahf")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_awho2"]
+atlas = ExtResource("1_7vahf")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_62nyr"]
+atlas = ExtResource("1_7vahf")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ylcg5"]
+atlas = ExtResource("1_7vahf")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dn7pb"]
+atlas = ExtResource("1_7vahf")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0biyd"]
+atlas = ExtResource("2_myljl")
+region = Rect2(0, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_07acm"]
+atlas = ExtResource("3_ib7f5")
+region = Rect2(0, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hqajb"]
+atlas = ExtResource("4_xoere")
+region = Rect2(0, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mxfd8"]
+atlas = ExtResource("5_ytsrf")
+region = Rect2(0, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ylpsg"]
+atlas = ExtResource("4_xoere")
+region = Rect2(0, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ca4n"]
+atlas = ExtResource("3_ib7f5")
+region = Rect2(0, 0, 38, 38)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_suadj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ydk7i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k12bk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_awho2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_62nyr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ylcg5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dn7pb")
+}],
+"loop": false,
+"name": &"collected",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0biyd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_07acm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hqajb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mxfd8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ylpsg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ca4n")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8imes"]
+radius = 7.07107
+
+[node name="garrafa_vida" type="Area2D"]
+script = ExtResource("1_gsm8l")
+
+[node name="anim" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_suadj")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.371265
+
+[node name="collision" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8imes")
+
+[node name="coleta" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_ngrev")
+volume_db = -10.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]

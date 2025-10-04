@@ -2,16 +2,17 @@ extends Button
 @export var tranca = true
 @export var nome_fase: String 
 @export var nmr_fase: String 
-@export var moeda_bloqueio = 0
+@export var fase_bloqueio = 0
 @onready var fase = $fase
 @onready var bloqueio = $bloqueio
+@onready var troca_btn = $troca_btn
 var nmr_um = preload("res://Addons/Free/Menu/Levels/01.png")
 var nmr_dois = preload("res://Addons/Free/Menu/Levels/02.png")
 var nmr_tres = preload("res://Addons/Free/Menu/Levels/03.png")
 var nmr_quatro = preload("res://Addons/Free/Menu/Levels/04.png")
 
 func _ready():
-	if Global.moeda > moeda_bloqueio:
+	if Global.fase > fase_bloqueio:
 		tranca = false
 	if tranca:
 		bloqueio.visible = true
@@ -31,3 +32,8 @@ func _ready():
 func _on_pressed():
 	if !tranca:
 		get_tree().change_scene_to_file(nome_fase)
+
+func _on_mouse_exited():
+	if !tranca:
+		troca_btn.play()
+

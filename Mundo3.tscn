@@ -1,6 +1,7 @@
-[gd_scene load_steps=52 format=3 uid="uid://cie6am2l84ktx"]
+[gd_scene load_steps=53 format=3 uid="uid://cie6am2l84ktx"]
 
 [ext_resource type="Script" path="res://scripts/Mundo.gd" id="1_2lxy0"]
+[ext_resource type="PackedScene" uid="uid://d7e3ujavp710" path="res://garrafa_vida.tscn" id="3_eh5qm"]
 [ext_resource type="PackedScene" uid="uid://cigce187yrbdx" path="res://espinhos_area_cristal.tscn" id="3_o0uvx"]
 [ext_resource type="PackedScene" uid="uid://b8lhe2amprayo" path="res://enemy3.tscn" id="4_rpm4k"]
 [ext_resource type="PackedScene" uid="uid://dcie1hk7syhqi" path="res://final_jogo.tscn" id="5_uwtic"]
@@ -392,6 +393,12 @@ position = Vector2(2968, -78)
 
 [node name="cherry18" parent="coletaveis" instance=ExtResource("31_lxhqo")]
 position = Vector2(1457, -66)
+
+[node name="vidas" type="Node2D" parent="."]
+
+[node name="garrafa_vida3" parent="vidas" instance=ExtResource("3_eh5qm")]
+position = Vector2(1715, 33)
+scale = Vector2(0.7, 0.7)
 
 [node name="espinhos" type="Node2D" parent="."]
 position = Vector2(117, 4)

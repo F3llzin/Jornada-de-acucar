@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dm6valn4sw22r"]
+[gd_scene load_steps=4 format=3 uid="uid://dm6valn4sw22r"]
 
 [ext_resource type="Script" path="res://Scripts/fase_btn.gd" id="1_iuaef"]
 [ext_resource type="Texture2D" uid="uid://bomu8ukanuveq" path="res://Addons/Free/Menu/Buttons/Close.png" id="2_dr2hw"]
+[ext_resource type="AudioStream" uid="uid://coj1gr4fggeap" path="res://Addons/Free/Sons/Trocadebotão.mp3" id="3_2adrc"]
 
 [node name="fase_btn" type="Button"]
 offset_right = 8.0
@@ -17,4 +18,9 @@ position = Vector2(11, 8.83333)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_dr2hw")
 
+[node name="troca_btn" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_2adrc")
+volume_db = -15.0
+
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
 [connection signal="pressed" from="." to="." method="_on_pressed"]

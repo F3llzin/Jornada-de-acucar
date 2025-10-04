@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://bsh5thx504yep"]
+[gd_scene load_steps=52 format=3 uid="uid://bsh5thx504yep"]
 
 [ext_resource type="Script" path="res://scripts/Mundo.gd" id="1_i3p3u"]
 [ext_resource type="PackedScene" uid="uid://d0et5ubiolsqn" path="res://coletavel_outono.tscn" id="2_h3tlj"]
@@ -35,6 +35,7 @@
 [ext_resource type="Theme" uid="uid://cacpanawqld15" path="res://PAUSE.tres" id="31_ddpkv"]
 [ext_resource type="Texture2D" uid="uid://bmbtwpsdhi1dw" path="res://Addons/Free/Artes_jogo/tronco_caido_outono.png" id="31_l0mjo"]
 [ext_resource type="AudioStream" uid="uid://co7qk0q6cvpdt" path="res://Addons/Free/Sons/musica_outono.mp3" id="31_u3hjo"]
+[ext_resource type="PackedScene" uid="uid://d7e3ujavp710" path="res://garrafa_vida.tscn" id="36_2hccg"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_eeb8d"]
 tile_data = PackedInt32Array(0, 1, 0)
@@ -243,6 +244,12 @@ position = Vector2(2000, -66)
 
 [node name="cherry16" parent="coletaveis" instance=ExtResource("2_h3tlj")]
 position = Vector2(2000, -96)
+
+[node name="vidas" type="Node2D" parent="."]
+
+[node name="garrafa_vida3" parent="vidas" instance=ExtResource("36_2hccg")]
+position = Vector2(1986, 39)
+scale = Vector2(0.7, 0.7)
 
 [node name="espinhos" type="Node2D" parent="."]
 position = Vector2(117, 1)
