@@ -1,0 +1,729 @@
+[gd_scene load_steps=53 format=3 uid="uid://b7bo1mbv88o0e"]
+
+[ext_resource type="Script" path="res://scripts/Mundo.gd" id="1_rjm86"]
+[ext_resource type="PackedScene" uid="uid://d0et5ubiolsqn" path="res://coletavel_outono.tscn" id="2_mqbba"]
+[ext_resource type="PackedScene" uid="uid://d7e3ujavp710" path="res://garrafa_vida.tscn" id="3_3u1rn"]
+[ext_resource type="PackedScene" uid="uid://dwxwyfqud20x7" path="res://espinhos_area.tscn" id="4_eb060"]
+[ext_resource type="PackedScene" uid="uid://cn86d25o00chr" path="res://arvore_outono_part.tscn" id="5_ry402"]
+[ext_resource type="Texture2D" uid="uid://c5kyhqudgf6yv" path="res://Addons/Free/Artes_jogo/banco.png" id="6_c4d72"]
+[ext_resource type="Texture2D" uid="uid://bkhtti87im4c4" path="res://Addons/Free/Artes_jogo/arvore outono tipo 2.png" id="7_kq3jv"]
+[ext_resource type="Texture2D" uid="uid://dny5p8qfso2go" path="res://Addons/Free/Artes_jogo/placa.png" id="8_b6kcb"]
+[ext_resource type="Texture2D" uid="uid://3bio45ilwi4r" path="res://Addons/Free/Artes_jogo/placa_perigo.png" id="9_tb3st"]
+[ext_resource type="Texture2D" uid="uid://iabagsomp7eh" path="res://Addons/Free/Artes_jogo/Decoracao/jarro_flor_dec.png" id="10_15qei"]
+[ext_resource type="Texture2D" uid="uid://c1b1en2vvvv88" path="res://Addons/Free/Artes_jogo/poste.png" id="11_pmixn"]
+[ext_resource type="Texture2D" uid="uid://bmbtwpsdhi1dw" path="res://Addons/Free/Artes_jogo/tronco_caido_outono.png" id="12_6j500"]
+[ext_resource type="Texture2D" uid="uid://c2jqqx4q2ekq6" path="res://Addons/Free/Artes_jogo/tronco_outono.png" id="13_f04ps"]
+[ext_resource type="Texture2D" uid="uid://cdyoakf14m6ci" path="res://Addons/Free/Artes_jogo/casa_arvore2.png" id="14_gt6ra"]
+[ext_resource type="PackedScene" uid="uid://cc64vt0n8xfpo" path="res://enemy2.tscn" id="15_a2qjj"]
+[ext_resource type="PackedScene" uid="uid://bh7sntndx4xcr" path="res://jogador.tscn" id="16_1prhp"]
+[ext_resource type="Texture2D" uid="uid://dpy657om4jxvn" path="res://Addons/Free/Artes_jogo/placa_out.png" id="17_7q842"]
+[ext_resource type="Texture2D" uid="uid://chn3gxfmr7gfe" path="res://Addons/Free/Artes_jogo/tile.png" id="18_lwnac"]
+[ext_resource type="PackedScene" uid="uid://cyxhlk1rr7hqm" path="res://checkpoint.tscn" id="19_ghvdl"]
+[ext_resource type="Texture2D" uid="uid://csgwg0ifalfym" path="res://Addons/Free/Artes_jogo/ceu_primavera.png" id="20_lsfxv"]
+[ext_resource type="Texture2D" uid="uid://cg2u3m8a5ntk7" path="res://Addons/Free/Artes_jogo/montanha_bg_primavera.png" id="21_umec5"]
+[ext_resource type="Texture2D" uid="uid://dakx42taqqmao" path="res://Addons/Free/Artes_jogo/chao_primavera.png" id="22_ca2rw"]
+[ext_resource type="Texture2D" uid="uid://ndrxgnps80no" path="res://Addons/Free/Artes_jogo/nuvem_primavera.png" id="22_opcc3"]
+[ext_resource type="PackedScene" uid="uid://bt5bn0p70du3r" path="res://zona_queda.tscn" id="23_cfkmi"]
+[ext_resource type="Texture2D" uid="uid://cyo2tvmvt8dhq" path="res://Addons/Free/Menu/Buttons/seta_normal.png" id="24_5msr2"]
+[ext_resource type="Script" path="res://Scripts/gerenciador_hud.gd" id="25_6kbb4"]
+[ext_resource type="Texture2D" uid="uid://csdf3oeqfnxtf" path="res://Addons/Free/Main Characters/Inimigo Abobora/abobora_pulando.png" id="26_42hv0"]
+[ext_resource type="Texture2D" uid="uid://tfong2ny4dfq" path="res://Addons/Free/Items/Fruits/noz.png" id="27_s0lym"]
+[ext_resource type="Texture2D" uid="uid://b4f1v5d32io3f" path="res://Addons/Free/Menu/Buttons/Other/vida.png" id="28_2s60m"]
+[ext_resource type="Theme" uid="uid://cacpanawqld15" path="res://PAUSE.tres" id="29_ajeoj"]
+[ext_resource type="Script" path="res://Scripts/transicao.gd" id="30_5bt0l"]
+[ext_resource type="Shader" path="res://shaders/transicao.gdshader" id="31_6ruo3"]
+[ext_resource type="Script" path="res://Scripts/color.gd" id="32_3pkbn"]
+[ext_resource type="PackedScene" uid="uid://b3545jl6vdnu8" path="res://pause_menu.tscn" id="33_f4owe"]
+[ext_resource type="AudioStream" uid="uid://co7qk0q6cvpdt" path="res://Addons/Free/Sons/musica_outono.mp3" id="34_cpn0m"]
+[ext_resource type="PackedScene" uid="uid://dcie1hk7syhqi" path="res://final_jogo.tscn" id="35_gwbrs"]
+[ext_resource type="PackedScene" uid="uid://d0p8x1lammvn0" path="res://falling_plataform.tscn" id="36_li7u2"]
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_eeb8d"]
+tile_data = PackedInt32Array(0, 1, 0)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_xrmc3"]
+tile_data = PackedInt32Array(0, 5, 0)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_sopa3"]
+tile_data = PackedInt32Array(0, 4, 0)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_gki4g"]
+tile_data = PackedInt32Array(0, 3, 0)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_gxu77"]
+tile_data = PackedInt32Array(0, 2, 0)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jlmv7"]
+texture = ExtResource("18_lwnac")
+6:4/0 = 0
+6:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:4/0/physics_layer_0/angular_velocity = 0.0
+6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:4/0 = 0
+7:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:4/0/physics_layer_0/angular_velocity = 0.0
+7:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:4/0 = 0
+8:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+8:4/0/physics_layer_0/angular_velocity = 0.0
+8:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:5/0 = 0
+6:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:5/0/physics_layer_0/angular_velocity = 0.0
+6:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:5/0 = 0
+7:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:5/0/physics_layer_0/angular_velocity = 0.0
+8:5/0 = 0
+8:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+8:5/0/physics_layer_0/angular_velocity = 0.0
+8:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:6/0 = 0
+6:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:6/0/physics_layer_0/angular_velocity = 0.0
+7:6/0 = 0
+7:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:6/0/physics_layer_0/angular_velocity = 0.0
+8:6/0 = 0
+8:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+8:6/0/physics_layer_0/angular_velocity = 0.0
+10:7/0 = 0
+10:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+10:7/0/physics_layer_0/angular_velocity = 0.0
+6:8/0 = 0
+6:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:8/0/physics_layer_0/angular_velocity = 0.0
+6:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:8/0 = 0
+7:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:8/0/physics_layer_0/angular_velocity = 0.0
+7:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:8/0 = 0
+8:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+8:8/0/physics_layer_0/angular_velocity = 0.0
+8:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:9/0 = 0
+6:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:9/0/physics_layer_0/angular_velocity = 0.0
+6:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:9/0 = 0
+7:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:9/0/physics_layer_0/angular_velocity = 0.0
+8:9/0 = 0
+8:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+8:9/0/physics_layer_0/angular_velocity = 0.0
+8:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:10/0 = 0
+6:10/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:10/0/physics_layer_0/angular_velocity = 0.0
+7:10/0 = 0
+7:10/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:10/0/physics_layer_0/angular_velocity = 0.0
+8:10/0 = 0
+8:10/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+8:10/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_33j8d"]
+physics_layer_0/collision_layer = 2
+physics_layer_0/collision_mask = 0
+sources/0 = SubResource("TileSetAtlasSource_jlmv7")
+pattern_0 = SubResource("TileMapPattern_eeb8d")
+pattern_1 = SubResource("TileMapPattern_xrmc3")
+pattern_2 = SubResource("TileMapPattern_sopa3")
+pattern_3 = SubResource("TileMapPattern_gki4g")
+pattern_4 = SubResource("TileMapPattern_gxu77")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h8yfa"]
+size = Vector2(64, 14.5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6t3l6"]
+atlas = ExtResource("27_s0lym")
+region = Rect2(0, 0, 31, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lxmg6"]
+atlas = ExtResource("27_s0lym")
+region = Rect2(31, 0, 31, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_byxvn"]
+atlas = ExtResource("27_s0lym")
+region = Rect2(62, 0, 31, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rksb7"]
+atlas = ExtResource("27_s0lym")
+region = Rect2(93, 0, 31, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w4mmc"]
+atlas = ExtResource("27_s0lym")
+region = Rect2(124, 0, 31, 25)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vs1fo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6t3l6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lxmg6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_byxvn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rksb7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w4mmc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_a886s"]
+shader = ExtResource("31_6ruo3")
+shader_parameter/lines = 10.0
+shader_parameter/threshold = 0.0
+shader_parameter/line_color_a = Color(1, 1, 1, 1)
+shader_parameter/line_color_b = Color(0, 0, 0, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_rjm86")
+
+[node name="coletaveis" type="Node2D" parent="."]
+position = Vector2(8, 120)
+
+[node name="cherry" parent="coletaveis" instance=ExtResource("2_mqbba")]
+position = Vector2(280, -105)
+
+[node name="cherry2" parent="coletaveis" instance=ExtResource("2_mqbba")]
+position = Vector2(234, -82)
+
+[node name="cherry3" parent="coletaveis" instance=ExtResource("2_mqbba")]
+position = Vector2(328, -81)
+
+[node name="cherry4" parent="coletaveis" instance=ExtResource("2_mqbba")]
+position = Vector2(501, -76)
+
+[node name="cherry5" parent="coletaveis" instance=ExtResource("2_mqbba")]
+position = Vector2(741, -51)
+
+[node name="cherry6" parent="coletaveis" instance=ExtResource("2_mqbba")]
+position = Vector2(854, -52)
+
+[node name="cherry7" parent="coletaveis" instance=ExtResource("2_mqbba")]
+position = Vector2(927, -52)
+
+[node name="cherry8" parent="coletaveis" instance=ExtResource("2_mqbba")]
+position = Vector2(1091, -50)
+
+[node name="cherry9" parent="coletaveis" instance=ExtResource("2_mqbba")]
+position = Vector2(1245, -52)
+
+[node name="cherry10" parent="coletaveis" instance=ExtResource("2_mqbba")]
+position = Vector2(1392, -51)
+
+[node name="cherry11" parent="coletaveis" instance=ExtResource("2_mqbba")]
+position = Vector2(1482, -74)
+
+[node name="cherry13" parent="coletaveis" instance=ExtResource("2_mqbba")]
+position = Vector2(1705, -74)
+
+[node name="cherry18" parent="coletaveis" instance=ExtResource("2_mqbba")]
+position = Vector2(1760, -74)
+
+[node name="cherry12" parent="coletaveis" instance=ExtResource("2_mqbba")]
+position = Vector2(1688, -50)
+
+[node name="cherry14" parent="coletaveis" instance=ExtResource("2_mqbba")]
+position = Vector2(1952, -66)
+
+[node name="cherry17" parent="coletaveis" instance=ExtResource("2_mqbba")]
+position = Vector2(1952, -97)
+
+[node name="cherry15" parent="coletaveis" instance=ExtResource("2_mqbba")]
+position = Vector2(2000, -66)
+
+[node name="cherry16" parent="coletaveis" instance=ExtResource("2_mqbba")]
+position = Vector2(2000, -96)
+
+[node name="vidas" type="Node2D" parent="."]
+
+[node name="garrafa_vida3" parent="vidas" instance=ExtResource("3_3u1rn")]
+position = Vector2(1986, 39)
+scale = Vector2(0.7, 0.7)
+
+[node name="espinhos" type="Node2D" parent="."]
+position = Vector2(117, 1)
+
+[node name="espinhos_area" parent="espinhos" instance=ExtResource("4_eb060")]
+position = Vector2(164, 53)
+
+[node name="espinhos_area3" parent="espinhos" instance=ExtResource("4_eb060")]
+position = Vector2(307, 53)
+
+[node name="espinhos_area2" parent="espinhos" instance=ExtResource("4_eb060")]
+position = Vector2(780, 69)
+
+[node name="espinhos_area4" parent="espinhos" instance=ExtResource("4_eb060")]
+position = Vector2(1622, 69)
+
+[node name="decoracoes2" type="Node2D" parent="."]
+position = Vector2(-1, -89)
+
+[node name="Arvore" parent="decoracoes2" instance=ExtResource("5_ry402")]
+position = Vector2(485, 120)
+scale = Vector2(1.8, 1.8)
+emit_qnd_jogo_iniciar = true
+
+[node name="Arvore2" parent="decoracoes2" instance=ExtResource("5_ry402")]
+position = Vector2(1857, 120)
+scale = Vector2(1.8, 1.8)
+emit_qnd_jogo_iniciar = true
+
+[node name="Banco" type="Sprite2D" parent="decoracoes2"]
+position = Vector2(1525, 158)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("6_c4d72")
+
+[node name="Banco2" type="Sprite2D" parent="decoracoes2"]
+position = Vector2(226, 157)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("6_c4d72")
+
+[node name="ArvoreOutonoTipo4" type="Sprite2D" parent="decoracoes2"]
+position = Vector2(2824, 106)
+scale = Vector2(1.8, 1.8)
+texture = ExtResource("7_kq3jv")
+
+[node name="ArvoreOutonoTipo5" type="Sprite2D" parent="decoracoes2"]
+position = Vector2(1552, 124)
+scale = Vector2(1.8, 1.8)
+texture = ExtResource("7_kq3jv")
+
+[node name="Placa" type="Sprite2D" parent="decoracoes2"]
+position = Vector2(843, 157)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("8_b6kcb")
+flip_h = true
+
+[node name="Placa2" type="Sprite2D" parent="decoracoes2"]
+position = Vector2(1492, 158)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("8_b6kcb")
+
+[node name="PlacaSeguir" type="Sprite2D" parent="decoracoes2"]
+position = Vector2(171, 157)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("17_7q842")
+
+[node name="PlacaSeguir2" type="Sprite2D" parent="decoracoes2"]
+position = Vector2(1924, 158)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("17_7q842")
+
+[node name="decoracoes" type="Node2D" parent="."]
+scale = Vector2(0.4, 0.4)
+
+[node name="PlacaPerigo" type="Sprite2D" parent="decoracoes"]
+position = Vector2(1640, 127.5)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_tb3st")
+
+[node name="PlacaPerigo3" type="Sprite2D" parent="decoracoes"]
+position = Vector2(2605, 167.5)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_tb3st")
+
+[node name="JarroFlorDec3" type="Sprite2D" parent="decoracoes"]
+position = Vector2(502.5, 175)
+texture = ExtResource("10_15qei")
+flip_h = true
+
+[node name="Poste" type="Sprite2D" parent="decoracoes"]
+position = Vector2(4007.5, 132.5)
+scale = Vector2(3, 3)
+texture = ExtResource("11_pmixn")
+
+[node name="Poste5" type="Sprite2D" parent="decoracoes"]
+position = Vector2(5797.5, 132.5)
+scale = Vector2(3, 3)
+texture = ExtResource("11_pmixn")
+
+[node name="Poste6" type="Sprite2D" parent="decoracoes"]
+position = Vector2(6197.5, 132.5)
+scale = Vector2(3, 3)
+texture = ExtResource("11_pmixn")
+
+[node name="Poste7" type="Sprite2D" parent="decoracoes"]
+position = Vector2(6840, 132.5)
+scale = Vector2(3, 3)
+texture = ExtResource("11_pmixn")
+
+[node name="Poste2" type="Sprite2D" parent="decoracoes"]
+position = Vector2(1417.5, 92.5)
+scale = Vector2(3, 3)
+texture = ExtResource("11_pmixn")
+
+[node name="Poste3" type="Sprite2D" parent="decoracoes"]
+position = Vector2(885, 130)
+scale = Vector2(3, 3)
+texture = ExtResource("11_pmixn")
+
+[node name="Poste4" type="Sprite2D" parent="decoracoes"]
+position = Vector2(325, 132.5)
+scale = Vector2(3, 3)
+texture = ExtResource("11_pmixn")
+
+[node name="TroncoCaidoOutono" type="Sprite2D" parent="decoracoes"]
+position = Vector2(4495, 187.5)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("12_6j500")
+
+[node name="TroncoCaidoOutono2" type="Sprite2D" parent="decoracoes"]
+position = Vector2(4980, 187.5)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("12_6j500")
+
+[node name="TroncoOutono" type="Sprite2D" parent="decoracoes"]
+position = Vector2(4127.5, 190)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("13_f04ps")
+
+[node name="CasaArvore2" type="Sprite2D" parent="decoracoes"]
+position = Vector2(5150, 72.5)
+scale = Vector2(4, 4)
+texture = ExtResource("14_gt6ra")
+
+[node name="inimigos" type="Node2D" parent="."]
+
+[node name="Enemy" parent="inimigos" instance=ExtResource("15_a2qjj")]
+position = Vector2(357, 82)
+
+[node name="Enemy2" parent="inimigos" instance=ExtResource("15_a2qjj")]
+position = Vector2(503, 82)
+
+[node name="Enemy3" parent="inimigos" instance=ExtResource("15_a2qjj")]
+position = Vector2(2211, 96)
+
+[node name="Enemy4" parent="inimigos" instance=ExtResource("15_a2qjj")]
+position = Vector2(2401, 99)
+
+[node name="jogador" parent="." instance=ExtResource("16_1prhp")]
+position = Vector2(145, 63)
+
+[node name="tile" type="TileMap" parent="."]
+position = Vector2(0, 31)
+tile_set = SubResource("TileSet_33j8d")
+format = 2
+layer_0/name = "chao"
+layer_0/tile_data = PackedInt32Array(262145, 458752, 6, 262146, 458752, 6, 262147, 458752, 6, 262148, 458752, 6, 262149, 458752, 6, 262150, 524288, 6, 262151, 393216, 6, 262152, 458752, 6, 262153, 458752, 6, 262154, 458752, 6, 262155, 458752, 6, 262156, 458752, 6, 196608, 393216, 5, 262144, 393216, 6, 196614, 524288, 5, 131078, 524288, 5, 65542, 524288, 5, 6, 524288, 5, -65530, 524288, 5, -65531, 655360, 7, -65532, 655360, 7, -65536, 393216, 5, -65535, 655360, 7, -65534, 655360, 7, -65533, 458752, 9, 0, 393216, 5, 65536, 393216, 5, 131072, 393216, 5, 1, 458752, 9, 65537, 655360, 7, 131073, 655360, 7, 196609, 458752, 9, 2, 655360, 7, 65538, 458752, 9, 131074, 458752, 9, 196610, 655360, 7, 3, 458752, 9, 65539, 458752, 9, 131075, 655360, 7, 4, 655360, 7, 131076, 458752, 9, 196612, 655360, 7, 5, 458752, 9, 65541, 655360, 7, 131077, 655360, 7, 196613, 458752, 9, 196611, 458752, 9, 65540, 458752, 9, 196615, 393216, 4, 196616, 458752, 4, 196617, 458752, 4, -131066, 524288, 4, -131067, 458752, 4, -196604, 524288, 5, -131068, 393216, 4, -262140, 524288, 4, -262141, 458752, 4, -262142, 393216, 4, -327678, 524288, 4, -327680, 393216, 4, -327679, 458752, 4, -262144, 393216, 5, -196608, 393216, 5, -196607, 655360, 7, -131071, 458752, 9, -131072, 393216, 5, -262143, 655360, 7, -196606, 458752, 9, -131070, 458752, 9, -196605, 655360, 7, -131069, 655360, 7, 196618, 458752, 4, 196619, 458752, 4, 196620, 458752, 4, 196621, 458752, 4, 196622, 458752, 4, 196623, 458752, 4, 262157, 458752, 6, 262158, 458752, 6, 262159, 458752, 6, 131088, 393216, 4, 196624, 393216, 5, 262160, 458752, 6, 131089, 458752, 4, 131090, 524288, 4, 131097, 393216, 4, 131098, 458752, 4, 131099, 524288, 4, 131106, 393216, 4, 131107, 458752, 4, 131108, 458752, 4, 131109, 458752, 4, 131110, 458752, 4, 131111, 458752, 4, 131112, 458752, 4, 131113, 524288, 4, 262161, 458752, 6, 262162, 458752, 6, 262163, 458752, 6, 262164, 458752, 6, 262165, 458752, 6, 262166, 458752, 6, 262167, 458752, 6, 262168, 458752, 6, 262169, 458752, 6, 262170, 458752, 6, 262171, 458752, 6, 262172, 458752, 6, 262173, 458752, 6, 262174, 458752, 6, 262175, 458752, 6, 262176, 458752, 6, 262177, 458752, 6, 262178, 458752, 6, 262179, 458752, 6, 262180, 458752, 6, 262181, 458752, 6, 262182, 458752, 6, 262183, 458752, 6, 262184, 458752, 6, 262185, 524288, 6, 196625, 458752, 5, 196626, 524288, 5, 196627, 393216, 4, 196628, 458752, 4, 196629, 458752, 4, 196630, 458752, 4, 196631, 458752, 4, 196632, 524288, 4, 196633, 393216, 5, 196634, 458752, 5, 196635, 524288, 5, 196636, 393216, 4, 196637, 458752, 4, 196638, 458752, 4, 196639, 458752, 4, 196640, 458752, 4, 196641, 524288, 4, 196642, 393216, 5, 196643, 458752, 5, 196644, 458752, 5, 196645, 458752, 5, 196646, 458752, 5, 196647, 458752, 5, 196648, 458752, 5, 196649, 524288, 5, 196654, 393216, 4, 262190, 393216, 6, 196655, 524288, 4, 262191, 524288, 6, 196660, 393216, 4, 262196, 393216, 6, 196661, 458752, 4, 262197, 458752, 6, 196662, 458752, 4, 262198, 458752, 6, 196663, 458752, 4, 262199, 458752, 6, 196664, 458752, 4, 262200, 458752, 6, 196665, 458752, 4, 262201, 458752, 6, 196666, 458752, 4, 262202, 458752, 6, 196667, 524288, 4, 262203, 524288, 6, 196710, 458752, 4, 262246, 458752, 6, 196711, 458752, 4, 262247, 458752, 6, 196712, 458752, 4, 262248, 458752, 6, 196713, 458752, 4, 262249, 458752, 6, 196714, 458752, 4, 262250, 458752, 6, 196715, 458752, 4, 262251, 458752, 6, 196716, 458752, 4, 262252, 458752, 6, 262253, 458752, 6, 262254, 458752, 6, 262255, 458752, 6, 262256, 458752, 6, 262257, 458752, 6, 262258, 458752, 6, 262259, 458752, 6, 262260, 458752, 6, 262261, 458752, 6, 262262, 458752, 6, 196727, 458752, 4, 262263, 458752, 6, 196728, 458752, 4, 262264, 458752, 6, 196729, 458752, 4, 262265, 458752, 6, 196730, 458752, 4, 262266, 458752, 6, 262267, 458752, 6, 262268, 458752, 6, 262269, 458752, 6, 262270, 458752, 6, 262271, 458752, 6, 262272, 458752, 6, 196737, 458752, 4, 262273, 458752, 6, 196738, 458752, 4, 262274, 458752, 6, 196739, 458752, 4, 262275, 458752, 6, 196740, 524288, 4, 262276, 524288, 6, 262281, 458752, 4, 262282, 458752, 4, 262283, 458752, 4, 262284, 458752, 4, 196753, 458752, 4, 262289, 458752, 6, 196754, 524288, 4, 262290, 524288, 6, 262291, 458752, 4, 262292, 458752, 4, 262293, 458752, 4, 262294, 458752, 4, 262295, 458752, 4, 262296, 458752, 4, 196761, 393216, 4, 262297, 393216, 6, 196762, 458752, 4, 262298, 458752, 6, 196763, 458752, 4, 262299, 458752, 6, 196764, 524288, 4, 262300, 524288, 6, 196769, 393216, 4, 262305, 393216, 6, 196770, 458752, 4, 262306, 458752, 6, 196771, 458752, 4, 262307, 458752, 6, 196772, 524288, 4, 262308, 524288, 6, 196777, 393216, 4, 262313, 393216, 6, 196717, 458752, 4, 196718, 458752, 4, 196719, 458752, 4, 196720, 458752, 4, 196721, 458752, 4, 196722, 458752, 4, 196723, 458752, 4, 196724, 458752, 4, 196725, 458752, 4, 196726, 458752, 4, 196731, 458752, 4, 196732, 458752, 4, 196733, 458752, 4, 196734, 458752, 4, 196735, 458752, 4, 196736, 458752, 4, 262277, 458752, 4, 262278, 458752, 4, 262279, 458752, 4, 262280, 458752, 4, 262285, 458752, 4, 262286, 458752, 4, 196751, 393216, 4, 262287, 393216, 6, 196752, 458752, 4, 262288, 458752, 6, 196778, 458752, 4, 262314, 458752, 6, 196779, 458752, 4, 262315, 458752, 6, 196780, 524288, 4, 262316, 524288, 6, 131245, 393216, 4, 196781, 393216, 5, 262317, 393216, 6, 131246, 458752, 4, 196782, 655360, 7, 262318, 458752, 6, 131247, 458752, 4, 196783, 458752, 9, 262319, 458752, 6, 131248, 458752, 4, 196784, 458752, 9, 262320, 458752, 6, 131249, 458752, 4, 196785, 655360, 7, 262321, 458752, 6, 131250, 458752, 4, 196786, 655360, 7, 262322, 458752, 6, 131251, 458752, 4, 196787, 458752, 9, 262323, 458752, 6, 131252, 458752, 4, 196788, 458752, 9, 262324, 458752, 6, 131253, 458752, 4, 196789, 458752, 9, 262325, 458752, 6, 131254, 458752, 4, 196790, 458752, 9, 262326, 458752, 6, 131255, 458752, 4, 196791, 655360, 7, 262327, 458752, 6, 131256, 458752, 4, 196792, 655360, 7, 262328, 458752, 6, 131257, 458752, 4, 196793, 655360, 7, 262329, 458752, 6, -196422, 393216, 4, -130886, 393216, 5, -65350, 393216, 5, 186, 393216, 5, 65722, 393216, 5, 131258, 524288, 4, 196794, 655360, 7, 262330, 458752, 6, -196421, 458752, 4, -130885, 458752, 9, -65349, 458752, 9, 187, 655360, 7, 65723, 655360, 7, 131259, 458752, 9, 196795, 655360, 7, 262331, 458752, 6, -393028, 393216, 4, -327492, 393216, 5, -261956, 393216, 5, -196420, 524288, 4, -130884, 655360, 7, -65348, 458752, 9, 188, 458752, 9, 65724, 458752, 9, 131260, 655360, 7, 196796, 655360, 7, 262332, 458752, 6, -393027, 458752, 4, -327491, 458752, 9, -261955, 458752, 9, -196419, 655360, 7, -130883, 458752, 9, -65347, 655360, 7, 189, 458752, 9, 65725, 655360, 7, 131261, 655360, 7, 196797, 655360, 7, 262333, 458752, 6, -393026, 458752, 4, -327490, 655360, 7, -261954, 655360, 7, -196418, 655360, 7, -130882, 655360, 7, -65346, 655360, 7, 190, 655360, 7, 65726, 655360, 7, 131262, 655360, 7, 196798, 655360, 7, 262334, 458752, 6, -393025, 458752, 4, -327489, 458752, 9, -261953, 655360, 7, -196417, 655360, 7, -130881, 458752, 9, -65345, 458752, 9, 191, 655360, 7, 65727, 458752, 9, 131263, 458752, 9, 196799, 458752, 9, 262335, 458752, 6, -393024, 458752, 4, -327488, 655360, 7, -261952, 655360, 7, -196416, 655360, 7, -130880, 655360, 7, -65344, 655360, 7, 192, 655360, 7, 65728, 655360, 7, 131264, 458752, 9, 196800, 458752, 9, 262336, 458752, 6, -393023, 524288, 4, -327487, 524288, 5, -261951, 524288, 5, -196415, 524288, 5, -130879, 524288, 5, -65343, 524288, 5, 193, 524288, 5, 65729, 524288, 5, 131265, 524288, 5, 196801, 524288, 5, 262337, 524288, 6, 196672, 393216, 4, 262208, 393216, 6, 196673, 524288, 4, 262209, 524288, 6, 196698, 393216, 4, 262234, 393216, 6, 196699, 458752, 4, 262235, 458752, 6, 196700, 458752, 4, 262236, 458752, 6, 196701, 458752, 4, 262237, 458752, 6, 196702, 458752, 4, 262238, 458752, 6, 196703, 458752, 4, 262239, 458752, 6, 196704, 458752, 4, 262240, 458752, 6, 196705, 458752, 4, 262241, 458752, 6, 196706, 458752, 4, 262242, 458752, 6, 196707, 458752, 4, 262243, 458752, 6, 196708, 458752, 4, 262244, 458752, 6, 196709, 458752, 4, 262245, 458752, 6)
+
+[node name="checkpoint" parent="." instance=ExtResource("19_ghvdl")]
+position = Vector2(610, 67)
+
+[node name="BG" type="ParallaxBackground" parent="."]
+
+[node name="01" type="ParallaxLayer" parent="BG"]
+position = Vector2(1, -129)
+motion_mirroring = Vector2(408, 0)
+
+[node name="texture" type="Sprite2D" parent="BG/01"]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("20_lsfxv")
+centered = false
+
+[node name="03" type="ParallaxLayer" parent="BG"]
+position = Vector2(1, -114)
+motion_scale = Vector2(0.2, 1)
+motion_mirroring = Vector2(400, 0)
+
+[node name="texture" type="Sprite2D" parent="BG/03"]
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("22_opcc3")
+centered = false
+
+[node name="02" type="ParallaxLayer" parent="BG"]
+position = Vector2(1, -114)
+motion_scale = Vector2(0.18, 1)
+motion_mirroring = Vector2(515, 0)
+
+[node name="texture" type="Sprite2D" parent="BG/02"]
+position = Vector2(-34, 0)
+scale = Vector2(0.3, 0.17)
+texture = ExtResource("21_umec5")
+centered = false
+
+[node name="04" type="ParallaxLayer" parent="BG"]
+position = Vector2(1, -129)
+motion_mirroring = Vector2(399.84, 0)
+
+[node name="texture" type="Sprite2D" parent="BG/04"]
+position = Vector2(7, 84.5)
+scale = Vector2(0.21, 0.131)
+texture = ExtResource("22_ca2rw")
+centered = false
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 2.6)
+limit_left = 0
+limit_bottom = 110
+limit_smoothed = true
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_left_margin = 0.3
+drag_right_margin = 0.4
+editor_draw_limits = true
+editor_draw_drag_margin = true
+
+[node name="area_queda" type="Node2D" parent="."]
+position = Vector2(-432, 1)
+
+[node name="zona_queda" parent="area_queda" instance=ExtResource("23_cfkmi")]
+position = Vector2(1149, 106)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_queda/zona_queda"]
+position = Vector2(-13, -2.25)
+shape = SubResource("RectangleShape2D_h8yfa")
+
+[node name="zona_queda2" parent="area_queda" instance=ExtResource("23_cfkmi")]
+position = Vector2(1246, 106)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_queda/zona_queda2"]
+position = Vector2(-13, -2.25)
+shape = SubResource("RectangleShape2D_h8yfa")
+
+[node name="zona_queda3" parent="area_queda" instance=ExtResource("23_cfkmi")]
+position = Vector2(1437, 106)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_queda/zona_queda3"]
+position = Vector2(-13, -2.25)
+shape = SubResource("RectangleShape2D_h8yfa")
+
+[node name="zona_queda4" parent="area_queda" instance=ExtResource("23_cfkmi")]
+position = Vector2(1531, 108)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_queda/zona_queda4"]
+position = Vector2(-13, -2.25)
+shape = SubResource("RectangleShape2D_h8yfa")
+
+[node name="zona_queda5" parent="area_queda" instance=ExtResource("23_cfkmi")]
+position = Vector2(1596, 108)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_queda/zona_queda5"]
+position = Vector2(-13, -2.25)
+shape = SubResource("RectangleShape2D_h8yfa")
+
+[node name="zona_queda6" parent="area_queda" instance=ExtResource("23_cfkmi")]
+position = Vector2(1661, 108)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_queda/zona_queda6"]
+position = Vector2(-13, -2.25)
+shape = SubResource("RectangleShape2D_h8yfa")
+
+[node name="zona_queda7" parent="area_queda" instance=ExtResource("23_cfkmi")]
+position = Vector2(1726, 108)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_queda/zona_queda7"]
+position = Vector2(-13, -2.25)
+shape = SubResource("RectangleShape2D_h8yfa")
+
+[node name="zona_queda8" parent="area_queda" instance=ExtResource("23_cfkmi")]
+position = Vector2(1791, 108)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_queda/zona_queda8"]
+position = Vector2(-13, -2.25)
+shape = SubResource("RectangleShape2D_h8yfa")
+
+[node name="zona_queda9" parent="area_queda" instance=ExtResource("23_cfkmi")]
+position = Vector2(1856, 108)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_queda/zona_queda9"]
+position = Vector2(-13, -2.25)
+shape = SubResource("RectangleShape2D_h8yfa")
+
+[node name="zona_queda10" parent="area_queda" instance=ExtResource("23_cfkmi")]
+position = Vector2(2989, 105)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_queda/zona_queda10"]
+position = Vector2(-13, -2.25)
+shape = SubResource("RectangleShape2D_h8yfa")
+
+[node name="zona_queda11" parent="area_queda" instance=ExtResource("23_cfkmi")]
+position = Vector2(3117, 105)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_queda/zona_queda11"]
+position = Vector2(-13, -2.25)
+shape = SubResource("RectangleShape2D_h8yfa")
+
+[node name="mobile" type="CanvasLayer" parent="."]
+
+[node name="ui_esq" type="TouchScreenButton" parent="mobile"]
+position = Vector2(328, 520)
+rotation = 1.5708
+scale = Vector2(4, 4)
+texture_normal = ExtResource("24_5msr2")
+texture_pressed = ExtResource("24_5msr2")
+action = "ui_right"
+visibility_mode = 1
+
+[node name="ui_dir" type="TouchScreenButton" parent="mobile"]
+position = Vector2(0, 648)
+rotation = -1.5708
+scale = Vector2(4, 4)
+texture_normal = ExtResource("24_5msr2")
+texture_pressed = ExtResource("24_5msr2")
+action = "ui_left"
+visibility_mode = 1
+
+[node name="ui_pulo" type="TouchScreenButton" parent="mobile"]
+position = Vector2(1024, 520)
+scale = Vector2(4, 4)
+texture_normal = ExtResource("24_5msr2")
+texture_pressed = ExtResource("24_5msr2")
+action = "ui_accept"
+visibility_mode = 1
+
+[node name="hud" type="CanvasLayer" parent="."]
+
+[node name="control" type="Control" parent="hud"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("25_6kbb4")
+
+[node name="container" type="MarginContainer" parent="hud/control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="abates" type="HBoxContainer" parent="hud/control/container"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="hud/control/container/abates"]
+position = Vector2(-25, 14)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("26_42hv0")
+region_enabled = true
+region_rect = Rect2(0, 2.98803, 22.2531, 23.012)
+
+[node name="abate_" type="Label" parent="hud/control/container/abates"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Abates: "
+vertical_alignment = 1
+
+[node name="contador_abate" type="Label" parent="hud/control/container/abates"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "+00"
+vertical_alignment = 1
+
+[node name="moeda" type="HBoxContainer" parent="hud/control/container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="hud/control/container/moeda"]
+position = Vector2(47, 10)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_vs1fo")
+autoplay = "default"
+
+[node name="contador" type="Label" parent="hud/control/container/moeda"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "0000"
+vertical_alignment = 1
+
+[node name="vida" type="HBoxContainer" parent="hud/control/container"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="icone" type="TextureRect" parent="hud/control/container/vida"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("28_2s60m")
+
+[node name="pause_bttn" type="CanvasLayer" parent="."]
+
+[node name="Pause_bttn" type="Button" parent="pause_bttn"]
+offset_left = 880.0
+offset_top = 24.0
+offset_right = 927.0
+offset_bottom = 55.0
+scale = Vector2(1.2, 1.2)
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("29_ajeoj")
+
+[node name="transicao" type="CanvasLayer" parent="."]
+script = ExtResource("30_5bt0l")
+
+[node name="color" type="ColorRect" parent="transicao"]
+material = SubResource("ShaderMaterial_a886s")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("32_3pkbn")
+
+[node name="pause_menu2" parent="." instance=ExtResource("33_f4owe")]
+
+[node name="posicao_inicial" type="Marker2D" parent="."]
+position = Vector2(130, 61)
+
+[node name="som_fundo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("34_cpn0m")
+volume_db = -5.0
+pitch_scale = 0.9
+autoplay = true
+
+[node name="final_jogo" parent="." instance=ExtResource("35_gwbrs")]
+position = Vector2(2911, 60)
+
+[node name="plataforma_cai" type="Node2D" parent="."]
+position = Vector2(150, 62)
+
+[node name="Falling_plataform" type="Node2D" parent="plataforma_cai"]
+position = Vector2(949, 25)
+
+[node name="falling_plataform" parent="plataforma_cai/Falling_plataform" instance=ExtResource("36_li7u2")]
+
+[node name="Falling_plataform2" type="Node2D" parent="plataforma_cai"]
+position = Vector2(1027, 25)
+
+[node name="falling_plataform" parent="plataforma_cai/Falling_plataform2" instance=ExtResource("36_li7u2")]
+
+[node name="Falling_plataform3" type="Node2D" parent="plataforma_cai"]
+position = Vector2(1102, 25)
+
+[node name="falling_plataform" parent="plataforma_cai/Falling_plataform3" instance=ExtResource("36_li7u2")]
+
+[node name="Falling_plataform4" type="Node2D" parent="plataforma_cai"]
+position = Vector2(1177, 25)
+
+[node name="falling_plataform" parent="plataforma_cai/Falling_plataform4" instance=ExtResource("36_li7u2")]
+
+[node name="Falling_plataform5" type="Node2D" parent="plataforma_cai"]
+position = Vector2(1250, 25)
+
+[node name="falling_plataform" parent="plataforma_cai/Falling_plataform5" instance=ExtResource("36_li7u2")]
+
+[connection signal="pressed" from="pause_bttn/Pause_bttn" to="." method="_on_pause_bttn_pressed"]

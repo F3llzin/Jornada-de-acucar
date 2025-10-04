@@ -45,5 +45,6 @@ offset_left = 734.0
 offset_top = 431.0
 offset_right = 742.0
 offset_bottom = 439.0
+nome_fase = "res://Mundo4.tscn"
 nmr_fase = "4"
 fase_bloqueio = 2
