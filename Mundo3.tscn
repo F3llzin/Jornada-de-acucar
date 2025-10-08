@@ -712,7 +712,7 @@ position = Vector2(3201, 63)
 prox_Nivel = "res://Mundo4.tscn"
 
 [node name="jogador" parent="." instance=ExtResource("14_y7k0d")]
-position = Vector2(145, 64)
+position = Vector2(146, 65)
 
 [node name="tile" type="TileMap" parent="."]
 position = Vector2(0, 31)

@@ -140,10 +140,9 @@ script = ExtResource("1_iv36r")
 [node name="anim" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_os4k1")
-animation = &"collected"
+animation = &"idle"
 autoplay = "idle"
-frame = 5
-frame_progress = 1.0
+frame_progress = 0.162454
 
 [node name="collision" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_knju3")

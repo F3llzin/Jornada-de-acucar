@@ -178,7 +178,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6de8k"]
-size = Vector2(14, 2)
+size = Vector2(16, 2)
 
 [node name="Enemy" type="CharacterBody2D" groups=["inimigos"]]
 collision_layer = 4
